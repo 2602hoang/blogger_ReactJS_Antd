@@ -5,6 +5,7 @@ import SearchIcon from '@mui/icons-material/Search';
 // import Logo from '../assets/Logo.png';
 import { FloatButton } from 'antd';
 import { MenuOutlined } from '@ant-design/icons';
+import Nav from './Nav';
 
 function Header() {
     const [menuVisible, setMenuVisible] = useState(false);
@@ -54,6 +55,12 @@ function Header() {
                Contact
                 </a>
             </li>
+            <li className='m-8 md:m-0'>
+                {/* <a href='/contact' className='text-white md:text-black hover:text-red-500 transition duration-500 ease-in'>
+               Contact
+                </a> */}
+                <Nav/>
+            </li>
             {/* <li 
             {/* <li className='m-8 md:m-0'>
                 <a className='text-white md:text-black hover:text-red-500 transition duration-500 ease-in'>
@@ -76,7 +83,8 @@ function Header() {
             {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg> */}
-            <FloatButton icon={<MenuOutlined  style={{color:'black', }}/>} className='flex top-10 left-5   '/>
+            <FloatButton icon={<MenuOutlined  style={{color:'black', }}/>} className='flex top-10 left-5  '/>
+           
         </div>
         
     </nav>

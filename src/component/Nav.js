@@ -20,19 +20,19 @@ function Nav() {
         setDarkMode(!darkMode);
     };
     return(
+        <div className='flex flex-row'>
         <FloatButton.Group
-        trigger="click"
+        trigger="hover"
+        shape='circle'
         type="primary"
-        style={{
-            right: 30,
-        }}
+        className='bottom-10 left-5'
         icon={<SettingTwoTone />}
     >
         <FloatButton tooltip={<div>Dask mode</div>} onClick={toggleDarkMode} icon={<BgColorsOutlined />} />
         <FloatButton onClick={handleClick} icon={<RetweetOutlined />} description={value} tooltip={<div>{value}</div>} />
-        <FloatButton.BackTop tooltip={<div>Back Top</div>}
-        />
-    </FloatButton.Group>
+        
+         </FloatButton.Group>
+         </div>
     )
 }
 

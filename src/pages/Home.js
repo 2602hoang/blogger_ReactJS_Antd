@@ -42,7 +42,7 @@ function Home() {
             <div className='min-h-screen w-full h-4/5 flex justify-center items-center md:flex-row flex-col'>
               <div
                data-aos="fade-right" 
-               className='shadow-md rounded-3xl p-5  flex flex-col md:space-y-10 mt-11 space-y-7'>
+               className='mx-2 shadow-md rounded-3xl p-5  flex flex-col md:space-y-10 mt-11 space-y-7'>
                 <div className='flex flex-col'>
                   <div className='flex flex-row'>
                 <b className='text-sky-600  text-[70px]'>Hello,<b className='animate-ping'>I am</b></b>
@@ -101,7 +101,7 @@ function Home() {
             <section></section>
             <section></section>
             <section></section>
-            <Nav/>
+            {/* <Nav/> */}
            <Fotter/>
    </div>
   );
