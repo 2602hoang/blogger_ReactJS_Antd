@@ -23,20 +23,23 @@ function About() {
             data-aos="fade-right"
             className={`  w-full rounded-full flex justify-center items-center`}
              >
-                    <img src={avata} className='mx-5 drop-shadow-2xl w-[450px] h-[450px] rounded-tl-full rounded-bl-full opacity-100 shadow-2xl '/>
+                    <img src={avata} className='mx-5 drop-shadow-2xl w-[450px] h-[450px] rounded-tl-[200px]
+                     rounded-bl-[200px] opacity-100 shadow-2xl '/>
             </div>
 
             <div data-aos="fade-left"
              className={`
              
-             flex text-start flex-col mx-3 md:mr-3 my-auto justify-center items-center 
-             opacity-100 shadow-2xl border-2 p-6 rounded-tr-full rounded-br-full ${darkMode ? 'text-white' : 'text-black'}`}>
+             flex text-start flex-col my-2 mx-3 md:mr-3  justify-center items-center 
+             opacity-100 shadow-2xl border-2 p-6 rounded-tr-[200px] rounded-br-[200px] ${darkMode ? 'text-white' : 'text-black'}`}>
                 <p>
                 {/* I am a student waiting for my diploma, so I can work full-time at the company. */}
                 {/* Software Engineering major, mainly Front-End programming, user interface design for Website and Mobie applications.
                 Looking forward to developing, learning to become a full-stack programmer in the future. */}
                 </p>
-                <b className='text-transparent bg-clip-text bg-gradient-to-br from-purple-900 via-pink-700 to-yellow-400 my-2 uppercase text-start text-7xl'>about me</b>
+                <b className='text-transparent bg-clip-text
+                 bg-gradient-to-br from-purple-900 via-pink-700 to-yellow-400 my-2 uppercase text-start
+                  text-7xl animate-float-image'>about me</b>
                 <p className={`md:text-2xl text-lg font-mono ${darkMode ? 'text-white' : 'text-black'}`}>
                 I'm a frontend developer who loves to make things look beautiful and working perfectly. <br/>
                 I'm passionate about making websites that are easy to use and that provide the best user experience possible.  <br/>

@@ -58,7 +58,7 @@ function Home() {
                       <br></br>
                       
                       <span className='text-5xl '>And I'm a<br/>
-                      <marquee bgcolor="#FFB4A4" scrollamount="3" loop="3" width="100%" behavior="scroll" className='text-sky-600 '> Frontend Developer</marquee> </span>
+                      <marquee bgcolor="#FFB4A4" scrollamount="3" loop="3" width="100%" behavior="scroll" className='text-sky-600 font-bold mt-2 '> Frontend Developer</marquee> </span>
                       </div>
 
                       <div className='space-x-8 flex flex-row '>

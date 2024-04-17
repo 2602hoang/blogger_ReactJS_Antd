@@ -9,7 +9,9 @@ function Service() {
     <div className={`flex w-full flex-col ${darkMode ? 'dark' : ''}`}>
         <Header/>
         <div className='min-h-screen'>
-
+          <div>
+            
+          </div>
         </div>
 
         <Fotter/></div>

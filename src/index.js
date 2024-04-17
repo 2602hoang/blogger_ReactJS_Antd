@@ -19,8 +19,8 @@ root.render(
   <Routes>
     <Route path='/' element={<Home />}></Route>
     <Route path='/about' element={<About />}></Route>
-    <Route path='/service' element={<Service />}></Route>
-    <Route path='/Skill' element={<Skill />}></Route>
+    <Route path='/projects' element={<Service />}></Route>
+    <Route path='/skills' element={<Skill />}></Route>
     <Route path='/contact' element={<Contact />}></Route>
     </Routes>
   </BrowserRouter>

@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react'; // Import useState if you're using it
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
-// import Logo from '../assets/Logo.png';
+import Logo from '../assets/logo.png';
 import { FloatButton } from 'antd';
 import { MenuOutlined } from '@ant-design/icons';
 import Nav from './Nav';
@@ -23,8 +23,9 @@ function Header() {
     header ${darkMode ? 'dark' : ''} 
      container mx-auto px-4`}>
     <nav className='justify-between items-center py-5 flex'>
-        <div className='md:flex hidden top-0 left-0 z-20  w-14 md:w-24 md:mr-96 '>
-            <img src="" alt="Logo" />
+        <div className='md:flex md:top-0 md:left-0 top-0 right-5 z-0 ml-auto md:z-20  w-14 md:w-24 md:mr-96 '>
+            <a href='/' className='flex justify-center'>
+            <img src={Logo} alt="Back Home" /> </a>
         </div>
         <ul id="menu"
             className={`
@@ -43,14 +44,15 @@ function Header() {
                 About
                 </a>
             </li>
+             
              <li className='m-8 md:m-0'>
-                <a href='/service' className='text-white md:text-black hover:text-red-500 transition duration-500 ease-in'>
-                Services
+                <a href='/skills' className='text-white md:text-black hover:text-red-500 transition duration-500 ease-in'>
+               Skill
                 </a>
             </li>
-             <li className='m-8 md:m-0'>
-                <a href='/Skill' className='text-white md:text-black hover:text-red-500 transition duration-500 ease-in'>
-               Skills
+            <li className='m-8 md:m-0'>
+                <a href='/projects' className='text-white md:text-black hover:text-red-500 transition duration-500 ease-in'>
+                Project
                 </a>
             </li>
             <li className='m-8 md:m-0'>
