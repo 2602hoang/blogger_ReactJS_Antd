@@ -10,9 +10,11 @@ import Service from './pages/Service';
 // import Portfolio from './pages/Skill';
 import Contact from './pages/Contact';
 import Skill from './pages/Skill';
+import { DarkModeProvider } from './component/DarkModeProvider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <DarkModeProvider>
   <BrowserRouter>
   <Routes>
     <Route path='/' element={<Home />}></Route>
@@ -22,6 +24,7 @@ root.render(
     <Route path='/contact' element={<Contact />}></Route>
     </Routes>
   </BrowserRouter>
+  </DarkModeProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

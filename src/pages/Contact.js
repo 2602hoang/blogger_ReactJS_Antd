@@ -7,6 +7,7 @@ import axios from 'axios';
 import TextArea from 'antd/es/input/TextArea';
 import Aos from 'aos';  
 import "aos/dist/aos.css"
+import { useDarkMode } from '../component/DarkModeProvider';
 
 const validateMessages = {
     required: '${label} is required!',
@@ -70,10 +71,10 @@ function Contact() {
             form.setFieldsValue({ [field]: undefined });
         });
     };
-
+    const { darkMode, toggleDarkMode } = useDarkMode();
     return (
 
-        <div className='flex w-full flex-col '>
+        <div className={`flex w-full flex-col ${darkMode ? 'dark' : ''}`}>
             <Header />
             <section></section>
             <div data-aos="flip-left"
@@ -82,7 +83,7 @@ function Contact() {
 
 
                 <div className='shadow-sky-200 
-                mx-5
+                     mx-5
                     rounded-tl-3xl rounded-br-3xl border-yellow-300 border-2 
                     shadow-2xl p-5 flex flex-col justify-center items-center '>
 
@@ -90,23 +91,23 @@ function Contact() {
                         <h1 className='flex justify-center items-center text-center my-14 uppercase font-normal text-yellow-400 text-3xl'>MESSAGE CONTENT</h1>
                         <div className="flex flex-wrap -mx-4">
                             <div className="w-full md:w-2/5 px-4 mb-4">
-                                <Form.Item  name="name" label="Your Name" rules={[{ required: true }]}>
+                                <Form.Item  name="name" label={<p className={`${darkMode?"text-white":"text-black"}`}>Your Name</p>} rules={[{ required: true }]}>
                                     <TextArea autoSize={{ minRows: 1, maxRows: 2 }} />
                                 </Form.Item>
                             </div>
                             <div className="w-full md:w-3/5 px-4 mb-4">
-                                <Form.Item name="email" label="Email" rules={[{ type: 'email', required: true }]}>
+                                <Form.Item name="email" label={<p className={`${darkMode?"text-white":"text-black"}`}>Email</p>} rules={[{ type: 'email', required: true }]}>
                                     <Input />
                                 </Form.Item>
                             </div>
                         </div>
-                        <Form.Item name="message" label="Message" rules={[{ required: true, message: 'Please input your message!' }]}>
+                        <Form.Item name="message" label={<p className={`${darkMode?"text-white":"text-black"}`}>Message</p>} rules={[{ required: true, message: 'Please input your message!' }]}>
                             <TextArea autoSize={{ minRows: 3, maxRows: 6 }} />
                         </Form.Item>
                         <Form.Item className="flex justify-center">
                             <Button className='text-yellow-300 hover:bg-red-400 bg-white' type="default" htmlType="submit" icon={<SendOutlined />}>Send Message</Button>
                         </Form.Item>
-                        <h1 className='text-center font-thin text-sm'>
+                        <h1 className={`text-center font-thin text-sm ${darkMode?"text-white":"text-black"}`} >
                             (Your message will be sent to the page admin's personal mail)
                         </h1>
                     </Form>

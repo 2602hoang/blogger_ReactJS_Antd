@@ -12,3 +12,11 @@
       transform: translateY(0);
     }
   }
+  .dark {
+    background-color: #121212; /* Dark background color */
+    color: #ffffff; /* White text color */
+    /* Add more dark mode styles here */
+}
+.dark ul#menu li a {
+    color: white; /* Change menu text color to white in dark mode */
+}

@@ -6,6 +6,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import { FloatButton } from 'antd';
 import { MenuOutlined } from '@ant-design/icons';
 import Nav from './Nav';
+import { useDarkMode } from './DarkModeProvider';
 
 function Header() {
     const [menuVisible, setMenuVisible] = useState(false);
@@ -13,12 +14,13 @@ function Header() {
     const toggleMenu = () => {
         setMenuVisible(!menuVisible);
     };
-
+  
+    const { darkMode, toggleDarkMode } = useDarkMode();
 
   return (
     <div className ={`
     
-    
+    header ${darkMode ? 'dark' : ''} 
      container mx-auto px-4`}>
     <nav className='justify-between items-center py-5 flex'>
         <div className='md:flex hidden top-0 left-0 z-20  w-14 md:w-24 md:mr-96 '>
@@ -27,6 +29,7 @@ function Header() {
         <ul id="menu"
             className={`
             py-4
+            flexd
             md:space-y-0
             fixed z-20 top-0 left-0 w-full h-full flex flex-col justify-center items-center bg-gray-900 bg-opacity-90 ${menuVisible ? '' : 'invisible'
                 } md:visible md:bg-transparent md:h-auto md:flex-row md:justify-between md:static`}>
@@ -59,7 +62,7 @@ function Header() {
                 {/* <a href='/contact' className='text-white md:text-black hover:text-red-500 transition duration-500 ease-in'>
                Contact
                 </a> */}
-                <Nav/>
+                <Nav darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
             </li>
             {/* <li 
             {/* <li className='m-8 md:m-0'>
