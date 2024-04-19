@@ -33,11 +33,12 @@ function About() {
             <div data-aos="fade-left"
              className={`
              shadow-white
+             shadow-2xl
              w-auto h-auto
              md:w-1/2
              
              flex text-start flex-col my-2 mx-3 md:mr-10  justify-center items-center 
-             opacity-100 shadow-2xl border-2 p-6 rounded-tr-[200px] rounded-br-[200px] ${darkMode ? 'text-white' : 'text-black'}`}>
+             opacity-100  border-2 p-6 rounded-tr-[200px] rounded-br-[200px] ${darkMode ? 'text-white' : 'text-black'}`}>
                 <p>
                 {/* I am a student waiting for my diploma, so I can work full-time at the company. */}
                 {/* Software Engineering major, mainly Front-End programming, user interface design for Website and Mobie applications.

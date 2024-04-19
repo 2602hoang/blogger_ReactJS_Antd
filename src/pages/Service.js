@@ -99,7 +99,7 @@ function Service() {
 
       </div>
       {/* Your other content */}
-      <div className='md:mx-56 mx-2 my-5'>
+      <div className='md:mx-72 mx-2 my-5'>
         <div  className="grid md:grid-cols-2 grid-cols-1 gap-3 md:gap-9 justify-center items-center">
           {/* Map over your portfolio items */}
           {[img1, img2,].map((img, index) => (
@@ -108,7 +108,8 @@ function Service() {
               key={index}
               onMouseEnter={() => setHoveredItem(index)}
               onMouseLeave={() => setHoveredItem(null)}
-              className="h-[350px] w-full border-2 rounded-2xl hover:bg-sky-300 hover:border-sky-700 relative"
+              className="h-[350px] shadow-white
+              shadow-2xl w-full border-2 rounded-2xl hover:bg-sky-300 hover:border-sky-700 relative"
               style={{
                 backgroundImage: `linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),url(${img})`,
                 backgroundRepeat: 'no-repeat',
@@ -163,7 +164,8 @@ function Service() {
               key={index}
               onMouseEnter={() => setHoveredItem1(index)}
               onMouseLeave={() => setHoveredItem1(null)}
-              className="h-[350px] w-full border-2 rounded-2xl hover:bg-sky-300 hover:border-sky-300 relative"
+              className="h-[350px] shadow-white
+              shadow-2xl w-full border-2 rounded-2xl hover:bg-sky-300 hover:border-sky-300 relative"
               style={{
                 backgroundImage: `linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),url(${img})`,
                 backgroundRepeat: 'no-repeat',
