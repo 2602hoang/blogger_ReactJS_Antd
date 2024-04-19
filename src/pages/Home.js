@@ -4,7 +4,8 @@ import Nav from '../component/Nav';
 import Header from '../component/Header';
 import Content from '../component/Content';
 import Fotter from '../component/Fotter';
-import avata from '../assets/AVATA.jpg'
+import avata from '../assets/AVATA.png'
+import avata1 from '../assets/AVATA1.png'
 import { Button,Modal,QRCode,Popover} from "antd"
 import {UserOutlined,GithubFilled,FacebookFilled,MailFilled,PhoneFilled} from '@ant-design/icons';
 import Aos from 'aos';  
@@ -64,16 +65,19 @@ function Home() {
 
                       <div className='space-x-8 flex flex-row '>
                       <Button
+                      id="link"
                       target="_blank"
-                      className='rounded-full hover:bg-violet-600 bg-white hover:animate-none border-2
+                      className='rounded-full hover:bg-sky-300 bg-white hover:animate-none border-2
                       border-black animate-bounce' href='https://github.com/2602hoang' title='Github Me' type='link'
                         icon={<GithubFilled style={{color:'black'}}/>}/>
                       <Button
+                      id="link"
                       target="_blank"
-                      className='rounded-full hover:bg-violet-600 bg-white hover:animate-none border-2 border-black animate-bounce' href='mailto:vuhuyhoangboj@gmail.com' title='Gmail Me' type='link' icon={<MailFilled style={{color:'black'}} />}/>
+                      className='rounded-full hover:bg-sky-300 bg-white hover:animate-none border-2 border-black animate-bounce' href='mailto:vuhuyhoangboj@gmail.com' title='Gmail Me' type='link' icon={<MailFilled style={{color:'black'}} />}/>
                       <Button 
+                      id="link"
                       target="_blank"
-                      className='rounded-full hover:bg-violet-600 bg-white hover:animate-none border-2 border-black animate-bounce' href='https://www.facebook.com/VHH26022001' title='FaceBook Me' type='link' icon={<FacebookFilled  style={{color:'black'}}/>}/>
+                      className='rounded-full hover:bg-sky-300 bg-white hover:animate-none border-2 border-black animate-bounce' href='https://www.facebook.com/VHH26022001' title='FaceBook Me' type='link' icon={<FacebookFilled  style={{color:'black'}}/>}/>
                         <Popover
                       overlayInnerStyle={{
                         padding: 0,
@@ -84,8 +88,9 @@ function Home() {
                       <QRCode value="https://zalo.me/0917789964" title="Zalo Me" bordered={false} /></div>}
                     >
                       <Button
+                      id="link"
                       target="_blank"
-                      className='rounded-full hover:bg-violet-600 bg-white hover:animate-none border-2 border-black animate-bounce' onClick={()=>{
+                      className='rounded-full hover:bg-sky-300 bg-white hover:animate-none border-2 border-black animate-bounce' onClick={()=>{
                         
                       }} title='Call Me' type='text' icon={<PhoneFilled   style={{color:'black'}}/>}>
                         091778994
@@ -112,8 +117,11 @@ function Home() {
                       </div>
                 </div>
 
-                <div  className='md:ml-40 rounded-3xl my-10  mb-10 flex md:w-[400px] md:h-auto'>
-                <img  className='hover:animate-none animate-float-image w-[400px] h-[400px]  border-2 shadow-black shadow-2xl rounded-full' src={avata}/>
+                <div  className={`md:ml-40  ${darkMode ? 'dark' : ''}  my-10  mb-10 flex md:w-[400px] md:h-auto  `}>
+                <img  className={` hover:animate-none animate-float-image w-[400px] h-[500px] 
+                ${darkMode ? 'bg-black' : ''}      `}
+                 
+                src={darkMode ? avata1 : avata} />
                 </div>
               </div>
               

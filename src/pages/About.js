@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Header from '../component/Header'
-import avata from '../assets/AVATA.jpg'
+import avata from '../assets/AVATA2.jpg'
 import Fotter from '../component/Fotter'
 import { Button } from 'antd'
 import Aos from 'aos';  
@@ -9,7 +9,7 @@ import { useDarkMode } from '../component/DarkModeProvider';
 function About() {
   useEffect(() => {
     Aos.init({
-      duration: 3000, // Adjust the duration to your preference
+      duration: 1000, // Adjust the duration to your preference
     });
   }, []);
   const { darkMode, toggleDarkMode } = useDarkMode();
@@ -21,20 +21,26 @@ function About() {
         <div className=' min-h-screen w-full h-auto flex justify-center items-center md:flex-row flex-col'>
 
             <div 
-            data-aos="fade-right"
+            data-aos="flip-right"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
             className={`mx-5 w-auto  rounded-full flex justify-center items-center`}
              >
                     <img src={avata} className='
                     shadow-white 
-                     drop-shadow-2xl w-[450px] h-[450px] rounded-tl-[200px]
+                     drop-shadow-2xl w-[450px] h-[550px] rounded-tl-[200px]
                      rounded-bl-[200px] opacity-100 shadow-2xl '/>
             </div>
 
-            <div data-aos="fade-left"
+            <div data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
              className={`
              shadow-white
              shadow-2xl
-             w-auto h-auto
+             mt-5
+             w-auto md:h-[550px]
+             h-auto
              md:w-1/2
              
              flex text-start flex-col my-2 mx-3 md:mr-10  justify-center items-center 
@@ -52,7 +58,7 @@ function About() {
                 I'm passionate about making websites that are easy to use and that provide the best user experience possible.  <br/>
                 I also happen to be a creative person, which I use to inject a little bit of fun into<br/> every project.
                 </p>'
-                <div className='mr-auto'>
+                <div className='mr-auto justify-center items-center '>
                 <Button className=''>
                   Read More
                 </Button>

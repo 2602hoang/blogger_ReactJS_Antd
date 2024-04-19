@@ -18,5 +18,11 @@
     /* Add more dark mode styles here */
 }
 .dark ul#menu li a {
-    color: white; /* Change menu text color to white in dark mode */
+    color: white; 
 }
+
+.dark ul#menu li a:hover {
+    color: red; 
+}
+
+

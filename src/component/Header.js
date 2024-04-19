@@ -32,31 +32,32 @@ function Header() {
             py-4
             flexd
             md:space-y-0
-            fixed z-20 top-0 left-0 w-full h-full flex flex-col justify-center items-center bg-gray-900 bg-opacity-100 ${menuVisible ? '' : 'invisible'
+            ${darkMode ? 'dark' : 'bg-slate-100'} 
+            fixed z-20 top-0 left-0 w-full h-full flex font-bold flex-col justify-center items-center  bg-opacity-100 ${menuVisible ? '' : 'invisible'
                 } md:visible md:bg-transparent md:h-auto md:flex-row md:justify-between md:static`}>
              <li className='m-8 md:m-0'>
-                <a href='/' className='text-white md:text-black hover:text-red-500 transition duration-500 ease-in'>
+                <a href='/' className=' md:text-black hover:border-b-2 hover:border-red-500 hover:text-red-500 transition duration-500 ease-in'>
                Home
                 </a>
             </li>
              <li className='m-8 md:m-0'>
-                <a href='/about' className='text-white md:text-black hover:text-red-500 transition duration-500 ease-in'>
+                <a href='/about' className=' md:text-black hover:border-b-2 hover:border-red-500 hover:text-red-500 transition duration-500 ease-in'>
                 About
                 </a>
             </li>
              
              <li className='m-8 md:m-0'>
-                <a href='/skills' className='text-white md:text-black hover:text-red-500 transition duration-500 ease-in'>
+                <a href='/skills' className=' md:text-black hover:border-b-2 hover:border-red-500 hover:text-red-500 transition duration-500 ease-in'>
                Skill
                 </a>
             </li>
             <li className='m-8 md:m-0'>
-                <a href='/projects' className='text-white md:text-black hover:text-red-500 transition duration-500 ease-in'>
+                <a href='/projects' className=' md:text-black hover:border-b-2 hover:border-red-500 hover:text-red-500 transition duration-500 ease-in'>
                 Project
                 </a>
             </li>
             <li className='m-8 md:m-0'>
-                <a href='/contact' className='text-white md:text-black hover:text-red-500 transition duration-500 ease-in'>
+                <a href='/contact' className=' md:text-black hover:border-b-2 hover:border-red-500 hover:text-red-500 transition duration-500 ease-in'>
                Contact
                 </a>
             </li>

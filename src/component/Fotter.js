@@ -36,7 +36,7 @@ function Fotter() {
       type='text' icon={<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
         <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
       </svg>
-      } className="text-white flex justify-center items-center text-center  border-2 text-sm rounded-lg border-red-700">{time}</Button>
+      } className="text-white flex justify-center items-center text-center bg-orange-800 border-2 text-sm rounded-lg border-red-700">{time}</Button>
       <p className='text-center text-base'>Copyright &copy; 2024 by Huy Hoang <span>Dev</span> | All Rights Reserved</p>
     </div>
   )
