@@ -7,6 +7,7 @@ import img3 from "../assets/3.png"
 import img4 from "../assets/4.png"
 import img5 from "../assets/5.png"
 import img6 from "../assets/6.png"
+import img7 from "../assets/7.png"
 
 import { useDarkMode } from '../component/DarkModeProvider';
 import { Button, Drawer, Image, List } from 'antd';
@@ -53,15 +54,21 @@ function Service() {
   const [hoveredItem, setHoveredItem] = useState(null);
   const [hoveredItem1, setHoveredItem1] = useState(null);
   const values = [
-    "Value 1",
-    "Value 2",
+    <p>FOOD ORDERING APPLICATION FOR DISTRACTED RESTAURANTS <br /><b className='text-red-500'>(2 people)</b> </p>,
+    <p>ZOLA CHAT APP <br /> <b className='text-red-500'>(5 people)</b> </p>,
+    // Add corresponding values for other elements if needed
+  ];
+  const string = [
+    "Develop website interface for kitchen staff with ReactJS, mobile interface for service staff with ReactNative. Make API calls. Build documents and complete the database.",
+    "ReactNative mobie interface development, newspaper documentation development",
     // Thêm các giá trị tương ứng với các phần tử khác nếu cần
   ];
   const values1 = [
-    "Value 3",
-    "Value 4",
-    "Value 5",
-    "Value 6",
+    "Build interfaces, deploy interface code and basic functions. Develop projects on the internet environment.",
+    "Build interfaces, deploy interface code and basic functions. Develop projects on the internet environment.",
+    "Build interfaces, deploy interface code and basic functions. Develop projects on the internet environment.",
+    "Build interfaces, deploy interface code and basic functions. Develop projects on the internet environment.",
+    "Comming Soon . . .",
     // Thêm các giá trị tương ứng với các phần tử khác nếu cần
   ];
   const hrefs = [
@@ -84,15 +91,15 @@ function Service() {
   return (
     <div className={`flex w-full flex-col ${darkMode ? 'dark' : ''}`}>
       <Header />
-      <div data-aos="flip-left" className=' mt-7 flex flex-row justify-center items-center'>
+      <div data-aos="flip-left" className='mx-12 mt-7 flex flex-row justify-center items-center'>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
           <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
         </svg>
 
-        <h1 className='text-transparent bg-clip-text text-5xl
+        <h1 className='text-transparent bg-clip-text text-4xl
                  bg-gradient-to-br from-purple-900 via-pink-700 to-yellow-400 text-center font-bold uppercase'>
 
-          Mobie App + WebSite App</h1>
+          Mobie App WebSite App</h1>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
         </svg>
@@ -118,21 +125,25 @@ function Service() {
               }}
             >
               {hoveredItem === index && (
-                <div className="w-auto rounded-2xl h-auto absolute bg-sky-300 inset-0 flex justify-center items-center flex-col px-16 bg-gradient-to-t from-opacity-10 to-main-color">
-                  <h4 className="text-2xl">Mobie+Website Design</h4>
-                  <p className="text-lg my-3">{values[index]}</p>
+                <div className=" w-auto rounded-2xl h-auto absolute bg-sky-300 inset-0 flex justify-center items-center flex-col px-16 bg-gradient-to-t from-opacity-10 to-main-color">
+                  <h4 className=" text-center
+                  bg-gradient-to-r from-orange-500 via-yellow-500 to-green-500 text-purple-800 rounded-lg m-0 self-stretch relative text-inherit leading-[44px] font-semibold font-inherit
+                  text-2xl">Project with team </h4>
+                  <p className="text-center text-lg my-3">{values[index]} </p>
+                  <p className="text-center text-lg my-2">  {string[index]}</p>
                   {/* <a target="_blank" href={hrefs1[index]} className="inline-flex justify-center items-center w-14 h-14 bg-text-color rounded-full">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                     </svg>
 
                   </a> */}
-                  <div className='flex justify-center mt-auto mb-2'>
+                  <div className='flex justify-center mt-auto mb-2 w-auto'>
                   <Button onClick={() =>
-
+                    
                     hrefs1[index]()
 
                   }
+                  className="rounded-3xl text-yellow-400 font-semibold px-5 text-center justify-center items-center"
                   >Detail</Button>
                   </div>
                 </div>
@@ -158,7 +169,7 @@ function Service() {
       <div className='md:mx-32 mx-2 my-5'>
         <div  className="grid md:grid-cols-3 grid-cols-1 gap-3 md:gap-9 justify-center items-center">
           {/* Map over your portfolio items */}
-          {[img3, img4, img5, img6].map((img, index) => (
+          {[img3, img4, img5, img6,img7,].map((img, index) => (
             <div
             data-aos="flip-up"
               key={index}
@@ -174,9 +185,11 @@ function Service() {
               }}
             >
               {hoveredItem1 === index && (
-                <div className="bg-sky-300 rounded-2xl  absolute   inset-0 flex justify-center items-center flex-col px-16 bg-gradient-to-t  ">
-                  <h4 className="text-2xl">Website Design</h4>
-                  <p className="text-lg my-3">{values1[index]}</p>
+                <div className="bg-sky-300 rounded-2xl   absolute   inset-0 flex justify-center items-center flex-col px-16 bg-gradient-to-t  ">
+                  <h4 className=" text-center 
+                  bg-gradient-to-r from-orange-500 via-yellow-500 to-green-500 text-purple-800 rounded-lg m-0 self-stretch relative text-inherit leading-[44px] font-semibold font-inherit
+                  text-2xl">Personal project</h4>
+                  <p className={`text-lg my-3 text-center ${index === 4 ? 'animate-bounce' : ''}`}>{values1[index]}</p>
                   <div className='flex flex-row justify-center items-center mt-auto'>
 
                     <Button type='link' target="_blank" href={hrefs[index]} className="flex justify-center
@@ -198,11 +211,12 @@ function Service() {
       <Fotter />
       <Drawer className='flex flex-col justify-center items-center'
         title=" FOOD ORDERING APPLICATION FOR DISTRACTED RESTAURANTS "
-        width={'100%'} open={open} onClose={onClose}
-        placement="left"
+        width={window.innerWidth >= 768 ? '50%' : '100%'}
+        open={open} onClose={onClose}
+        placement="right"
 
       >
-        <div className='flex flex-col justify-center items-center'>
+        <div className='flex flex-col justify-center items-center w-auto'>
           <List
             itemLayout="vertical"
             size="large"
@@ -210,11 +224,11 @@ function Service() {
               onChange: (page) => {
                 console.log(page);
               },
-              pageSize: 4,
+              pageSize: 3,
             }}
             header={
-              <div>
-                <h2 className='bg-gradient-to-br from-purple-800 via-pink-700 to-yellow-400'>Image of Mobie App</h2>
+              <div className='w-auto flex justify-center item'>
+                <h2 className=' uppercase bg-gradient-to-br from-purple-800 via-pink-700 to-yellow-400'>Image of Mobie App</h2>
               </div>
             }
             dataSource={images}
@@ -225,15 +239,16 @@ function Service() {
           <List
             itemLayout="vertical"
             size="large"
+            
             pagination={{
               onChange: (page) => {
                 console.log(page);
               },
-              pageSize: 2,
+              pageSize: 1,
             }}
             header={
-              <div>
-                <h2 className='bg-gradient-to-br from-purple-800 via-pink-700 to-yellow-400'>Image of Website App</h2>
+              <div className='w-auto flex justify-center item'>
+                <h2 className='uppercase text-center bg-gradient-to-br from-purple-800 via-pink-700 to-yellow-400'>Image of Website App</h2>
               </div>
             }
             dataSource={images1}
@@ -273,12 +288,12 @@ function Service() {
       <Drawer
         className='flex flex-col justify-center items-center'
         title="ZOLA CHAT APP"
-        width={'100%'}
+        width={window.innerWidth >= 768 ? '50%' : '100%'}
         open={open1}
         onClose={onClose1}
-        placement="right"
+        placement="left"
       >
-        <div className='flex flex-col justify-center items-center'>
+        <div className='flex w-auto flex-col justify-center items-center'>
           <List    itemLayout="vertical"
             size="large"
             pagination={{
@@ -288,8 +303,8 @@ function Service() {
               pageSize: 1,
             }}
             header={
-              <div>
-                <h2 className='bg-gradient-to-br from-purple-800 via-pink-700 to-yellow-400'>Image of Website App</h2>
+              <div className='w-auto flex justify-center item'>
+                <h2 className='uppercase text-center bg-gradient-to-br from-purple-800 via-pink-700 to-yellow-400'>Image of Website App</h2>
               </div>
             }
             dataSource={imgs1}
@@ -307,8 +322,8 @@ function Service() {
               pageSize: 1,
             }}
             header={
-              <div>
-                <h2 className='bg-gradient-to-br from-purple-800 via-pink-700 to-yellow-400'>Image of Mobie App</h2>
+              <div className='w-auto flex justify-center item'>
+                <h2 className='text-center uppercase bg-gradient-to-br from-purple-800 via-pink-700 to-yellow-400'>Image of Mobie App</h2>
               </div>
             }
             dataSource={imgs}

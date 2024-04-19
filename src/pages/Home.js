@@ -41,7 +41,7 @@ function Home() {
     
             <Header /> 
             <section></section>
-            <div className=' min-h-screen w-full h-auto flex justify-center items-center md:flex-row flex-col'>
+            <div className='mb-5 min-h-screen w-full h-auto flex justify-center items-center md:flex-row flex-col'>
               <div
                data-aos="fade-top" 
                className={`
@@ -54,7 +54,8 @@ function Home() {
                         <div className='flex flex-row'>
                         <b className='text-sky-600  text-[70px]'>Hello,<b className=''>I am</b></b>
                       </div>
-                      <span className='text-4xl animate-pulse '>Vu Huy Hoang</span>
+                      <span className=' text-transparent bg-clip-text
+                 bg-gradient-to-br from-purple-900 via-pink-700 to-yellow-400 text-5xl animate-pulse pb-5'>Vũ Huy Hoàng</span>
                       <br></br>
                       
                       <span className='text-5xl '>And I'm a<br/>
@@ -96,10 +97,18 @@ function Home() {
                       
                       </div>
                     
-                      <div className='animate-none hover:animate-pulse mx-2 md:mx-0 md:justify-center md:items-center justify-center items-center flex'>               
+                      <div className=' animate-none hover:animate-pulse mx-2 md:mx-0 md:justify-center md:items-center justify-center items-center flex'>               
                         <Button
+                        className='hover:animate-pulse bg-yellow-300'
                         target="_blank"
-                        href='https://drive.google.com/file/d/14B1j9y1IUDaneHU0BNiII_kXuBWdsye1/view?usp=sharing' icon={<UserOutlined />} title='CV Vu Huy Hoang' type='default' className=''>View CV me</Button>
+                        onClick={() => {
+                          window.open('https://drive.google.com/file/d/14B1j9y1IUDaneHU0BNiII_kXuBWdsye1/view?usp=sharing');
+                          window.location.href = 'https://drive.google.com/uc?export=download&id=14B1j9y1IUDaneHU0BNiII_kXuBWdsye1';
+                        }}
+                        
+                        icon={<UserOutlined />} title='View&Dowload'  >
+                           
+                          View CV me</Button>
                       </div>
                 </div>
 

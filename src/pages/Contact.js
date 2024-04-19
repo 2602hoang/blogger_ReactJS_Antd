@@ -26,44 +26,44 @@ function Contact() {
         });
       }, []);
     const [form] = Form.useForm();
-    const onFinish = async (values, e) => {
+    const onFinish = async (values,e) => {
         if (e) e.preventDefault();
         try {
-            const formURL = "https://docs.google.com/forms/d/e/1FAIpQLSet9Mpnudon8eNeN5xMkDORUKaynBdDyZmTBzbujoiOQ2-9-A/formResponse"; // Google Form URL
-            const formData = new FormData();
-
-            // Append form values to formData
-            formData.append("entry.863424587", values.name);
-            //   formData.append("entry.1516466819", values.phone);
-            formData.append("entry.490067886", values.email);
-            formData.append("entry.1763298453", values.message);
-
-            // Submit formData to Google Form URL
-            await axios.post(formURL, formData, {
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                }
-            });
-
-            // Reset form fields after successful submission
-            // form.resetFields();
-
-            // Show success message to user
-            alert('Form submitted successfully!');
-            // console.log(formData);
-            resetFields(['name', 'phone', 'email', 'message']);
-
-        }
-
+          const formURL = "https://docs.google.com/forms/d/e/1FAIpQLSdqmTV_KURUpUDL5qcoZfTb_FIzcI2LdMP3NiNRj-qXkljDoQ/formResponse"; // Google Form URL
+          const formData = new FormData();
+    
+          // Append form values to formData
+          formData.append("entry.550024018", values.name);
+          formData.append("entry.1516466819", values.phone);
+          formData.append("entry.431800140", values.email);
+          formData.append("entry.2013422363", values.message);
+    
+          // Submit formData to Google Form URL
+          await axios.post(formURL, formData, {
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            }
+        });
+          
+          // Reset form fields after successful submission
+          // form.resetFields();
+    
+          // Show success message to user
+          alert('Form submitted successfully!');
+          // console.log(formData);
+          resetFields(['name', 'phone', 'email', 'message']);
+         
+        } 
+        
         catch (error) {
-            // form.resetFields();  
-            console.error('Error submitting form:', error);
-            resetFields(['name', 'phone', 'email', 'message']);
-            alert(' Your message has been sent to the site administrator is email !.Tks U');
-            // form.resetFields();
-
+          // form.resetFields();  
+          console.error('Error submitting form:', error);
+          resetFields(['name', 'phone', 'email', 'message']);
+          alert('Your message has been sent to the site administrator via email. Messages are saved in google sheets. Thank you for contacting me!!!');
+          // form.resetFields();
+          
         }
-    };
+      };
 
 
     const resetFields = (fields) => {
@@ -97,15 +97,32 @@ function Contact() {
                                     <TextArea autoSize={{ minRows: 1, maxRows: 2 }} />
                                 </Form.Item>
                             </div>
-                            <div className="w-full md:w-3/5 px-4 mb-4">
-                                <Form.Item name="email" label={<p className={`${darkMode?"text-white":"text-black"}`}>Email</p>} rules={[{ type: 'email', required: true }]}>
+                            <div className="w-full md:w-3/5 px-4 mb-4 md:pr-8">
+                                <Form.Item name="phone" label={<p className={`${darkMode?"text-white":"text-black"}`}>Phone</p>}
+                                  rules={[
+                                    {
+                                        required: true,
+                                      message: 'Please input your phone number!',
+                                    },
+                                    {
+                                      pattern: /^\d{10}$/,
+                                      message: 'Please input a valid 10-digit phone number!',
+                                    },
+                                  ]}>
                                     <Input />
                                 </Form.Item>
                             </div>
                         </div>
+                        <div className="w-full md:w-full md:pl-8 mb-4 md:pr-4">
+                                <Form.Item name="email" label={<p className={`${darkMode?"text-white":"text-black"}`}>Email</p>} rules={[{ type: 'email', required: true }]}>
+                                    <Input />
+                                </Form.Item>
+                            </div>
+                        <div className='w-full md:pl-3 md:pr-4 '>
                         <Form.Item name="message" label={<p className={`${darkMode?"text-white":"text-black"}`}>Message</p>} rules={[{ required: true, message: 'Please input your message!' }]}>
                             <TextArea autoSize={{ minRows: 3, maxRows: 6 }} />
                         </Form.Item>
+                        </div>
                         <Form.Item className="flex justify-center">
                             <Button className='text-yellow-300 hover:bg-red-400 bg-white' type="default" htmlType="submit" icon={<SendOutlined />}>Send Message</Button>
                         </Form.Item>

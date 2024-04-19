@@ -32,7 +32,7 @@ function Header() {
             py-4
             flexd
             md:space-y-0
-            fixed z-20 top-0 left-0 w-full h-full flex flex-col justify-center items-center bg-gray-900 bg-opacity-90 ${menuVisible ? '' : 'invisible'
+            fixed z-20 top-0 left-0 w-full h-full flex flex-col justify-center items-center bg-gray-900 bg-opacity-100 ${menuVisible ? '' : 'invisible'
                 } md:visible md:bg-transparent md:h-auto md:flex-row md:justify-between md:static`}>
              <li className='m-8 md:m-0'>
                 <a href='/' className='text-white md:text-black hover:text-red-500 transition duration-500 ease-in'>
