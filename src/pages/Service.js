@@ -60,7 +60,7 @@ function Service() {
   ];
   const string = [
     "Develop website interface for kitchen staff with ReactJS, mobile interface for service staff with ReactNative. Make API calls. Build documents and complete the database.",
-    "ReactNative mobie interface development, newspaper documentation development",
+    "Mobile interface development with ReactNative, newspaper document development",
     // Thêm các giá trị tương ứng với các phần tử khác nếu cần
   ];
   const values1 = [
@@ -129,8 +129,8 @@ function Service() {
                   <h4 className=" text-center
                   bg-gradient-to-r from-orange-500 via-yellow-500 to-green-500 text-purple-800 rounded-lg m-0 self-stretch relative text-inherit leading-[44px] font-semibold font-inherit
                   text-2xl">Project with team </h4>
-                  <p className="text-center text-lg my-3">{values[index]} </p>
-                  <p className="text-center text-lg my-2">  {string[index]}</p>
+                  <p className=" text-center text-lg my-0">{values[index]} </p>
+                  <p className="text-start text-lg my-0">  {string[index]}</p>
                   {/* <a target="_blank" href={hrefs1[index]} className="inline-flex justify-center items-center w-14 h-14 bg-text-color rounded-full">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
@@ -189,7 +189,7 @@ function Service() {
                   <h4 className=" text-center 
                   bg-gradient-to-r from-orange-500 via-yellow-500 to-green-500 text-purple-800 rounded-lg m-0 self-stretch relative text-inherit leading-[44px] font-semibold font-inherit
                   text-2xl">Personal project</h4>
-                  <p className={`text-lg my-3 text-center ${index === 4 ? 'animate-bounce' : ''}`}>{values1[index]}</p>
+                  <p className={`text-lg mt-8 text-start ${index === 4 ? 'animate-bounce' : ''}`}>{values1[index]}</p>
                   <div className='flex flex-row justify-center items-center mt-auto'>
 
                     <Button type='link' target="_blank" href={hrefs[index]} className="flex justify-center
