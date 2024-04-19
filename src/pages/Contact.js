@@ -84,6 +84,7 @@ function Contact() {
 
                 <div className='shadow-sky-200 
                      mx-5
+                    
                     rounded-tl-3xl rounded-br-3xl border-yellow-300 border-2 
                     shadow-2xl p-5 flex flex-col justify-center items-center '>
 

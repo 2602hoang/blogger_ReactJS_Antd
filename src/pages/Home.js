@@ -41,7 +41,7 @@ function Home() {
     
             <Header /> 
             <section></section>
-            <div className='  min-h-screen w-full h-auto flex justify-center items-center md:flex-row flex-col'>
+            <div className=' min-h-screen w-full h-auto flex justify-center items-center md:flex-row flex-col'>
               <div
                data-aos="fade-top" 
                className={`

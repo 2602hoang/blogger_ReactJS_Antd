@@ -14,23 +14,29 @@ function About() {
   }, []);
   const { darkMode, toggleDarkMode } = useDarkMode();
   return (
-    <div className={`flex w-full flex-col ${darkMode ? 'dark' : ''}`}>
+    <div className={`flex justify-center items-center w-full flex-col ${darkMode ? 'dark' : ''}`}>
          <Header /> 
         <section></section>
 
-        <div  className='my-5 md:flex-row min-h-screen flex-col container flex justify-center items-center md:mx-20'>
+        <div className=' min-h-screen w-full h-auto flex justify-center items-center md:flex-row flex-col'>
+
             <div 
             data-aos="fade-right"
-            className={`  w-full rounded-full flex justify-center items-center`}
+            className={`mx-5 w-auto  rounded-full flex justify-center items-center`}
              >
-                    <img src={avata} className='mx-5 drop-shadow-2xl w-[450px] h-[450px] rounded-tl-[200px]
+                    <img src={avata} className='
+                    shadow-white 
+                     drop-shadow-2xl w-[450px] h-[450px] rounded-tl-[200px]
                      rounded-bl-[200px] opacity-100 shadow-2xl '/>
             </div>
 
             <div data-aos="fade-left"
              className={`
+             shadow-white
+             w-auto h-auto
+             md:w-1/2
              
-             flex text-start flex-col my-2 mx-3 md:mr-3  justify-center items-center 
+             flex text-start flex-col my-2 mx-3 md:mr-10  justify-center items-center 
              opacity-100 shadow-2xl border-2 p-6 rounded-tr-[200px] rounded-br-[200px] ${darkMode ? 'text-white' : 'text-black'}`}>
                 <p>
                 {/* I am a student waiting for my diploma, so I can work full-time at the company. */}

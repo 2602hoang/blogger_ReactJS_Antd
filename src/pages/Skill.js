@@ -14,15 +14,16 @@ function Skill() {
   return (
     <div className={`flex w-full flex-col ${darkMode ? 'dark' : ''}`}>
         <Header/>
-        <div className=' flex flex-col text-center   mt-10 min-h-screen'>
-          <b className=' 
+        <div className=' min-h-screen w-full h-auto flex justify-center items-center  flex-col'>
+
+          <b className=' flex justify-center items-center
           text-7xl text-transparent bg-clip-text
            bg-gradient-to-br
             from-purple-900 via-pink-700 to-yellow-400 
             text-center animate-pulse'>SKILLS ABOUT ME</b>
-          <div className='flex flex-col'>
-            <div data-aos="flip-down">
-              <h1 className='font-extrabold mt-12 animate-pulse text-5xl'>Programming Skills</h1>
+          <div className='flex flex-col justify-center items-center'>
+            <div data-aos="flip-down" className='flex-col flex justify-center items-center'>
+              <h1 className='text-center font-extrabold mt-12 animate-pulse text-5xl'>Programming Skills</h1>
               <div  class="flex-col  flex text-center justify-center items-center   ">
                                 <div class="animate-float-image hover:animate-none my-10 mt-28 mx-2 md:flex-row  md:space-y-0 space-y-5  flex-wrap flex-col flex text-center justify-center items-center space-x-2  w-auto">
                                     <div class="text-3xl px-3 bg-pink-200 text-pink-800 rounded-full"> ⭐</div>
@@ -39,7 +40,7 @@ function Skill() {
                                 </div>
                 </div>
             </div>
-            <div data-aos="flip-up">
+            <div data-aos="flip-up" className='flex-col flex justify-center items-center'>
               <h1 className='mt-12 font-extrabold text-6xl animate-pulse'>Soft Skills</h1>
               <div  class=" my-5 flex-col md:flex-row flex text-center justify-center items-center ">
                                     {/* <marquee behavior	="alternate" direction="right"> */}
