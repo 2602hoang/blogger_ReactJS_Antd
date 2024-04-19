@@ -8,7 +8,7 @@ function Skill() {
   const { darkMode, toggleDarkMode } = useDarkMode();
   useEffect(() => {
     Aos.init({
-      duration: 3000, // Adjust the duration to your preference
+      duration: 1000, // Adjust the duration to your preference
     });
   }, []);
   return (
