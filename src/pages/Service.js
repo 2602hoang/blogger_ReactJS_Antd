@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from '../component/Header';
 import Fotter from '../component/Fotter';
 import img1 from "../assets/1.png"
@@ -11,8 +11,14 @@ import img6 from "../assets/6.png"
 import { useDarkMode } from '../component/DarkModeProvider';
 import { Button, Drawer, Image, List } from 'antd';
 import { GithubOutlined } from '@ant-design/icons';
-
+import Aos from 'aos';  
+import "aos/dist/aos.css"
 function Service() {
+  useEffect(() => {
+    Aos.init({
+      duration: 3000, // Adjust the duration to your preference
+    });
+  }, []);
   const [open, setOpen] = useState(false);
   const showDrawer = () => {
     setOpen(true);
@@ -78,25 +84,27 @@ function Service() {
   return (
     <div className={`flex w-full flex-col ${darkMode ? 'dark' : ''}`}>
       <Header />
-      <div className=' mt-7 flex flex-row justify-center items-center'>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+      <div data-aos="flip-left" className=' mt-7 flex flex-row justify-center items-center'>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
           <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
         </svg>
 
-        <h1 className='text-center font-bold uppercase'>
+        <h1 className='text-transparent bg-clip-text text-5xl
+                 bg-gradient-to-br from-purple-900 via-pink-700 to-yellow-400 text-center font-bold uppercase'>
 
           Mobie App + WebSite App</h1>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
         </svg>
 
       </div>
       {/* Your other content */}
       <div className='md:mx-56 mx-2 my-5'>
-        <div className="grid md:grid-cols-2 grid-cols-1 gap-3 md:gap-9 justify-center items-center">
+        <div  className="grid md:grid-cols-2 grid-cols-1 gap-3 md:gap-9 justify-center items-center">
           {/* Map over your portfolio items */}
           {[img1, img2,].map((img, index) => (
             <div
+              data-aos="flip-down"
               key={index}
               onMouseEnter={() => setHoveredItem(index)}
               onMouseLeave={() => setHoveredItem(null)}
@@ -110,7 +118,7 @@ function Service() {
             >
               {hoveredItem === index && (
                 <div className="w-auto rounded-2xl h-auto absolute bg-sky-300 inset-0 flex justify-center items-center flex-col px-16 bg-gradient-to-t from-opacity-10 to-main-color">
-                  <h4 className="text-2xl">Web Design</h4>
+                  <h4 className="text-2xl">Mobie+Website Design</h4>
                   <p className="text-lg my-3">{values[index]}</p>
                   {/* <a target="_blank" href={hrefs1[index]} className="inline-flex justify-center items-center w-14 h-14 bg-text-color rounded-full">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -118,12 +126,14 @@ function Service() {
                     </svg>
 
                   </a> */}
+                  <div className='flex justify-center mt-auto mb-2'>
                   <Button onClick={() =>
 
                     hrefs1[index]()
 
                   }
                   >Detail</Button>
+                  </div>
                 </div>
               )}
             </div>
@@ -134,20 +144,22 @@ function Service() {
 
 
 
-      <div className='mt-24 flex flex-row justify-center items-center'>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+      <div data-aos="flip-right" className='mt-24 flex flex-row justify-center items-center'>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
         </svg>
-        <h1 className='text-center font-bold uppercase'>Web Design</h1>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <h1 className='text-transparent bg-clip-text text-5xl
+                 bg-gradient-to-br from-purple-900 via-pink-700 to-yellow-400 text-center font-bold uppercase'>Web Design</h1>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
         </svg>
       </div>
       <div className='md:mx-32 mx-2 my-5'>
-        <div className="grid md:grid-cols-3 grid-cols-1 gap-3 md:gap-9 justify-center items-center">
+        <div  className="grid md:grid-cols-3 grid-cols-1 gap-3 md:gap-9 justify-center items-center">
           {/* Map over your portfolio items */}
           {[img3, img4, img5, img6].map((img, index) => (
             <div
+            data-aos="flip-up"
               key={index}
               onMouseEnter={() => setHoveredItem1(index)}
               onMouseLeave={() => setHoveredItem1(null)}
@@ -161,18 +173,19 @@ function Service() {
             >
               {hoveredItem1 === index && (
                 <div className="bg-sky-300 rounded-2xl  absolute   inset-0 flex justify-center items-center flex-col px-16 bg-gradient-to-t  ">
-                  <h4 className="text-2xl">Web Design</h4>
+                  <h4 className="text-2xl">Website Design</h4>
                   <p className="text-lg my-3">{values1[index]}</p>
                   <div className='flex flex-row justify-center items-center mt-auto'>
 
-                    <a target="_blank" href={hrefs[index]} className="flex justify-center
-                   items-center w-8 h-8 bg-text-color rounded-full">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                      </svg>
-
-                    </a>
-                    Visit here
+                    <Button type='link' target="_blank" href={hrefs[index]} className="flex justify-center
+                   items-center w-8 h-8 bg-text-color rounded-full"
+                   icon={ <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                   <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                 </svg>}
+                   >
+                      Visit here
+                    </Button>
+                    
                   </div>
                 </div>
               )}
