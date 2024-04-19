@@ -79,7 +79,8 @@ function Contact() {
             <section></section>
             <div data-aos="flip-left"
      data-aos-easing="ease-out-cubic"
-     data-aos-duration="2000" className='my-5  min-h-screen flex-col  flex justify-center items-center '>
+     data-aos-duration="2000"
+      className='my-5  min-h-screen flex-col  flex justify-center items-center '>
 
 
                 <div className='shadow-sky-200 
@@ -88,7 +89,7 @@ function Contact() {
                     rounded-tl-3xl rounded-br-3xl border-yellow-300 border-2 
                     shadow-2xl p-5 flex flex-col justify-center items-center '>
 
-                    <Form className='flex flex-col md:mx-0 md:w-[600px]' form={form} name="nest-messages" onFinish={onFinish} validateMessages={validateMessages}>
+                    <Form className='flex flex-col md:mx-0 md:w-[800px] h-auto' form={form} name="nest-messages" onFinish={onFinish} validateMessages={validateMessages}>
                         <h1 className='flex justify-center items-center text-center my-14 uppercase font-normal text-yellow-400 text-3xl'>MESSAGE CONTENT</h1>
                         <div className="flex flex-wrap -mx-4">
                             <div className="w-full md:w-2/5 px-4 mb-4">
