@@ -7,7 +7,7 @@ import "aos/dist/aos.css"
 import ProgressBar from '../component/ProgressBar';
 import { useTranslation } from 'react-i18next';
 function Skill() {
-  const { darkMode, toggleDarkMode } = useDarkMode();
+  const { darkMode, } = useDarkMode();
   useEffect(() => {
     Aos.init({
       duration: 1000, // Adjust the duration to your preference

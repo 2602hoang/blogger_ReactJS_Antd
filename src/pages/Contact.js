@@ -9,18 +9,29 @@ import Aos from 'aos';
 import "aos/dist/aos.css"
 import { useDarkMode } from '../component/DarkModeProvider';
 import ProgressBar from '../component/ProgressBar';
+import { useTranslation } from 'react-i18next';
 
-const validateMessages = {
-    required: '${label} is required!',
-    types: {
-        email: '${label} is not a valid email!',
-        number: '${label} is not a valid number!',
-    },
-    number: {
-        range: '${label} must be between ${min} and ${max}',
-    },
-};
+
 function Contact() {
+    const { t } = useTranslation();
+
+    // Define or retrieve the label string
+    const label = t('Label');
+
+    // Define min and max values or retrieve them from somewhere
+    const min = 10;
+    const max = 10;
+
+    const validateMessages = {
+        required: ` ${t('is required')}!`,
+        types: {
+            email: ` ${t('is not a valid email')}!`,
+            number: ` ${t('is not a valid number')}!`,
+        },
+        number: {
+            range: `${label} ${t('must be between')} ${min} ${t('and')} ${max}`,
+        },
+    };
     useEffect(() => {
         Aos.init({
           duration: 3000, // Adjust the duration to your preference
@@ -50,7 +61,7 @@ function Contact() {
           // form.resetFields();
     
           // Show success message to user
-          alert('Form submitted successfully!');
+          alert(`${t("Your message has been sent to the site administrator via email. Messages are saved in google sheets. Thank you for contacting me!!!")}`);
           // console.log(formData);
           resetFields(['name', 'phone', 'email', 'message']);
          
@@ -60,7 +71,7 @@ function Contact() {
           // form.resetFields();  
           console.error('Error submitting form:', error);
           resetFields(['name', 'phone', 'email', 'message']);
-          alert('Your message has been sent to the site administrator via email. Messages are saved in google sheets. Thank you for contacting me!!!');
+          alert(`${t("Your message has been sent to the site administrator via email. Messages are saved in google sheets. Thank you for contacting me!!!")}`);
           // form.resetFields();
           
         }
@@ -92,23 +103,24 @@ function Contact() {
                     shadow-2xl p-5 flex flex-col justify-center items-center '>
 
                     <Form className='flex flex-col md:mx-0 md:w-[800px] h-auto' form={form} name="nest-messages" onFinish={onFinish} validateMessages={validateMessages}>
-                        <h1 className='flex justify-center items-center text-center my-14 uppercase font-normal text-yellow-400 text-3xl'>MESSAGE CONTENT</h1>
+                        <h1 className='flex justify-center items-center text-center my-14 uppercase font-normal text-yellow-400 text-3xl'>{t("MESSAGE CONTENT")}</h1>
                         <div className="flex flex-wrap -mx-4">
                             <div className="w-full md:w-2/5 px-4 mb-4">
-                                <Form.Item  name="name" label={<p className={`${darkMode?"text-black":"text-white"}`}>Your Name</p>} rules={[{ required: true }]}>
+                                <Form.Item  name="name" label={<p className={`${darkMode?"text-black":"text-white"}`}>
+                                    {t("Your Name")}</p>} rules={[{ required: true }]}>
                                     <TextArea autoSize={{ minRows: 1, maxRows: 2 }} />
                                 </Form.Item>
                             </div>
                             <div className="w-full md:w-3/5 px-4 mb-4 md:pr-8">
-                                <Form.Item name="phone" label={<p className={`${darkMode?"text-black":"text-white"}`}>Phone</p>}
+                                <Form.Item name="phone" label={<p className={`${darkMode?"text-black":"text-white"}`}>{t("Phone")}</p>}
                                   rules={[
                                     {
-                                        required: true,
-                                      message: 'Please input your phone number!',
+                                    required: true,
+                                      message: t('Please input your phone number!'),
                                     },
                                     {
                                       pattern: /^\d{10}$/,
-                                      message: 'Please input a valid 10-digit phone number!',
+                                      message: t('Please input a valid 10-digit phone number!'),
                                     },
                                   ]}>
                                     <Input />
@@ -121,15 +133,16 @@ function Contact() {
                                 </Form.Item>
                             </div>
                         <div className='w-full md:pl-3 md:pr-4 '>
-                        <Form.Item name="message" label={<p className={`${darkMode?"text-black":"text-white"}`}>Message</p>} rules={[{ required: true, message: 'Please input your message!' }]}>
+                        <Form.Item name="message" label={<p className={`${darkMode?"text-black":"text-white"}`}>{t("Message")}</p>}
+                         rules={[{ required: true, message: 'Please input your message!' }]}>
                             <TextArea autoSize={{ minRows: 3, maxRows: 6 }} />
                         </Form.Item>
                         </div>
                         <Form.Item className="flex justify-center">
-                            <Button className='text-yellow-300 hover:bg-red-400 bg-white' type="default" htmlType="submit" icon={<SendOutlined />}>Send Message</Button>
+                            <Button className='text-yellow-300 hover:bg-red-400 bg-white' type="default" htmlType="submit" icon={<SendOutlined />}>{t("Send Message")}</Button>
                         </Form.Item>
                         <h1 className={`text-center font-thin text-sm ${darkMode?"text-black":"text-white"}`} >
-                            (Your message will be sent to the page admin's personal mail)
+                            {t("(Your message will be sent to the page admin's personal mail)")}
                         </h1>
                     </Form>
 

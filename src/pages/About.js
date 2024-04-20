@@ -65,7 +65,7 @@ function About() {
                 </p>'
                 <div className='mr-auto justify-center items-center '>
                 <Button className=''>
-                  Read More
+                  {t("Read More")}
                 </Button>
                 </div>
             </div>

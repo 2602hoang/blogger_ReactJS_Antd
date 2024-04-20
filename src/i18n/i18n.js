@@ -221,14 +221,28 @@ i18n
                         "CRUD user information and chat, CU messages, making video calls.": "Thông tin người dùng CRUD và trò chuyện, tin nhắn CU, thực hiện cuộc gọi video.",
                         "Mobile": "Di động",
                         "Website": "Trang web",
-
+                        "(Your message will be sent to the page admin's personal mail)":"(Tin nhắn của bạn sẽ được gửi đến thư cá nhân của quản trị viên trang)",
+                        "Your message has been sent to the site administrator via email. Messages are saved in google sheets. Thank you for contacting me!!!":"Thư của bạn đã được gửi đến quản trị viên trang web qua email. Tin nhắn được lưu trong google trang tính. Cảm ơn bạn đã liên hệ với tôi!!",
+                        
+                        "is required":"bắt buộc",
+                        "is not a valid email":"Email không phải là một email hợp lệ",
+                        "Please input your phone number!":"Vui lòng nhập số điện thoại của bạn!",
+                        "must be between":"",
+                        "and":"",
+                        "Please input a valid 10-digit phone number!":"Vui lòng nhập số điện thoại 10 chữ số hợp lệ!",
+                        
+                        "Please input your message!":"Vui lòng nhập tin nhắn của bạn!",
+                        "Read More":"Đọc thêm",
                     }
                 },
             en: {
                 translation: {
-                    
-                        
-                         
+                    "Read More":"Read More",
+                    "Your message has been sent to the site administrator via email. Messages are saved in google sheets. Thank you for contacting me!!!":"Your message has been sent to the site administrator via email. Messages are saved in google sheets. Thank you for contacting me!!!",
+                    "(Your message will be sent to the page admin's personal mail)":"(Your message will be sent to the page admin's personal mail)",
+                    "Please input your message!":"Please input your message!" , 
+                    "Please input a valid 10-digit phone number!":"Please input a valid 10-digit phone number!",
+
                                 "Dask mode": "Dask mode",
                                 "Hello": "Hello",
                                 "I am": "I am",
@@ -382,8 +396,9 @@ i18n
             }
         },
         lng: "en",
-        fallbackLng: "vn",
+        fallbackLng: "en",
         interpolation: {
             escapeValue: false
         }
     });
+    export default i18n;
