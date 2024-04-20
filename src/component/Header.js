@@ -20,20 +20,20 @@ function Header() {
   return (
     <div className ={`
     
-    header ${darkMode ? 'dark' : ''} 
+    header ${darkMode ? '': 'dark'} 
      container mx-auto px-4`}>
-    <nav className='justify-between items-center py-5 flex'>
-        <div className='md:flex md:top-0 md:left-0 top-0 right-5 z-0 ml-auto md:z-20  w-14 md:w-24 md:mr-96 '>
-            <a href='/' className='flex justify-center'>
-            <img src={Logo} alt="Back Home" /> </a>
+    <nav className='justify-between items-center py-5 flex '>
+        <div className='md:flex top-0 left-0  z-0  md:z-20  w-40 md:w-64 md:mr-96 flex flex-row '>
+            <a href='/' className=' flex items-center gap-x-2 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500'>
+            <img src={Logo} alt="Back Home" className='w-14 h-14'/> Blogger Me</a>
         </div>
         <ul id="menu"
             className={`
             py-4
             flexd
             md:space-y-0
-            ${darkMode ? 'dark' : 'bg-slate-100'} 
-            fixed z-20 top-0 left-0 w-full h-full flex font-bold flex-col justify-center items-center  bg-opacity-100 ${menuVisible ? '' : 'invisible'
+            ${darkMode ? 'bg-slate-100' : 'dark'} 
+            fixed z-20 top-0 left-0 w-full h-full flex font-bold flex-col justify-center items-center  bg-opacity-80 ${menuVisible ? 'min-h-full' : 'invisible'
                 } md:visible md:bg-transparent md:h-auto md:flex-row md:justify-between md:static`}>
              <li className='m-8 md:m-0'>
                 <a href='/' className=' md:text-black hover:border-b-2 hover:border-red-500 hover:text-red-500 transition duration-500 ease-in'>
@@ -89,7 +89,7 @@ function Header() {
             {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg> */}
-            <FloatButton icon={<MenuOutlined  style={{color:'black', }}/>} className='flex  top-10 left-5  '/>
+            <FloatButton icon={<MenuOutlined  style={{color:'black', }}/>} className='flex  top-10 right-5  '/>
            
         </div>
         

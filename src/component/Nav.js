@@ -23,7 +23,7 @@ function Nav() {
         <FloatButton.Group
         trigger="click"
         type="default"
-        className='top-10 right-5 md:right-5 md:bottom-10'
+        className='bottom-28  right-5 md:right-5 '
         icon={<SettingTwoTone />}
     >
         <FloatButton tooltip={<div>Dask mode</div>} onClick={toggleDarkMode} icon={<BgColorsOutlined />} />

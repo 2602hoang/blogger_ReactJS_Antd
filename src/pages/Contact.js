@@ -74,7 +74,7 @@ function Contact() {
     const { darkMode, toggleDarkMode } = useDarkMode();
     return (
 
-        <div className={`flex w-full flex-col ${darkMode ? 'dark' : ''}`}>
+        <div className={`flex w-full flex-col ${darkMode ? '': 'dark'}`}>
             <Header />
             <section></section>
             <div data-aos="flip-left"
@@ -93,12 +93,12 @@ function Contact() {
                         <h1 className='flex justify-center items-center text-center my-14 uppercase font-normal text-yellow-400 text-3xl'>MESSAGE CONTENT</h1>
                         <div className="flex flex-wrap -mx-4">
                             <div className="w-full md:w-2/5 px-4 mb-4">
-                                <Form.Item  name="name" label={<p className={`${darkMode?"text-white":"text-black"}`}>Your Name</p>} rules={[{ required: true }]}>
+                                <Form.Item  name="name" label={<p className={`${darkMode?"text-black":"text-white"}`}>Your Name</p>} rules={[{ required: true }]}>
                                     <TextArea autoSize={{ minRows: 1, maxRows: 2 }} />
                                 </Form.Item>
                             </div>
                             <div className="w-full md:w-3/5 px-4 mb-4 md:pr-8">
-                                <Form.Item name="phone" label={<p className={`${darkMode?"text-white":"text-black"}`}>Phone</p>}
+                                <Form.Item name="phone" label={<p className={`${darkMode?"text-black":"text-white"}`}>Phone</p>}
                                   rules={[
                                     {
                                         required: true,
@@ -114,19 +114,19 @@ function Contact() {
                             </div>
                         </div>
                         <div className="w-full md:w-full md:pl-8 mb-4 md:pr-4">
-                                <Form.Item name="email" label={<p className={`${darkMode?"text-white":"text-black"}`}>Email</p>} rules={[{ type: 'email', required: true }]}>
+                                <Form.Item name="email" label={<p className={`${darkMode?"text-black":"text-white"}`}>Email</p>} rules={[{ type: 'email', required: true }]}>
                                     <Input />
                                 </Form.Item>
                             </div>
                         <div className='w-full md:pl-3 md:pr-4 '>
-                        <Form.Item name="message" label={<p className={`${darkMode?"text-white":"text-black"}`}>Message</p>} rules={[{ required: true, message: 'Please input your message!' }]}>
+                        <Form.Item name="message" label={<p className={`${darkMode?"text-black":"text-white"}`}>Message</p>} rules={[{ required: true, message: 'Please input your message!' }]}>
                             <TextArea autoSize={{ minRows: 3, maxRows: 6 }} />
                         </Form.Item>
                         </div>
                         <Form.Item className="flex justify-center">
                             <Button className='text-yellow-300 hover:bg-red-400 bg-white' type="default" htmlType="submit" icon={<SendOutlined />}>Send Message</Button>
                         </Form.Item>
-                        <h1 className={`text-center font-thin text-sm ${darkMode?"text-white":"text-black"}`} >
+                        <h1 className={`text-center font-thin text-sm ${darkMode?"text-black":"text-white"}`} >
                             (Your message will be sent to the page admin's personal mail)
                         </h1>
                     </Form>

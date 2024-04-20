@@ -12,7 +12,7 @@ function Skill() {
     });
   }, []);
   return (
-    <div className={`flex w-full flex-col ${darkMode ? 'dark' : ''}`}>
+    <div className={`flex w-full flex-col ${darkMode ? '': 'dark'}`}>
         <Header/>
         <div className=' min-h-screen w-full h-auto flex justify-center items-center  flex-col'>
 

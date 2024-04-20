@@ -38,7 +38,7 @@ function Home() {
         
   return (
     
-   <div className={`flex w-full flex-col ${darkMode ? 'dark' : ''}`}>
+   <div className={`flex w-full flex-col ${darkMode ? '': 'dark'}`}>
     
             <Header /> 
             <section></section>
@@ -117,7 +117,7 @@ function Home() {
                       </div>
                 </div>
 
-                <div  className={`md:ml-40  ${darkMode ? 'dark' : ''}  my-10  mb-10 flex md:w-[400px] md:h-auto  `}>
+                <div  className={`md:ml-40  ${darkMode ? '': 'dark'}  my-10  mb-10 flex md:w-[400px] md:h-auto  `}>
                 <img  className={` hover:animate-none animate-float-image w-[400px] h-[500px] 
                 ${darkMode ? 'bg-black' : ''}      `}
                  

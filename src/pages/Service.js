@@ -89,7 +89,7 @@ function Service() {
 
 
   return (
-    <div className={`flex w-full flex-col ${darkMode ? 'dark' : ''}`}>
+    <div className={`flex w-full flex-col ${darkMode ? '': 'dark'}`}>
       <Header />
       <div data-aos="flip-left" className='mx-12 mt-7 flex flex-row justify-center items-center'>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
