@@ -8,6 +8,7 @@ import TextArea from 'antd/es/input/TextArea';
 import Aos from 'aos';  
 import "aos/dist/aos.css"
 import { useDarkMode } from '../component/DarkModeProvider';
+import ProgressBar from '../component/ProgressBar';
 
 const validateMessages = {
     required: '${label} is required!',
@@ -75,6 +76,7 @@ function Contact() {
     return (
 
         <div className={`flex w-full flex-col ${darkMode ? '': 'dark'}`}>
+             <ProgressBar/>
             <Header />
             <section></section>
             <div data-aos="flip-left"

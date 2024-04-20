@@ -11,6 +11,7 @@ import {UserOutlined,GithubFilled,FacebookFilled,MailFilled,PhoneFilled} from '@
 import Aos from 'aos';  
 import "aos/dist/aos.css"
 import { useDarkMode } from '../component/DarkModeProvider';
+import ProgressBar from '../component/ProgressBar';
 
 function Home() {
   // const [open, setOpen] = useState(false);
@@ -39,7 +40,7 @@ function Home() {
   return (
     
    <div className={`flex w-full flex-col ${darkMode ? '': 'dark'}`}>
-    
+     <ProgressBar/>
             <Header /> 
             <section></section>
             <div className='mb-5 min-h-screen w-full h-auto flex justify-center items-center md:flex-row flex-col'>
@@ -121,7 +122,7 @@ function Home() {
                 <img  className={` hover:animate-none animate-float-image w-[400px] h-[500px] 
                 ${darkMode ? 'bg-black' : ''}      `}
                  
-                src={darkMode ? avata1 : avata} />
+                src={darkMode ? avata : avata1} />
                 </div>
               </div>
               

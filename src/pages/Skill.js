@@ -4,6 +4,7 @@ import Fotter from '../component/Fotter'
 import { useDarkMode } from '../component/DarkModeProvider';
 import Aos from 'aos';  
 import "aos/dist/aos.css"
+import ProgressBar from '../component/ProgressBar';
 function Skill() {
   const { darkMode, toggleDarkMode } = useDarkMode();
   useEffect(() => {
@@ -13,6 +14,7 @@ function Skill() {
   }, []);
   return (
     <div className={`flex w-full flex-col ${darkMode ? '': 'dark'}`}>
+       <ProgressBar/>
         <Header/>
         <div className=' min-h-screen w-full h-auto flex justify-center items-center  flex-col'>
 

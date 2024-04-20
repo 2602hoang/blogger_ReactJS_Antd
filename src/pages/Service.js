@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import Header from '../component/Header';
 import Fotter from '../component/Fotter';
@@ -14,6 +15,7 @@ import { Button, Drawer, Image, List } from 'antd';
 import { GithubOutlined } from '@ant-design/icons';
 import Aos from 'aos';  
 import "aos/dist/aos.css"
+import ProgressBar from '../component/ProgressBar';
 function Service() {
   useEffect(() => {
     Aos.init({
@@ -90,8 +92,11 @@ function Service() {
 
   return (
     <div className={`flex w-full flex-col ${darkMode ? '': 'dark'}`}>
+      
+      <ProgressBar/>
+      
       <Header />
-      <div data-aos="flip-left" className='mx-12 mt-7 flex flex-row justify-center items-center'>
+      <div data-aos="flip-left" className='  mx-12 mt-7 flex flex-row justify-center items-center'>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
           <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
         </svg>
@@ -106,8 +111,8 @@ function Service() {
 
       </div>
       {/* Your other content */}
-      <div className='md:mx-72 mx-2 my-5'>
-        <div  className="grid md:grid-cols-2 grid-cols-1 gap-3 md:gap-9 justify-center items-center">
+      <div className='md:mx-72 mx-2 my-5 '>
+        <div  className=" grid md:grid-cols-2 grid-cols-1 gap-3 md:gap-9 justify-center items-center">
           {/* Map over your portfolio items */}
           {[img1, img2,].map((img, index) => (
             <div
@@ -115,7 +120,7 @@ function Service() {
               key={index}
               onMouseEnter={() => setHoveredItem(index)}
               onMouseLeave={() => setHoveredItem(null)}
-              className="h-[350px] shadow-white
+              className="  h-[350px] shadow-white
               shadow-2xl w-full border-2 rounded-2xl hover:bg-sky-300 hover:border-sky-700 relative"
               style={{
                 backgroundImage: `linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),url(${img})`,
@@ -210,13 +215,18 @@ function Service() {
       </div>
       <Fotter />
       <Drawer className='flex flex-col justify-center items-center'
-        title=" FOOD ORDERING APPLICATION FOR DISTRACTED RESTAURANTS "
+        title={<div className='uppercase'> Restaurant food ordering application
+
+           
+           </div>}
         width={window.innerWidth >= 768 ? '50%' : '100%'}
         open={open} onClose={onClose}
         placement="right"
 
       >
+       
         <div className='flex flex-col justify-center items-center w-auto'>
+        
           <List
             itemLayout="vertical"
             size="large"

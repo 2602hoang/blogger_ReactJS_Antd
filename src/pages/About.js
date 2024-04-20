@@ -6,6 +6,7 @@ import { Button } from 'antd'
 import Aos from 'aos';  
 import "aos/dist/aos.css"
 import { useDarkMode } from '../component/DarkModeProvider';
+import ProgressBar from '../component/ProgressBar'
 function About() {
   useEffect(() => {
     Aos.init({
@@ -15,6 +16,7 @@ function About() {
   const { darkMode, toggleDarkMode } = useDarkMode();
   return (
     <div className={`flex justify-center items-center w-full flex-col ${darkMode ? '': 'dark'}`}>
+          <ProgressBar/>
          <Header /> 
         <section></section>
 

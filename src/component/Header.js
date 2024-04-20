@@ -7,6 +7,7 @@ import { FloatButton } from 'antd';
 import { MenuOutlined } from '@ant-design/icons';
 import Nav from './Nav';
 import { useDarkMode } from './DarkModeProvider';
+import ProgressBar from './ProgressBar';
 
 function Header() {
     const [menuVisible, setMenuVisible] = useState(false);
@@ -22,7 +23,8 @@ function Header() {
     
     header ${darkMode ? '': 'dark'} 
      container mx-auto px-4`}>
-    <nav className='justify-between items-center py-5 flex '>
+   {/* <ProgressBar/> */}
+    <nav className='justify-between items-center py-5 flex  '>
         <div className='md:flex top-0 left-0  z-0  md:z-20  w-40 md:w-64 md:mr-96 flex flex-row '>
             <a href='/' className=' flex items-center gap-x-2 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500'>
             <img src={Logo} alt="Back Home" className='w-14 h-14'/> Blogger Me</a>
