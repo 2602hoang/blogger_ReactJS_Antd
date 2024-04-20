@@ -7,12 +7,15 @@ import Aos from 'aos';
 import "aos/dist/aos.css"
 import { useDarkMode } from '../component/DarkModeProvider';
 import ProgressBar from '../component/ProgressBar'
+import { useTranslation } from 'react-i18next'
 function About() {
   useEffect(() => {
     Aos.init({
       duration: 1000, // Adjust the duration to your preference
     });
   }, []);
+   
+  const { t } = useTranslation();
   const { darkMode, toggleDarkMode } = useDarkMode();
   return (
     <div className={`flex justify-center items-center w-full flex-col ${darkMode ? '': 'dark'}`}>
@@ -54,11 +57,11 @@ function About() {
                 </p>
                 <b className='text-transparent bg-clip-text
                  bg-gradient-to-br from-purple-900 via-pink-700 to-yellow-400 my-2 uppercase text-start
-                  text-7xl animate-float-image'>about me</b>
+                  text-7xl animate-float-image'>{t("About me")}</b>
                 <p className={`md:text-2xl text-lg font-mono ${darkMode ? 'text-black' : 'text-white'}`}>
-                I'm a frontend developer who loves to make things look beautiful and working perfectly. <br/>
-                I'm passionate about making websites that are easy to use and that provide the best user experience possible.  <br/>
-                I also happen to be a creative person, which I use to inject a little bit of fun into<br/> every project.
+                {t("I'm a frontend developer who loves to make things look beautiful and working perfectly")}. <br/>
+                {t("I'm passionate about making websites that are easy to use and that provide the best user experience possible")}.  <br/>
+                {t("I also happen to be a creative person, which I use to inject a little bit of fun into every project")}.
                 </p>'
                 <div className='mr-auto justify-center items-center '>
                 <Button className=''>

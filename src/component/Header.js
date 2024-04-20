@@ -8,10 +8,11 @@ import { MenuOutlined } from '@ant-design/icons';
 import Nav from './Nav';
 import { useDarkMode } from './DarkModeProvider';
 import ProgressBar from './ProgressBar';
-
+import "../i18n/i18n"
+import { useTranslation } from 'react-i18next';
 function Header() {
     const [menuVisible, setMenuVisible] = useState(false);
-   
+    const { t, i18n } = useTranslation();
     const toggleMenu = () => {
         setMenuVisible(!menuVisible);
     };
@@ -39,28 +40,28 @@ function Header() {
                 } md:visible md:bg-transparent md:h-auto md:flex-row md:justify-between md:static`}>
              <li className='m-8 md:m-0'>
                 <a href='/' className=' md:text-black hover:border-b-2 hover:border-red-500 hover:text-red-500 transition duration-500 ease-in'>
-               Home
+               {t("Home")}
                 </a>
             </li>
              <li className='m-8 md:m-0'>
                 <a href='/about' className=' md:text-black hover:border-b-2 hover:border-red-500 hover:text-red-500 transition duration-500 ease-in'>
-                About
+                {t("About")}
                 </a>
             </li>
              
              <li className='m-8 md:m-0'>
                 <a href='/skills' className=' md:text-black hover:border-b-2 hover:border-red-500 hover:text-red-500 transition duration-500 ease-in'>
-               Skill
+               {t("Skill")}
                 </a>
             </li>
             <li className='m-8 md:m-0'>
                 <a href='/projects' className=' md:text-black hover:border-b-2 hover:border-red-500 hover:text-red-500 transition duration-500 ease-in'>
-                Project
+                {t("Project")}
                 </a>
             </li>
             <li className='m-8 md:m-0'>
                 <a href='/contact' className=' md:text-black hover:border-b-2 hover:border-red-500 hover:text-red-500 transition duration-500 ease-in'>
-               Contact
+               {t("Contact")}
                 </a>
             </li>
             <li className='m-8 md:m-0'>
