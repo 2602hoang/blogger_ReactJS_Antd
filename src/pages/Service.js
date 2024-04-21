@@ -17,6 +17,7 @@ import Aos from 'aos';
 import "aos/dist/aos.css"
 import ProgressBar from '../component/ProgressBar';
 import { useTranslation } from 'react-i18next';
+import Nav from '../component/Nav';
 function Service() {
   const { t } = useTranslation();
   useEffect(() => {
@@ -54,7 +55,7 @@ function Service() {
   for (let i = 4; i <= 8; i++) {
     imgs1.push(require(`../assets/i${i}.png`));
   }
-  const { darkMode } = useDarkMode();
+  const { darkMode,toggleDarkMode } = useDarkMode();
   const [hoveredItem, setHoveredItem] = useState(null);
   const [hoveredItem1, setHoveredItem1] = useState(null);
   const values = [
@@ -219,6 +220,7 @@ function Service() {
           ))}
         </div>
       </div>
+      <Nav darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
       <Fotter />
       <Drawer className='flex flex-col justify-center items-center'
         title={<div className='uppercase'> {t("RESTAURANT FOOD ORDERING APPLICATION")}

@@ -34,7 +34,7 @@ function Home() {
       duration: 3000, // Adjust the duration to your preference
     });
   }, []);
-  const { darkMode,  } = useDarkMode();
+  const { darkMode, toggleDarkMode } = useDarkMode();
  
   const { t } = useTranslation();
         
@@ -135,6 +135,7 @@ function Home() {
             <section></section>
             <section></section>
             {/* <Nav/> */}
+            <Nav darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
            <Fotter/>
    </div>
   );

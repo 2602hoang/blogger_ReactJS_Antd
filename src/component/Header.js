@@ -17,7 +17,7 @@ function Header() {
         setMenuVisible(!menuVisible);
     };
   
-    const { darkMode, toggleDarkMode } = useDarkMode();
+    const { darkMode, } = useDarkMode();
 
   return (
     <div className ={`
@@ -64,34 +64,10 @@ function Header() {
                {t("Contact")}
                 </a>
             </li>
-            <li className='m-8 md:m-0'>
-                {/* <a href='/contact' className='text-white md:text-black hover:text-red-500 transition duration-500 ease-in'>
-               Contact
-                </a> */}
-                <Nav darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
-            </li>
-            {/* <li 
-            {/* <li className='m-8 md:m-0'>
-                <a className='text-white md:text-black hover:text-red-500 transition duration-500 ease-in'>
-                Login
-                </a>
-            </li>
-            <li className='m-8 md:m-0 border-2 rounded-lg border-sky-500 px-3'>
-                <button className='text-white md:text-blue-500 hover:text-red-500 transition duration-500 ease-in'>
-                Sign up
-                </button>
-            </li> */}
-            {/* <li className='hidden md:flex m-8 md:m-0'>
-                <select className='text-white md:text-black hover:text-red-500 transition duration-500 ease-in'>
-                <option value="">EV</option>
-                <option value="">VN</option>
-                </select>
-            </li> */}
+       
         </ul>
         <div id='menu-button' className='pt-5 top-10 left-5  md:hidden cursor-pointer flexd' onClick={toggleMenu}>
-            {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg> */}
+           
             <FloatButton icon={<MenuOutlined  style={{color:'black', }}/>} className='flex  top-10 right-5  '/>
            
         </div>

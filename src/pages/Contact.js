@@ -10,6 +10,7 @@ import "aos/dist/aos.css"
 import { useDarkMode } from '../component/DarkModeProvider';
 import ProgressBar from '../component/ProgressBar';
 import { useTranslation } from 'react-i18next';
+import Nav from '../component/Nav';
 
 
 function Contact() {
@@ -152,6 +153,7 @@ function Contact() {
             <section></section>
             <section></section>
             <section></section>
+            <Nav darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
             <Fotter />
         </div>
     )

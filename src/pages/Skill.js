@@ -6,8 +6,9 @@ import Aos from 'aos';
 import "aos/dist/aos.css"
 import ProgressBar from '../component/ProgressBar';
 import { useTranslation } from 'react-i18next';
+import Nav from '../component/Nav';
 function Skill() {
-  const { darkMode, } = useDarkMode();
+  const { darkMode, toggleDarkMode} = useDarkMode();
   useEffect(() => {
     Aos.init({
       duration: 1000, // Adjust the duration to your preference
@@ -65,6 +66,7 @@ function Skill() {
           </div>
 
         </div>
+        <Nav darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
         <Fotter/>
         </div>
   )

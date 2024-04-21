@@ -8,6 +8,7 @@ import "aos/dist/aos.css"
 import { useDarkMode } from '../component/DarkModeProvider';
 import ProgressBar from '../component/ProgressBar'
 import { useTranslation } from 'react-i18next'
+import Nav from '../component/Nav'
 function About() {
   useEffect(() => {
     Aos.init({
@@ -59,9 +60,11 @@ function About() {
                  bg-gradient-to-br from-purple-900 via-pink-700 to-yellow-400 my-2 uppercase text-start
                   text-7xl animate-float-image'>{t("About me")}</b>
                 <p className={`md:text-2xl text-lg font-mono ${darkMode ? 'text-black' : 'text-white'}`}>
-                {t("I'm a frontend developer who loves to make things look beautiful and working perfectly")}. <br/>
+                
+                {t("I'm a frontend developer passionate about crafting visually stunning websites and mobile apps that not only look beautiful but also offer robust functionality. I thrive on creating smooth user experiences, leveraging my creativity to inject a bit of excitement into every project.")}
+                {/* {t("I'm a frontend developer who loves to make things look beautiful and working perfectly")}. <br/>
                 {t("I'm passionate about making websites that are easy to use and that provide the best user experience possible")}.  <br/>
-                {t("I also happen to be a creative person, which I use to inject a little bit of fun into every project")}.
+                {t("I also happen to be a creative person, which I use to inject a little bit of fun into every project")}. */}
                 </p>'
                 <div className='mr-auto justify-center items-center '>
                 <Button className=''>
@@ -73,7 +76,7 @@ function About() {
         <section></section>
         <section></section>
         <section></section>
-
+        <Nav darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
         <Fotter/>      
     </div>
   )

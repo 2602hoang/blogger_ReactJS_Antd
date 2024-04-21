@@ -8,7 +8,7 @@ export const useLanguage = () => {
 };
 
 export const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState('en'); // Default language is English
+  const [language, setLanguage] = useState(''); // Default language is English
 
   useEffect(() => {
     const preferredLanguage = localStorage.getItem('preferredLanguage');

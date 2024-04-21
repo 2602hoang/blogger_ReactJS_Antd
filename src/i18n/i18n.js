@@ -233,10 +233,13 @@ i18n
                         
                         "Please input your message!":"Vui lòng nhập tin nhắn của bạn!",
                         "Read More":"Đọc thêm",
+                        "I'm a frontend developer passionate about crafting visually stunning websites and mobile apps that not only look beautiful but also offer robust functionality. I thrive on creating smooth user experiences, leveraging my creativity to inject a bit of excitement into every project."
+                        :"Tôi là một nhà phát triển frontend, đam mê tạo ra những trang web và ứng dụng di động mỹ lệ không chỉ đẹp mắt mà còn mang lại nhiều chức năng hoàn hảo. Tôi hứng thú với việc tạo ra trải nghiệm người dùng mượt mà, sử dụng sự sáng tạo của mình để thêm một chút hứng khởi vào mỗi dự án.",
                     }
                 },
             en: {
                 translation: {
+                    "I'm a frontend developer passionate about crafting visually stunning websites and mobile apps that not only look beautiful but also offer robust functionality. I thrive on creating smooth user experiences, leveraging my creativity to inject a bit of excitement into every project.":"I'm a frontend developer passionate about crafting visually stunning websites and mobile apps that not only look beautiful but also offer robust functionality. I thrive on creating smooth user experiences, leveraging my creativity to inject a bit of excitement into every project.",
                     "Read More":"Read More",
                     "Your message has been sent to the site administrator via email. Messages are saved in google sheets. Thank you for contacting me!!!":"Your message has been sent to the site administrator via email. Messages are saved in google sheets. Thank you for contacting me!!!",
                     "(Your message will be sent to the page admin's personal mail)":"(Your message will be sent to the page admin's personal mail)",
