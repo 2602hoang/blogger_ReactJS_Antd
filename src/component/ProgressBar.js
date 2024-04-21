@@ -22,16 +22,17 @@ function ProgressBar() {
   }, []);
 
   const progressBarStyle = {
-    height: window.innerWidth >= 768 ?"7px" :`${scrollPercent}%`,
-    width: window.innerWidth >= 768 ? `${scrollPercent}%` : '5px', // Adjust width based on screen size
+    height: window.innerWidth >= 768 ?"5px" :`${scrollPercent}%`,
+    width: window.innerWidth >= 768 ? `${scrollPercent}%` : '4px', // Adjust width based on screen size
     backgroundColor: darkMode?"#121212":"#fff",
   
   };
 
   return (
-    <div className='
-    md:w-full md:h-[7px] md:items-center md:top-0 z-50 
-    h-full w-1 bg-purple-600 fixed top-0 left-0 bottom-0'>
+    <div 
+    className='
+    md:w-full md:h-[5px] md:items-center md:top-0 z-50 
+    h-full w-1  fixed top-0 left-0 bottom-0'>
       <div style={progressBarStyle}></div>
     </div>
   );
