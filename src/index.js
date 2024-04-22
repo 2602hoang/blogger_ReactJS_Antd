@@ -8,21 +8,36 @@ import About from './pages/About';
 import Service from './pages/Service';
 import Contact from './pages/Contact';
 import Skill from './pages/Skill';
-import { DarkModeProvider } from './component/DarkModeProvider';
+import { DarkModeProvider, useDarkMode } from './component/DarkModeProvider';
 import i18n from "./i18n/i18n";
 import { LanguageProvider } from './component/LanguageProvider';
 import { Spin } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
 import logo from "./assets/dev.png"
-const Spinner = () => (
-  <Spin
-    delay={1}
-    indicator={<LoadingOutlined style={{ fontSize: 50}} spin />}
-    style={{ backgroundImage: `url(${logo})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}
-  />
-);
+
+const Spinner = () => {
+  const { darkMode } = useDarkMode();
+
+  return (
+    <Spin
+      delay={1}
+      indicator={
+        
+        <LoadingOutlined style={{ fontSize: 50 }} spin />
+      
+    }
+      style={{
+          background: darkMode ? "#121212" : "#121212",
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100vh'
+      }}
+    >
+    
+    </Spin>
+  );
+};
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -30,7 +45,7 @@ const App = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 500); // 500 milliseconds
+    }, 750); // 500 milliseconds
 
     return () => clearTimeout(timer);
   }, []);

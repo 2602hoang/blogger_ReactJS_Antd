@@ -19,12 +19,12 @@ function About() {
   const { t } = useTranslation();
   const { darkMode, toggleDarkMode } = useDarkMode();
   return (
-    <div className={`flex justify-center items-center w-full flex-col ${darkMode ? '': 'dark'}`}>
+    <div className={`flex  justify-center items-center w-full flex-col ${darkMode ? '': 'dark'}`}>
           <ProgressBar/>
          <Header /> 
         <section></section>
 
-        <div className=' min-h-screen w-full h-auto flex justify-center items-center md:flex-row flex-col'>
+        <div className='mt-8 min-h-screen w-full h-auto flex justify-center items-center md:flex-row flex-col'>
 
             <div 
             data-aos="flip-right"
@@ -66,16 +66,18 @@ function About() {
                 {t("I'm passionate about making websites that are easy to use and that provide the best user experience possible")}.  <br/>
                 {t("I also happen to be a creative person, which I use to inject a little bit of fun into every project")}. */}
                 </p>'
-                <div className='mr-auto justify-center items-center '>
-                <Button className=''>
+                <div className=' mr-auto justify-center items-center '>
+                <Button className='btn text-center justify-center items-center p-5'>
                   {t("Read More")}
                 </Button>
+                
                 </div>
             </div>
         </div>  
         <section></section>
         <section></section>
         <section></section>
+        
         <Nav darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
         <Fotter/>      
     </div>

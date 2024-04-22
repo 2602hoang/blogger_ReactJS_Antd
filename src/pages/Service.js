@@ -13,7 +13,7 @@ import img7 from "../assets/7.png"
 import { useDarkMode } from '../component/DarkModeProvider';
 import { Button, Drawer, Image, List } from 'antd';
 import { GithubOutlined } from '@ant-design/icons';
-import Aos from 'aos';  
+import Aos from 'aos';
 import "aos/dist/aos.css"
 import ProgressBar from '../component/ProgressBar';
 import { useTranslation } from 'react-i18next';
@@ -25,6 +25,7 @@ function Service() {
       duration: 3000, // Adjust the duration to your preference
     });
   }, []);
+
   const [open, setOpen] = useState(false);
   const showDrawer = () => {
     setOpen(true);
@@ -32,6 +33,7 @@ function Service() {
   const onClose = () => {
     setOpen(false);
   };
+
   const [open1, setOpen1] = useState(false);
   const showDrawer1 = () => {
     setOpen1(true);
@@ -55,7 +57,7 @@ function Service() {
   for (let i = 4; i <= 8; i++) {
     imgs1.push(require(`../assets/i${i}.png`));
   }
-  const { darkMode,toggleDarkMode } = useDarkMode();
+  const { darkMode, toggleDarkMode } = useDarkMode();
   const [hoveredItem, setHoveredItem] = useState(null);
   const [hoveredItem1, setHoveredItem1] = useState(null);
   const values = [
@@ -91,13 +93,13 @@ function Service() {
 
     // Thêm các href tương ứng với các phần tử khác nếu cần
   ];
- 
+
 
   return (
-    <div className={`flex w-full flex-col ${darkMode ? '': 'dark'}`}>
-      
-      <ProgressBar/>
-      
+    <div className={`flex w-full flex-col ${darkMode ? '' : 'dark'}`}>
+
+      <ProgressBar />
+
       <Header />
       <div data-aos="flip-left" className='  mx-12 mt-7 flex flex-row justify-center items-center'>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
@@ -107,7 +109,7 @@ function Service() {
         <h1 className='text-transparent bg-clip-text text-4xl
                  bg-gradient-to-br from-purple-900 via-pink-700 to-yellow-400 text-center  font-bold uppercase'>
 
-              {t("MOBIE APP WEBSITE APP")}</h1>
+          {t("MOBIE APP WEBSITE APP")}</h1>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="
         
         w-12 h-12">
@@ -116,17 +118,22 @@ function Service() {
 
       </div>
       {/* Your other content */}
-      <div className='md:mx-72 mx-2 my-5 '>
-        <div  className=" grid md:grid-cols-2 grid-cols-1 gap-3 md:gap-9 justify-center items-center">
+      <div className='md:mx-56 mx-2 my-5 justify-center items-center mt-8 '>
+        <div className=" grid md:grid-cols-2 grid-cols-1 gap-3 md:gap-9 justify-center items-center ">
           {/* Map over your portfolio items */}
           {[img1, img2,].map((img, index) => (
+            
             <div
               data-aos="flip-down"
               key={index}
               onMouseEnter={() => setHoveredItem(index)}
               onMouseLeave={() => setHoveredItem(null)}
-              className="  h-[350px] shadow-white
-              shadow-2xl w-full border-2 rounded-2xl hover:bg-sky-300 hover:border-sky-700 relative"
+              className={`h-[350px]
+              hover:bg-white
+               
+              shadow-white shadow-2xl w-full border-2 rounded-2xl  hover:border-sky-700 relative
+              
+              `}
               style={{
                 backgroundImage: `linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),url(${img})`,
                 backgroundRepeat: 'no-repeat',
@@ -134,32 +141,39 @@ function Service() {
                 backgroundPosition: 'center'
               }}
             >
-              {hoveredItem === index && (
-                <div className=" w-auto rounded-2xl h-auto absolute bg-sky-300 inset-0 
-                flex justify-center items-center flex-col px-16 bg-gradient-to-t from-opacity-10 to-main-color">
-                  <h4 className=" text-center
-                  bg-gradient-to-r from-orange-500 via-yellow-500 to-green-500 text-purple-800
-                   rounded-lg m-0 self-stretch relative text-inherit leading-[44px] font-semibold font-inherit
-                  text-2xl">{t("Project with team")} </h4>
-                  <b className=" text-center text-sm my-0">{values[index]} </b>
-                  <p className="text-black text-start text-sm my-0">  {string[index]}</p>
+              {hoveredItem === index&&
+              (
+                <div className={`transform  hover:scale-90 hover:shadow-lg 
+             
+                w-auto rounded-2xl h-auto absolute bg-sky-300 inset-0 
+                flex justify-center items-center flex-col px-16 bg-gradient-to-t from-opacity-10 to-main-color`}
+                >
+                  <h4 className="text-center -translate-y-2
+                bg-gradient-to-r from-orange-500 via-yellow-500 to-green-500 text-purple-800
+                rounded-lg m-0 self-stretch relative text-inherit leading-[44px] font-semibold font-inherit
+                text-2xl">{t("Project with team")}</h4>
+                  <b className="text-center text-sm my-0">{values[index]}</b>
+                  <p className="text-black text-start text-sm my-0">{string[index]}</p>
                   {/* <a target="_blank" href={hrefs1[index]} className="inline-flex justify-center items-center w-14 h-14 bg-text-color rounded-full">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                    </svg>
-
-                  </a> */}
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+      </svg>
+    </a> */}
                   <div className='flex justify-center mt-auto mb-2 w-auto'>
-                  <Button onClick={() =>
-                    
-                    hrefs1[index]()
+                    <Button 
 
-                  }
-                  className="rounded-3xl text-yellow-400 font-semibold px-5 text-center justify-center items-center"
-                  >{t("Detail")}</Button>
+
+onClick={hrefs1[index]} className="btn flex flex-row rounded-3xl text-yellow-400 font-semibold gap-x-1 text-center justify-center items-center">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+  <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 0 1 .67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 1 1-.671-1.34l.041-.022ZM12 9a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+</svg>
+  {t("Detail")}</Button>
                   </div>
                 </div>
-              )}
+              )
+             
+              }
+
             </div>
           ))}
         </div>
@@ -179,15 +193,15 @@ function Service() {
         </svg>
       </div>
       <div className='md:mx-32 mx-2 my-5'>
-        <div  className="grid md:grid-cols-3 grid-cols-1 gap-3 md:gap-9 justify-center items-center">
+        <div className="grid md:grid-cols-3 grid-cols-1 gap-3 md:gap-9 justify-center items-center">
           {/* Map over your portfolio items */}
-          {[img3, img4, img5, img6,img7,].map((img, index) => (
+          {[img3, img4, img5, img6, img7,].map((img, index) => (
             <div
-            data-aos="flip-up"
+              data-aos="flip-up"
               key={index}
               onMouseEnter={() => setHoveredItem1(index)}
               onMouseLeave={() => setHoveredItem1(null)}
-              className="h-[350px] shadow-white
+              className="h-[350px] shadow-white 
               shadow-2xl w-full border-2 rounded-2xl hover:bg-sky-300 hover:border-sky-300 relative"
               style={{
                 backgroundImage: `linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),url(${img})`,
@@ -197,8 +211,11 @@ function Service() {
               }}
             >
               {hoveredItem1 === index && (
-                <div className="bg-sky-300 rounded-2xl   absolute   inset-0 flex justify-center items-center flex-col px-16 bg-gradient-to-t  ">
-                  <h4 className=" text-center 
+                <div className="bg-sky-300 rounded-2xl 
+                
+                transform  hover:scale-90 hover:shadow-lg
+                absolute   inset-0 flex justify-center items-center flex-col px-3 bg-gradient-to-t  ">
+                  <h4 className=" text-center -translate-y-2
                   bg-gradient-to-r from-orange-500 via-yellow-500 to-green-500 text-purple-800 rounded-lg m-0 self-stretch relative text-inherit leading-[44px] font-semibold font-inherit
                   text-2xl">{t("Personal project")}</h4>
                   <p className={`text-lg text-black mt-8 text-start ${index === 4 ? 'animate-bounce' : ''}`}>{values1[index]}</p>
@@ -206,13 +223,13 @@ function Service() {
 
                     <Button type='link' target="_blank" href={hrefs[index]} className="flex justify-center
                    items-center w-8 h-8 bg-text-color rounded-full"
-                   icon={ <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                   <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                 </svg>}
-                   >
+                      icon={<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                      </svg>}
+                    >
                       {t("Visit here")}
                     </Button>
-                    
+
                   </div>
                 </div>
               )}
@@ -220,21 +237,26 @@ function Service() {
           ))}
         </div>
       </div>
-      <Nav darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
-      <Fotter />
-      <Drawer className='flex flex-col justify-center items-center'
-        title={<div className='uppercase'> {t("RESTAURANT FOOD ORDERING APPLICATION")}
 
-           
-           </div>}
+
+
+      <Nav darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      <Fotter />
+
+
+
+      <Drawer 
+        className='flex flex-col justify-center items-center'
+        title={t("RESTAURANT FOOD ORDERING APPLICATION")}
         width={window.innerWidth >= 768 ? '50%' : '100%'}
-        open={open} onClose={onClose}
+        open={open}
+        onClose={onClose}
         placement="right"
 
       >
-       
+
         <div className='flex flex-col justify-center items-center w-auto'>
-        
+
           <List
             itemLayout="vertical"
             size="large"
@@ -257,7 +279,7 @@ function Service() {
           <List
             itemLayout="vertical"
             size="large"
-            
+
             pagination={{
               onChange: (page) => {
                 console.log(page);
@@ -275,10 +297,10 @@ function Service() {
             )}
           />
           <h1 className='text-center text-3xl text-amber-500 text-'>{t("Detail")}<br /></h1>
-          <div className='flex '>
+          <div className='flex mx-2'>
             <span >
               <h4 className='font-medium text-black'>
-               {t("Project scale: graduation thesis course")}<br />
+                {t("Project scale: graduation thesis course")}<br />
                 {t("Team size: 2 people")}<br />
                 {t("My location:(front-end,test-case creation, documentation)")}<br />
                 - {t("Develop a website interface for kitchen staff with ReactJS, a mobie interface for waiters with ReactNative, develop documents, and complete the database with the rest of you.")}<br />
@@ -287,7 +309,7 @@ function Service() {
                 - {t("Receive orders, process orders on the website application, CRUD dishes, staff, statistics desk at the website application of the manager.")}<br />
                 - {t("The user interface is implemented using ReactJS and ReactNative.")}<br />
                 - {t("The backend uses GoLang and MySQL and is deployed on VPS.")}<br />
-                 {t("Technologies used")}: HTML / CSS, JavaScript, ReactJS, React Native, GoLang.<br /><br />
+                {t("Technologies used")}: HTML / CSS, JavaScript, ReactJS, React Native, GoLang.<br /><br />
               </h4>
             </span>
           </div>
@@ -303,6 +325,7 @@ function Service() {
           </div>
         </div>
       </Drawer>
+      
       <Drawer
         className='flex flex-col justify-center items-center'
         title={t("ZOLA CHAT APP")}
@@ -312,7 +335,7 @@ function Service() {
         placement="left"
       >
         <div className='flex w-auto flex-col justify-center items-center'>
-          <List    itemLayout="vertical"
+          <List itemLayout="vertical"
             size="large"
             pagination={{
               onChange: (page) => {
@@ -327,7 +350,7 @@ function Service() {
             }
             dataSource={imgs1}
             renderItem={(image, index) => (
-              <Image key={index} className="px-2" width={300} height={200} src={image} /> )}
+              <Image key={index} className="px-2" width={300} height={200} src={image} />)}
           />
 
           <List itemLayout="vertical"
@@ -346,7 +369,7 @@ function Service() {
             }
             dataSource={imgs}
             renderItem={(image, index) => (
-              <Image key={index} className="px-2 " width={200} src={image} /> )}
+              <Image key={index} className="px-2 " width={200} src={image} />)}
           />
 
           <h1 className='mt-36 text-center text-3xl text-amber-500 text-'>Detail<br /></h1>
@@ -365,14 +388,14 @@ function Service() {
               </h4>
             </span>
             <div className='flex'>
-              <br/>
+              <br />
               <h1 className='justify-start text-black font-medium'>{t("Source code at GitHub")}:&emsp;</h1>
-              
+
             </div>
             <div className='flex flex-row'>
-            <span className='justify-start text-black font-medium'>{t("Mobile & Website")} 👉:{'\t'}</span>
+              <span className='justify-start text-black font-medium'>{t("Mobile & Website")} 👉:{'\t'}</span>
               <Button type='link' className='animate-bounce' icon={<GithubOutlined />} href='https://github.com/2602hoang/zola-gui' />
-              </div>
+            </div>
           </div>
         </div>
       </Drawer>

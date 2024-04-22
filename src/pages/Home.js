@@ -67,22 +67,28 @@ function Home() {
                       </div>
 
                       <div className='space-x-8 flex flex-row '>
+                      <Popover  trigger="hover" content={<b>Github</b>}>
                       <Button
                       id="link"
                       target="_blank"
                       className='rounded-full hover:bg-sky-300 bg-white hover:animate-none border-2
                       border-black animate-bounce' href='https://github.com/2602hoang' title={t('Github me')} type='link'
                         icon={<GithubFilled style={{color:'black'}}/>}/>
+                      </Popover>
+                      <Popover  trigger="hover" content={<b>Email</b>}>
                       <Button
                       id="link"
                       target="_blank"
                       className='rounded-full hover:bg-sky-300 bg-white hover:animate-none border-2 border-black animate-bounce'
                        href='mailto:vuhuyhoangboj@gmail.com' title={t('Gmail me')} type='link' icon={<MailFilled style={{color:'black'}} />}/>
+                      </Popover>
+                      <Popover  trigger="hover" content={<b>FaceBook</b>}>
                       <Button 
                       id="link"
                       target="_blank"
                       className='rounded-full hover:bg-sky-300 bg-white hover:animate-none border-2 border-black animate-bounce' 
                       href='https://www.facebook.com/VHH26022001' title={t('Facebook me')} type='link' icon={<FacebookFilled  style={{color:'black'}}/>}/>
+                      </Popover>
                         <Popover
                       overlayInnerStyle={{
                         padding: 0,
@@ -95,6 +101,7 @@ function Home() {
                       <Button
                       id="link"
                       target="_blank"
+                      href='tel:0917789964'
                       className='rounded-full hover:bg-sky-300 bg-white hover:animate-none border-2 border-black animate-bounce' onClick={()=>{
                         
                       }} title={t('Call me')} type='text' icon={<PhoneFilled   style={{color:'black'}}/>}>
@@ -123,7 +130,9 @@ function Home() {
                 </div>
 
                 <div  className={`md:ml-40  ${darkMode ? '': 'dark'}  my-10  mb-10 flex md:w-[400px] md:h-auto  `}>
-                <img  className={` hover:animate-none animate-float-image w-[400px] h-[500px] 
+                <img  className={`
+                
+                hover:animate-none animate-float-image w-[400px] h-[500px] 
                 ${darkMode ? 'bg-black' : ''}      `}
                  
                 src={darkMode ? avata : avata1} />
