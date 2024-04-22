@@ -94,7 +94,7 @@ function Contact() {
             <div data-aos="flip-left"
                 data-aos-easing="ease-out-cubic"
                 data-aos-duration="2000"
-                className='my-5 md:mx-48 mx-2  min-h-screen flex-col  flex justify-center items-center '>
+                className='my-5 md:mx-64 mx-2  min-h-screen flex-col  flex justify-center items-center '>
 
 
                 <div className='shadow-sky-200 
