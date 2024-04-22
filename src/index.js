@@ -27,7 +27,7 @@ const Spinner = () => {
       
     }
       style={{
-          background: darkMode ? "#121212" : "#121212",
+          background: darkMode ? "#fff" : "#121212",
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
