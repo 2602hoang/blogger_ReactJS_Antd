@@ -88,6 +88,7 @@ function Contact() {
     return (
 
         <div className={`flex w-full flex-col ${darkMode ? '' : 'dark'}`}>
+            
             <ProgressBar />
             <Header />
             <section></section>

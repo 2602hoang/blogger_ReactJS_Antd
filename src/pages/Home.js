@@ -31,7 +31,7 @@ function Home() {
  
   useEffect(() => {
     Aos.init({
-      duration: 3000, // Adjust the duration to your preference
+      duration: 1000, // Adjust the duration to your preference
     });
   }, []);
   const { darkMode, toggleDarkMode } = useDarkMode();
@@ -116,8 +116,8 @@ function Home() {
                     
                       <div className=' animate-none hover:animate-pulse mx-2 md:mx-0 md:justify-center md:items-center justify-center items-center flex'>               
                         <Button
-                        className='hover:animate-pulse bg-yellow-300'
-                        target="_blank"
+                        className=' btn hover:animate-pulse bg-yellow-300'
+                        target="_blank"  
                         onClick={() => {
                           window.open('https://drive.google.com/file/d/14B1j9y1IUDaneHU0BNiII_kXuBWdsye1/view?usp=sharing');
                           window.location.href = 'https://drive.google.com/uc?export=download&id=14B1j9y1IUDaneHU0BNiII_kXuBWdsye1';
