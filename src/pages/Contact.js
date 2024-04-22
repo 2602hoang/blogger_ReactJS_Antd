@@ -94,12 +94,12 @@ function Contact() {
             <div data-aos="flip-left"
                 data-aos-easing="ease-out-cubic"
                 data-aos-duration="2000"
-                className='my-5  min-h-screen flex-col  flex justify-center items-center '>
+                className='my-5 md:mx-48 mx-2  min-h-screen flex-col  flex justify-center items-center '>
 
 
                 <div className='shadow-sky-200 
-                     mx-5
                     
+                    container2
                     rounded-tl-3xl rounded-br-3xl border-yellow-300 border-2 
                     shadow-2xl p-5 flex flex-col justify-center items-center '>
 
@@ -107,7 +107,7 @@ function Contact() {
                         <h1 className='flex justify-center items-center text-center my-14 uppercase font-normal text-yellow-400 text-3xl'>{t("MESSAGE CONTENT")}</h1>
                         <div className="flex flex-wrap -mx-4">
                             <div className="w-full md:w-2/5 px-4 mb-4">
-                                <Form.Item  name="name" label={<p className={`${darkMode ? "text-black" : "text-white"}`}>
+                                <Form.Item  name="name" label={<p className={`${darkMode ? "text-white" : "text-white"}`}>
                                     {t("Your Name")}</p>} rules={[{ required: true }]}>
                                     <Input prefix={<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
   <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clip-rule="evenodd" />
@@ -117,7 +117,7 @@ function Contact() {
                                 </Form.Item>
                             </div>
                             <div className="w-full md:w-3/5 px-4 mb-4 md:pr-8">
-                                <Form.Item name="phone" label={<p className={`${darkMode ? "text-black" : "text-white"}`}>{t("Phone")}</p>}
+                                <Form.Item name="phone" label={<p className={`${darkMode ? "text-white" : "text-white"}`}>{t("Phone")}</p>}
                                     rules={[
                                         {
                                             required: true,
@@ -140,7 +140,7 @@ function Contact() {
                             </div>
                         </div>
                         <div className="w-full md:w-full md:pl-10 mb-4 md:pr-4">
-                            <Form.Item name="email" label={<p className={`${darkMode ? "text-black" : "text-white"}`}>Email</p>} rules={[{ type: 'email', required: true }]}>
+                            <Form.Item name="email" label={<p className={`${darkMode ? "text-white" : "text-white"}`}>Email</p>} rules={[{ type: 'email', required: true }]}>
                                 <Input prefix={<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
   <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
   <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
@@ -149,7 +149,7 @@ function Contact() {
                             </Form.Item>
                         </div>
                         <div className='w-full md:pl-3 md:pr-4 '>
-                            <Form.Item  name="message" label={<p className={`${darkMode ? "text-black" : "text-white"}`}>{t("Message")}</p>}
+                            <Form.Item  name="message" label={<p className={`${darkMode ? "text-white" : "text-white"}`}>{t("Message")}</p>}
                                 rules={[{ required: true, message: 'Please input your message!' }]}>
                                 <TextArea prefix={
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
@@ -169,7 +169,7 @@ function Contact() {
                                 
                             {t("Send Message")}</Button>
                         </Form.Item>
-                        <h1 className={`text-center font-thin text-sm ${darkMode ? "text-black" : "text-white"}`} >
+                        <h1 className={`text-center font-thin text-sm ${darkMode ? "text-white" : "text-white"}`} >
                             {t("(Your message will be sent to the page admin's personal mail)")}
                         </h1>
                     </Form>

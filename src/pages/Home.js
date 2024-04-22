@@ -40,16 +40,16 @@ function Home() {
         
   return (
     
-   <div className={`flex w-full flex-col ${darkMode ? '': 'dark'}`}>
+   <div className={`justify-center items-center flex w-full flex-col ${darkMode ? '': 'dark'}`}>
      <ProgressBar/>
             <Header /> 
             <section></section>
-            <div className='mb-5 min-h-screen w-full h-auto flex justify-center items-center md:flex-row flex-col'>
+            <div className='mb-5 min-h-screen  w-full h-auto flex justify-center items-center md:flex-row flex-col'>
               <div
                data-aos="fade-top" 
                className={`
                ${darkMode?"shadow-orange-50":"border-white"}  border-2 shadow-black 
-               mx-2 my-2 
+               mx-40 my-2 
                 shadow-2xl rounded-3xl p-5 h-[auto]  flex flex-col md:flex-row md:space-y-10 mt-11 `}
                >
                 <div className='space-y-11 mt-auto'>

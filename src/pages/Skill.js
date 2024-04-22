@@ -16,12 +16,12 @@ function Skill() {
   }, []);
   const { t } = useTranslation();
   return (
-    <div className={`flex w-full flex-col ${darkMode ? '': 'dark'}`}>
+    <div className={`flex w-full   justify-center items-center flex-col ${darkMode ? '': 'dark'}`}>
        <ProgressBar/>
         <Header/>
-
-        <div className='mt-8 min-h-screen w-full h-auto flex justify-center items-center  flex-col'>
-
+        <div className='md:mx-20 mx-2'>
+        <div className=' container1   mt-8 min-h-screen w-full h-auto flex justify-center items-center  flex-col'>
+    
           <b className=' flex justify-center items-center
           text-7xl text-transparent bg-clip-text
            bg-gradient-to-br
@@ -72,6 +72,7 @@ function Skill() {
             </div>
           </div>
 
+        </div>
         </div>
         <Nav darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
         <Fotter/>

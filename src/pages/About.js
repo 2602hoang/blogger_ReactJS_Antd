@@ -47,7 +47,7 @@ function About() {
              mt-5
              w-auto md:h-[550px]
              h-auto
-             md:w-1/2
+             md:w-1/2 
              
              flex text-start flex-col my-2 mx-3 md:mr-10  justify-center items-center 
              opacity-100  border-2 p-6 rounded-tr-[200px] rounded-br-[200px] ${darkMode ? 'text-black' : 'text-white'}`}>
