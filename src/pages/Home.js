@@ -40,7 +40,7 @@ function Home() {
         
   return (
     
-   <div className={`justify-center items-center flex w-full flex-col ${darkMode ? '': 'dark'}`}>
+   <div className={`justify-center overflow-hidden items-center flex w-full flex-col ${darkMode ? '': 'dark'}`}>
      <ProgressBar/>
             <Header /> 
             <section></section>
