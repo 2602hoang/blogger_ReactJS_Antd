@@ -232,6 +232,7 @@ i18n
                         "Please input a valid 10-digit phone number!":"Vui lòng nhập số điện thoại 10 chữ số hợp lệ!",
                         
                         "Please input your message!":"Vui lòng nhập tin nhắn của bạn!",
+                        "":"",
                         "Read More":"Đọc thêm",
                         "I'm a frontend developer passionate about crafting visually stunning websites and mobile apps that not only look beautiful but also offer robust functionality. I thrive on creating smooth user experiences, leveraging my creativity to inject a bit of excitement into every project."
                         :"Tôi là một nhà phát triển frontend, đam mê tạo ra những trang web và ứng dụng di động mỹ lệ không chỉ đẹp mắt mà còn mang lại nhiều chức năng hoàn hảo. Tôi hứng thú với việc tạo ra trải nghiệm người dùng mượt mà, sử dụng sự sáng tạo của mình để thêm một chút hứng khởi vào mỗi dự án.",
