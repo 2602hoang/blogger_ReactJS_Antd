@@ -16,7 +16,7 @@ function Skill() {
   }, []);
   const { t } = useTranslation();
   return (
-    <div className={`flex w-full  container1 justify-center items-center flex-col ${darkMode ? '': 'dark'}`}>
+    <div className={`flex w-full overflow-hidden  container1 justify-center items-center flex-col ${darkMode ? '': 'dark'}`}>
        <ProgressBar/>
         <Header/>
         <div className='md:mx-20 mx-2'>

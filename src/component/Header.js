@@ -22,6 +22,7 @@ function Header() {
   return (
     <div className ={`
     rounded-3xl
+    overflow-hidden
     header ${darkMode ? '': 'dark'} 
      container mx-auto px-4`}>
    {/* <ProgressBar/> */}

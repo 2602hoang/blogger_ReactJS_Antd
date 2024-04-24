@@ -19,7 +19,7 @@ function About() {
   const { t } = useTranslation();
   const { darkMode, toggleDarkMode } = useDarkMode();
   return (
-    <div className={`flex  justify-center items-center w-full flex-col ${darkMode ? '': 'dark'}`}>
+    <div className={`flex overflow-hidden justify-center items-center w-full flex-col ${darkMode ? '': 'dark'}`}>
           <ProgressBar/>
          <Header /> 
         <section></section>

@@ -87,7 +87,7 @@ function Contact() {
     const { darkMode, toggleDarkMode } = useDarkMode();
     return (
 
-        <div className={`flex w-full flex-col ${darkMode ? '' : 'dark'}`}>
+        <div className={`flex w-full overflow-hidden flex-col ${darkMode ? '' : 'dark'}`}>
             
             <ProgressBar />
             <Header />
