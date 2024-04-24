@@ -96,7 +96,7 @@ function Service() {
 
 
   return (
-    <div className={`flex w-full overflow-hidden flex-col ${darkMode ? '' : 'dark'}`}>
+    <div className={`flex w-full flex-col ${darkMode ? '' : 'dark'}`}>
 
       <ProgressBar />
 
