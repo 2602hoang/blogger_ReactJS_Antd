@@ -22,14 +22,16 @@ function Header() {
   return (
     <div className ={`
     rounded-3xl
+     w-full
+     container
     overflow-hidden
-    header ${darkMode ? '': 'dark'} 
-     container mx-auto px-4`}>
+     ${darkMode ? '': 'dark'} 
+      mx-auto px-4`}>
    {/* <ProgressBar/> */}
     <nav className='justify-between items-center py-3 flex   '>
         <div className='md:flex top-0 left-0  z-50  md:z-50  w-52 md:w-72 md:mr-96 flex flex-row '>
             <a href='/' className='font-black flex  items-center gap-x-2 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500'>
-            <img src={Logo} alt="Back Home" className='w-12 h-12'/>Blogger Me</a>
+            <img src={Logo} alt="Back Home" className='w-12 h-12'/>Blog Me</a>
         </div>
         <ul id="menu"
             className={`
@@ -74,7 +76,7 @@ function Header() {
         </div>
         
     </nav>
-</div>
+    </div>
   );
 }
 

@@ -122,7 +122,7 @@ function Service() {
         <div className=" grid md:grid-cols-2 grid-cols-1 gap-3 md:gap-9 justify-center items-center ">
           {/* Map over your portfolio items */}
           {[img1, img2,].map((img, index) => (
-            
+
             <div
               data-aos="flip-down"
               key={index}
@@ -141,37 +141,37 @@ function Service() {
                 backgroundPosition: 'center'
               }}
             >
-              {hoveredItem === index&&
-              (
-                <div className={`transform  hover:scale-90 hover:shadow-lg 
+              {hoveredItem === index &&
+                (
+                  <div className={`transform  hover:scale-90 hover:shadow-lg 
              
                 w-auto rounded-2xl h-auto absolute bg-sky-300 inset-0 
                 flex justify-center items-center flex-col px-16 bg-gradient-to-t from-opacity-10 to-main-color`}
-                >
-                  <h4 className="text-center -translate-y-2
+                  >
+                    <h4 className="text-center -translate-y-2
                 bg-gradient-to-r from-orange-500 via-yellow-500 to-green-500 text-purple-800
                 rounded-lg m-0 self-stretch relative text-inherit leading-[44px] font-semibold font-inherit
                 text-2xl">{t("Project with team")}</h4>
-                  <b className="text-center text-sm my-0">{values[index]}</b>
-                  <p className="text-black text-start text-sm my-0">{string[index]}</p>
-                  {/* <a target="_blank" href={hrefs1[index]} className="inline-flex justify-center items-center w-14 h-14 bg-text-color rounded-full">
+                    <b className="text-center text-sm my-0">{values[index]}</b>
+                    <p className="text-black text-start text-sm my-0">{string[index]}</p>
+                    {/* <a target="_blank" href={hrefs1[index]} className="inline-flex justify-center items-center w-14 h-14 bg-text-color rounded-full">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
         <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
       </svg>
     </a> */}
-                  <div className='flex justify-center mt-auto mb-2 w-auto'>
-                    <Button 
+                    <div className='flex justify-center mt-auto mb-2 w-auto'>
+                      <Button
 
 
-onClick={hrefs1[index]} className="btn flex flex-row rounded-3xl text-yellow-400 font-semibold gap-x-1 text-center justify-center items-center">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
-  <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 0 1 .67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 1 1-.671-1.34l.041-.022ZM12 9a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
-</svg>
-  {t("Detail")}</Button>
+                        onClick={hrefs1[index]} className="btn flex flex-row rounded-3xl text-yellow-400 font-semibold gap-x-1 text-center justify-center items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+                          <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 0 1 .67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 1 1-.671-1.34l.041-.022ZM12 9a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" clipRule="evenodd" />
+                        </svg>
+                        {t("Detail")}</Button>
+                    </div>
                   </div>
-                </div>
-              )
-             
+                )
+
               }
 
             </div>
@@ -221,14 +221,118 @@ onClick={hrefs1[index]} className="btn flex flex-row rounded-3xl text-yellow-400
                   <p className={`text-lg text-black mt-8 text-start ${index === 4 ? 'animate-bounce' : ''}`}>{values1[index]}</p>
                   <div className='flex flex-row justify-center items-center mt-auto'>
 
-                    <Button type='link' target="_blank" href={hrefs[index]} className="flex justify-center
+                    {/* <Button type='link' target="_blank" href={hrefs[index]} className="flex justify-center
                    items-center w-8 h-8 bg-text-color rounded-full"
                       icon={<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                       </svg>}
                     >
                       {t("Visit here")}
-                    </Button>
+                    </Button> */}
+                    <div
+                      class="group relative flex justify-center items-center text-zinc-600 text-sm font-bold"
+                    >
+                      <div
+                        class="absolute opacity-0 group-hover:opacity-100 group-hover:-translate-y-[150%] -translate-y-[300%] duration-500 group-hover:delay-500 skew-y-[20deg] group-hover:skew-y-0 shadow-md"
+                      >
+                        <div class="bg-lime-200 flex items-center gap-1 p-2 rounded-md">
+                          <svg
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            height="20px"
+                            width="20px"
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="stroke-zinc-600"
+                          >
+                            <circle stroke-linejoin="round" r="9" cy="12" cx="12"></circle>
+                            <path
+                              stroke-linejoin="round"
+                              d="M12 3C12 3 8.5 6 8.5 12C8.5 18 12 21 12 21"
+                            ></path>
+                            <path
+                              stroke-linejoin="round"
+                              d="M12 3C12 3 15.5 6 15.5 12C15.5 18 12 21 12 21"
+                            ></path>
+                            <path stroke-linejoin="round" d="M3 12H21"></path>
+                            <path stroke-linejoin="round" d="M19.5 7.5H4.5"></path>
+                            <g filter="url(#filter0_d_15_556)">
+                              <path stroke-linejoin="round" d="M19.5 16.5H4.5"></path>
+                            </g>
+                            <defs>
+                              <filter
+                                color-interpolation-filters="sRGB"
+                                filterUnits="userSpaceOnUse"
+                                height="3"
+                                width="17"
+                                y="16"
+                                x="3.5"
+                                id="filter0_d_15_556"
+                              >
+                                <feFlood result="BackgroundImageFix" flood-opacity="0"></feFlood>
+                                <feColorMatrix
+                                  result="hardAlpha"
+                                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                  type="matrix"
+                                  in="SourceAlpha"
+                                ></feColorMatrix>
+                                <feOffset dy="1"></feOffset>
+                                <feGaussianBlur stdDeviation="0.5"></feGaussianBlur>
+                                <feColorMatrix
+                                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
+                                  type="matrix"
+                                ></feColorMatrix>
+                                <feBlend
+                                  result="effect1_dropShadow_15_556"
+                                  in2="BackgroundImageFix"
+                                  mode="normal"
+                                ></feBlend>
+                                <feBlend
+                                  result="shape"
+                                  in2="effect1_dropShadow_15_556"
+                                  in="SourceGraphic"
+                                  mode="normal"
+                                ></feBlend>
+                              </filter>
+                            </defs>
+                          </svg>
+                          <span>{hrefs[index]}</span>
+                        </div>
+                        <div
+                          class="shadow-md bg-lime-200 absolute bottom-0 translate-y-1/2 left-1/2 translate-x-full rotate-45 p-1"
+                        ></div>
+                        <div
+                          class="rounded-md bg-white group-hover:opacity-0 group-hover:scale-[115%] group-hover:delay-700 duration-500 w-full h-full absolute top-0 left-0"
+                        >
+                          <div
+                            class="border-b border-r border-white bg-white absolute bottom-0 translate-y-1/2 left-1/2 translate-x-full rotate-45 p-1"
+                          ></div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="shadow-md flex items-center group-hover:gap-2 bg-gradient-to-br from-lime-200 to-yellow-200 p-3 rounded-full cursor-pointer duration-300"
+                      >
+                        <svg
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          height="20px"
+                          width="20px"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="fill-zinc-600"
+                        >
+                          <path
+                            stroke-linejoin="round"
+                            stroke-linecap="round"
+                            d="M15.4306 7.70172C7.55045 7.99826 3.43929 15.232 2.17021 19.3956C2.07701 19.7014 2.31139 20 2.63107 20C2.82491 20 3.0008 19.8828 3.08334 19.7074C6.04179 13.4211 12.7066 12.3152 15.514 12.5639C15.7583 12.5856 15.9333 12.7956 15.9333 13.0409V15.1247C15.9333 15.5667 16.4648 15.7913 16.7818 15.4833L20.6976 11.6784C20.8723 11.5087 20.8993 11.2378 20.7615 11.037L16.8456 5.32965C16.5677 4.92457 15.9333 5.12126 15.9333 5.61253V7.19231C15.9333 7.46845 15.7065 7.69133 15.4306 7.70172Z"
+                          ></path></svg
+                        >
+                        <a href={hrefs[index]}>
+                        <span class="text-[0px] group-hover:text-sm duration-300"
+                        >{t("Visit here")}</span
+                        ></a>
+                      </div>
+                    </div>
+
 
                   </div>
                 </div>
@@ -245,7 +349,7 @@ onClick={hrefs1[index]} className="btn flex flex-row rounded-3xl text-yellow-400
 
 
 
-      <Drawer 
+      <Drawer
         className='flex flex-col justify-center items-center'
         title={t("RESTAURANT FOOD ORDERING APPLICATION")}
         width={window.innerWidth >= 768 ? '50%' : '100%'}
@@ -325,7 +429,7 @@ onClick={hrefs1[index]} className="btn flex flex-row rounded-3xl text-yellow-400
           </div>
         </div>
       </Drawer>
-      
+
       <Drawer
         className='flex flex-col justify-center items-center'
         title={t("ZOLA CHAT APP")}

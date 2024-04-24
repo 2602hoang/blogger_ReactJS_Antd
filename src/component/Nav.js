@@ -33,12 +33,16 @@ function Nav() {
                     onClick={toggleDarkMode}
                     icon={<BgColorsOutlined />}
                 />
+
+
+                
                 <FloatButton
                     onClick={toggleLanguage}
                     icon={<img src={tr} alt="Language" />}
                     description={value}
                     tooltip={<div>{value}</div>}
                 />
+                
             </FloatButton.Group>
         
     );
