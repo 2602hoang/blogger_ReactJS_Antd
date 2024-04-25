@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Header from '../component/Header'
 import avata from '../assets/AVATA2.jpg'
 import Fotter from '../component/Fotter'
-import { Button, Drawer, Image, Modal } from 'antd'
+import { Button, Drawer, Image, Modal, Popover, QRCode } from 'antd'
 import Aos from 'aos';
 import "aos/dist/aos.css"
 import { useDarkMode } from '../component/DarkModeProvider';
@@ -14,7 +14,7 @@ import Nav from '../component/Nav'
 
 // Import Swiper styles
 import 'swiper/css';
-import { IdcardFilled } from '@ant-design/icons'
+import { FacebookFilled, GithubFilled, GithubOutlined, GoogleOutlined, IdcardFilled, MailFilled, PhoneFilled } from '@ant-design/icons'
 import Silde from '../component/Silde'
 
 
@@ -129,20 +129,70 @@ function About() {
                 }}>
                   <h1 className='text-black'>Image Person</h1>
                   <div className='flex flex-col w-full  bg-black'>
-                    
-                  <Silde/>
-                   
+                      <div className=' w-auto justify-center items-center'>
+                      <Silde/>
+                      </div>
                   </div>
 
 
                   <div className='mt-10 flex flex-col '> 
                     <div>
-                      <h1>Hello</h1>
-                      <h2>I am a student waiting for my diploma, so I can work full-time at the company.
-                        Software Engineering major, mainly Front-End programming, user interface design for Website and Mobie applications. 
-                        Looking forward to developing, learning to become a full-stack programmer in the future.</h2>
+                      <h1 className='text-3xl font-bold text-[#121212]'>Hello</h1>
+                      <h2 className='text-center '>I am a student who has completed a course in Software Engineering. <br/>
+                        I have mainly focused on programming interfaces and designing interfaces for web and mobile applications.<br/>
+                         I want to develop and learn to become a full-stack programmer in the future.</h2>
                     </div>
                   </div>
+                  <h2 className='mt-12'>My social network here 👇</h2>
+                  <div className='space-x-8 flex flex-row justify-center items-center mt-5'>
+                      <Popover  trigger="hover" content={<b>Github</b>}>
+                      <Button
+                      id="link"
+                      target="_blank"
+                      className='rounded-full hover:bg-sky-300 bg-white hover:animate-none border-2
+                      border-black animate-bounce' href='https://github.com/2602hoang' title={t('Github me')} type='link'
+                        icon={<GithubFilled style={{color:'black'}}/>}/>
+                      </Popover>
+                      <Popover  trigger="hover" content={<b>Email</b>}>
+                      <Button
+                      id="link"
+                      target="_blank"
+                      className='rounded-full hover:bg-sky-300 bg-white hover:animate-none border-2 border-black animate-bounce'
+                       href='mailto:vuhuyhoangboj@gmail.com' title={t('Gmail me')} type='link' icon={<MailFilled style={{color:'black'}} />}/>
+                      </Popover>
+                      <Popover  trigger="hover" content={<b>FaceBook</b>}>
+                      <Button 
+                      id="link"
+                      target="_blank"
+                      className='rounded-full hover:bg-sky-300 bg-white hover:animate-none border-2 border-black animate-bounce' 
+                      href='https://www.facebook.com/VHH26022001' title={t('Facebook me')} type='link' icon={<FacebookFilled  style={{color:'black'}}/>}/>
+                      </Popover>
+                        <Popover
+                      overlayInnerStyle={{
+                        padding: 0,
+                      }}
+                      content={
+                      <div>
+                        <h1 className='text-center uppercase text-black '>{t("Zalo me")}!!!</h1>
+                      <QRCode value="https://zalo.me/0917789964" title="Zalo Me" bordered={false} /></div>}
+                    >
+                      <Button
+                      id="link"
+                      target="_blank"
+                      href='tel:0917789964'
+                      className='rounded-full hover:bg-sky-300 bg-white hover:animate-none border-2 border-black animate-bounce' onClick={()=>{
+                        
+                      }} title={t('Call me')} type='text' icon={<PhoneFilled   style={{color:'black'}}/>}>
+                        091778994
+                      </Button>
+                        </Popover>
+
+                      
+                      
+                      
+                      </div>
+
+
       </Modal>
         </div>
         )
