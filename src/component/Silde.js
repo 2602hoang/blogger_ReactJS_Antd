@@ -19,7 +19,7 @@ function Silde() {
 
     return (    
         <div className='  justify-center items-center '>
-            <Carousel dots="true" className='w-[full] md:h-[800px]' >
+            <Carousel dots="true" speed={1000} autoplay autoplaySpeed={500} className='w-[full] md:h-[800px]' >
 
 
 

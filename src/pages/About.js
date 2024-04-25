@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Header from '../component/Header'
 import avata from '../assets/AVATA2.jpg'
 import Fotter from '../component/Fotter'
-import { Button, Drawer, Image, Modal, Popover, QRCode } from 'antd'
+import { Avatar, Button, Drawer, Image, Modal, Popover, QRCode } from 'antd'
 import Aos from 'aos';
 import "aos/dist/aos.css"
 import { useDarkMode } from '../component/DarkModeProvider';
@@ -14,8 +14,9 @@ import Nav from '../component/Nav'
 
 // Import Swiper styles
 import 'swiper/css';
-import { FacebookFilled, GithubFilled, GithubOutlined, GoogleOutlined, IdcardFilled, MailFilled, PhoneFilled } from '@ant-design/icons'
+import { CommentOutlined, FacebookFilled, GithubFilled, GithubOutlined, GoogleOutlined, IdcardFilled, MailFilled, PhoneFilled, UserOutlined } from '@ant-design/icons'
 import Silde from '../component/Silde'
+import TextArea from 'antd/es/input/TextArea'
 
 
 
@@ -39,7 +40,67 @@ function About() {
         console.log(e);
         setOpen(false);
     };
-
+    const [comment, setComment] = useState('');
+    const [comments, setComments] = useState([]);
+    const handleSendComment = () => {
+      const currentTime = getCurrentTime();
+      const newComment = {
+        user: {
+          avatar: "",
+          name: " Anonymous",
+          mail: " Anonymous@gmail.com",
+        },
+        content: comment,
+        time: currentTime,
+      };
+      setComments([newComment, ...comments]);
+      setComment('');
+    };
+  
+    const renderComments = () => {
+      return comments.map((cmt, index) => (
+        <div className='flex-col flex w-full border-2 my-3 p-2 rounded-2xl '>
+            <div key={index} className="flex flex-row gap-5 border-b-2 ">
+              <div className='mr-auto'>
+                <a>
+                <Avatar style={{ backgroundColor: '#121212' }} icon={<UserOutlined />} />
+                  <span>{cmt.user.name}</span>
+                </a>
+                
+              </div>
+              <div className='ml-auto'>
+              <span >{cmt.time}</span>
+              </div>
+            </div>
+            
+          <b className='text-start mt-5  '><CommentOutlined style={{fontSize:"20px"}} className='mr-4 '/>:{cmt.content}</b>
+        </div>
+      ));
+    };
+    
+    const getCurrentTime = () => {
+      const now = new Date();
+      const date = now.getDate();
+      const month = now.getMonth() + 1;
+      const year = now.getFullYear();
+      const hours = now.getHours();
+      const minutes = now.getMinutes();
+      const formattedDateTime =
+        (date < 10 ? "0" : "") +
+        date +
+        "/" +
+        (month < 10 ? "0" : "") +
+        month +
+        "/" +
+        year +
+        " " +
+        (hours < 10 ? "0" : "") +
+        hours +
+        ":" +
+        (minutes < 10 ? "0" : "") +
+        minutes;
+      return formattedDateTime;
+    };
   
 
   const { t } = useTranslation();
@@ -111,7 +172,8 @@ function About() {
 
       <Nav darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <Fotter />
-      <Modal  title={<div className='flex justify-center items-center gap-4'> <IdcardFilled style={{color:'black',fontSize:"25px"}}/> {'\t\t\t\t'} About Me   </div>}
+      <Modal  title={<div className='flex justify-center items-center gap-4'> 
+      <IdcardFilled style={{color:'black',fontSize:"25px"}}/> {'\t\t\t\t'} About Me   </div>}
                 className=' overflow-hidden text-center  h-max  '
                 width={ window.innerWidth >= 768 ? "70%":"100%"}
                 
@@ -137,12 +199,30 @@ function About() {
 
                   <div className='mt-10 flex flex-col '> 
                     <div>
-                      <h1 className='text-3xl font-bold text-[#121212]'>Hello</h1>
+                     
                       <h2 className='text-center '>I am a student who has completed a course in Software Engineering. <br/>
                         I have mainly focused on programming interfaces and designing interfaces for web and mobile applications.<br/>
                          I want to develop and learn to become a full-stack programmer in the future.</h2>
                     </div>
                   </div>
+                   <h1 className='text-3xl font-bold text-[#121212]'>Leave a Comment</h1>
+
+                   <div id="conten_post" className='flex  justify-center items-center flex-col'>
+                    <h5>Comment</h5>
+                      <div id="cmt_input" className='w-1/2 space-y-6'>
+                        <TextArea 
+                        autoSize={{
+                          minRows: 4,
+                          maxRows: 10,
+                        }}
+                        id="cmtArea" placeholder='Comment here' value={comment} onChange={(e) => setComment(e.target.value)} ></TextArea>
+                        <Button id="cmtSubmit" onClick={handleSendComment}>Send</Button>
+                      </div>
+                      <div id="commentWrapper" className='w-full md:w-1/2 mt-5  '>
+                      {renderComments()}
+                      </div>
+                   </div>
+
                   <h2 className='mt-12'>My social network here 👇</h2>
                   <div className='space-x-8 flex flex-row justify-center items-center mt-5'>
                       <Popover  trigger="hover" content={<b>Github</b>}>
