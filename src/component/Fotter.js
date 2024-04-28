@@ -27,7 +27,7 @@ function Fotter() {
   }, []);
 
   return (
-    <div className="container5 border-t-2 flex-col flex w-full justify-center items-center flex-wrap bg-secondary-bg-color p-8">
+    <div className=" border-t-2 flex-col flex w-full justify-center items-center flex-wrap bg-secondary-bg-color p-8">
       <FloatButton.BackTop style={{ height: '60px', width: '60px' }} tooltip={<b>Back Top</b>} />
       <Button
         target="_blank"

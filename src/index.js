@@ -17,6 +17,7 @@ import logo from "./assets/dev.png"
 
 import Eror from './pages/Eror';
 
+
 const Spinner = () => {
   const { darkMode } = useDarkMode();
 
@@ -58,6 +59,7 @@ const App = () => {
         <BrowserRouter>
           <Routes>
           <Route path='/eror' element={loading ? <Spinner /> : <Eror />} />
+          {/* <Route path='/login' element={loading ? <Spinner /> : <Login />} /> */}
             <Route path='/' element={loading ? <Spinner /> : <Home />} />
             <Route path='/about' element={loading ? <Spinner /> : <About />} />
             <Route path='/projects' element={loading ? <Spinner /> : <Service />} />

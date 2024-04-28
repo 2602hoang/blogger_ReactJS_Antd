@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Header from '../component/Header'
 import avata from '../assets/AVATA2.jpg'
 import Fotter from '../component/Fotter'
-import { Avatar, Button, Drawer, Image, Modal, Popover, QRCode } from 'antd'
+import { Avatar, Button, Drawer, Form, Image, Input, Modal, Popover, QRCode } from 'antd'
 import Aos from 'aos';
 import "aos/dist/aos.css"
 import { useDarkMode } from '../component/DarkModeProvider';
@@ -14,21 +14,25 @@ import Nav from '../component/Nav'
 
 // Import Swiper styles
 import 'swiper/css';
-import { CommentOutlined, FacebookFilled, GithubFilled, GithubOutlined, GoogleOutlined, IdcardFilled, MailFilled, PhoneFilled, UserOutlined } from '@ant-design/icons'
+import { CommentOutlined, FacebookFilled, GithubFilled, GithubOutlined, GoogleOutlined, IdcardFilled, MailFilled, PhoneFilled, SendOutlined, UserOutlined } from '@ant-design/icons'
 import Silde from '../component/Silde'
 import TextArea from 'antd/es/input/TextArea'
+
+import axios from 'axios'
 
 
 
 function About() {
+  const { t } = useTranslation();
   useEffect(() => {
     Aos.init({
       duration: 1000, // Adjust the duration to your preference
     });
   }, []);
  
+  const [loading, setLoading] = useState(false)
+  const [check,setCheck] =useState(false);
   const [open, setOpen] = useState(false);
-
     const showModal = () => {
         setOpen(true);
     };
@@ -40,71 +44,150 @@ function About() {
         console.log(e);
         setOpen(false);
     };
+    const [open1, setOpen1] = useState(false);
+    const showModal1 = () => {
+        setOpen1(true);
+    };
+    const handleOk1 = (e) => {
+        console.log(e);
+        setOpen1(false);
+    };
+    const handleCancel1 = (e) => {
+        console.log(e);
+        setOpen1(false);
+    };
     const [comment, setComment] = useState('');
-    const [comments, setComments] = useState([]);
-    const handleSendComment = () => {
-      const currentTime = getCurrentTime();
-      const newComment = {
-        user: {
-          avatar: "",
-          name: " Anonymous",
-          mail: " Anonymous@gmail.com",
-        },
-        content: comment,
-        time: currentTime,
-      };
-      setComments([newComment, ...comments]);
-      setComment('');
+    // const [name, setName] = useState('');
+    // const [email, setEmail] = useState('');
+    // const [comments, setComments] = useState([]);
+    const handleSendComment = async (values, e) => {
+      if (e) e.preventDefault();
+      try {
+          const formURL = "https://docs.google.com/forms/d/e/1FAIpQLSflhgHoZvom5pzC0aiEDKIguU7k2ABWTWroq1qA8KclPDZrCA/formResponse"; // Google Form URL
+          const formData = new FormData();
+
+          // Append form values to formData
+          formData.append("entry.1595185453", values.name);
+          formData.append("entry.1329299153", values.email);
+          formData.append("entry.765171285", values.message);
+
+          // Submit formData to Google Form URL
+          await axios.post(formURL, formData, {
+              headers: {
+                  'Content-Type': 'application/x-www-form-urlencoded'
+              }
+          });
+
+          // Reset form fields after successful submission
+          // form.resetFields();
+
+          // Show success message to user
+           alert(`${t("Comment Success.Thanks U!!!")}`);
+          // console.log(formData);
+          resetFields(['name','email','message']);
+          handleCancel1();
+          
+          getComment();
+
+      }
+
+      catch (error) {
+          // form.resetFields();  
+          console.error('Error submitting form:', error);
+          resetFields(['name','email','message']);
+          handleCancel1();
+          
+          getComment();
+           alert(`${t("Comment Success.Thanks U!!!")}`);
+          // form.resetFields();
+
+      }
     };
+    useEffect(() => {
+      getComment();
+      //setLoading(true);
+      // getBanIDcontrong();
+      // getBanIDsudung();
+      setTimeout(() => {
+        setLoading(false);
+    }, 1000);
+      
+  }, []);
+    const getComment =async ()=>{
+      try {
+       
+       const reponse = await axios.get(`https://script.googleusercontent.com/macros/echo?user_content_key=Sh0dbG36cqnSuNjX8KlqPFTlLYgafsJ-mo8sHWC63jTZ36vTmbYixrJTuPJUdZMJlBQmctlC0F1m0noclLPkxdHI-Uog9fktm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnJvWH7-NqqPu9xUmUl8VXxLHBg1pWCl25YyAoPEtIwcvpX2HWczp9doKZV7MwLThk2YOL62slGMnCchTin-XhVboARGPSpsE-g&lib=Mzpwhs7tDO-FN3mzLalj4dcTi32_F69pn`)
+       const data = reponse.data;
+        setComment(reponse.data.data) 
+        console.log(reponse.data.data);
+      } catch (error) {
+        console.error('Error fetching post:', error);
+      }
+    }
+
+
+  const resetFields = (fields) => {
+      fields.forEach(field => {
+          form1.setFieldsValue({ [field]: undefined });
+      });
+  };
   
-    const renderComments = () => {
-      return comments.map((cmt, index) => (
-        <div className='flex-col flex w-full border-2 my-3 p-2 rounded-2xl '>
-            <div key={index} className="flex flex-row gap-5 border-b-2 ">
-              <div className='mr-auto'>
-                <a>
+  const renderComments = () => {
+    // Convert the comment object to an array of comments
+    const commentsArray = Object.values(comment);
+  
+    // Get the last 10 comments
+    const lastTenComments = commentsArray.slice(-10);
+  
+    // Reverse the order of comments to display the most recent first
+    const reversedComments = lastTenComments.reverse();
+  
+    return reversedComments.map((cmt, index) => {
+      // Format the time
+      const formattedTime = new Date(cmt.time).toLocaleString();
+  
+      return (
+        
+        <div className='flex-col flex w-full border-2 my-3 p-2 rounded-2xl' key={index}>
+          <div className="flex flex-row gap-5 border-b-2">
+            <div className='mr-auto'>
+              <a >
                 <Avatar style={{ backgroundColor: '#121212' }} icon={<UserOutlined />} />
-                  <span>{cmt.user.name}</span>
-                </a>
-                
-              </div>
-              <div className='ml-auto'>
-              <span >{cmt.time}</span>
-              </div>
+                <span className='ml-2 text-sky-400'>{cmt.name}</span>
+              </a>
             </div>
-            
-          <b className='text-start mt-5  '><CommentOutlined style={{fontSize:"20px"}} className='mr-4 '/>:{cmt.content}</b>
+            <div className='ml-auto'>
+              <span>{formattedTime}</span>
+            </div>
+          </div>
+          <p className='text-start font-thin text-[10px]'>This  [{cmt.email}]  left a comment 👇👇  </p>
+          <b className='text-start mt-5'>Comment
+            <CommentOutlined style={{ fontSize: "20px" }} className='ml-2' />:
+             {"\t\t\t"}{cmt.comment}
+          </b>
         </div>
-      ));
-    };
+      );
+    });
+  };
+  
+  
+  
+  
     
-    const getCurrentTime = () => {
-      const now = new Date();
-      const date = now.getDate();
-      const month = now.getMonth() + 1;
-      const year = now.getFullYear();
-      const hours = now.getHours();
-      const minutes = now.getMinutes();
-      const formattedDateTime =
-        (date < 10 ? "0" : "") +
-        date +
-        "/" +
-        (month < 10 ? "0" : "") +
-        month +
-        "/" +
-        year +
-        " " +
-        (hours < 10 ? "0" : "") +
-        hours +
-        ":" +
-        (minutes < 10 ? "0" : "") +
-        minutes;
-      return formattedDateTime;
-    };
+  
+    const validateMessages = {
+      required: ` ${t('is required')}!`,
+      types: {
+          email: ` ${t('is not a valid email')}!`,
+          number: ` ${t('is not a valid number')}!`,
+      },
+     
+  };
   
 
-  const { t } = useTranslation();
+
   const { darkMode, toggleDarkMode } = useDarkMode();
+  const [form1] = Form.useForm();
   return (
     <div className={`flex overflow-hidden justify-center items-center w-full flex-col ${darkMode ? '' : 'dark'}`}>
       <ProgressBar />
@@ -137,7 +220,7 @@ function About() {
              md:w-1/2 
              
              flex text-start flex-col my-2 mx-3 md:mr-10  justify-center items-center 
-             opacity-100  border-2 p-6 rounded-tr-[200px] rounded-br-[200px] ${darkMode ? 'text-black' : 'text-white'}`}>
+             opacity-100  border-2 p-6 rounded-tr-[200px] rounded-br-[200px] ${darkMode ? 'text-black' : 'text-black'}`}>
           <p>
             {/* I am a student waiting for my diploma, so I can work full-time at the company. */}
             {/* Software Engineering major, mainly Front-End programming, user interface design for Website and Mobie applications.
@@ -205,23 +288,99 @@ function About() {
                          I want to develop and learn to become a full-stack programmer in the future.</h2>
                     </div>
                   </div>
-                   <h1 className='text-3xl font-bold text-[#121212]'>Leave a Comment</h1>
+                   <h1 className='text-3xl font-bold text-[#121212] my-6'>Please contribute with your comments</h1>
 
                    <div id="conten_post" className='flex  justify-center items-center flex-col'>
-                    <h5>Comment</h5>
-                      <div id="cmt_input" className='w-1/2 space-y-6'>
+                  {/* < Button className='animate-bounce bg-slate-950' type='link'onClick={showModal1} > Leave your own comment</Button> */}
+                  <button onClick={showModal1} class="bg-red-300 hover:bg-red-500 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:text-white shadow-white transform transition-all duration-500 ease-in-out hover:scale-110 hover:brightness-110 hover:animate-pulse active:animate-bounce">
+                  Leave your own comment!!!
+</button>
+                    <Modal 
+                     className=' overflow-hidden text-center w-1/2  h-max  '
+                     width={ window.innerWidth >= 768 ? "50%":"100%"}
+                     
+                     open={open1}
+                     onOk={handleOk1}
+                     onCancel={handleCancel1}
+     
+                     okButtonProps={{
+                         disabled: true,
+                         hidden: true,
+                     }}
+                     cancelButtonProps={{
+                         disabled: true,
+                         hidden: true,
+                     }}
+                    >
+                      <div id="cmt_input" className='md:w-full w-full md:space-y-6 items-center justify-center flex'>
+
+                        <Form form={form1} className='flex w-2/3 flex-col md:mx-0 md:w-[800px] h-auto justify-center items-center'
+                        validateMessages={validateMessages}
+                        onFinish={handleSendComment}
+                        name="nest-messages"
+                        >
+                            <div className="w-full md:w-full md:px-4 mb-4">
+                                <Form.Item name="name" 
+                                 label={<p className={`${darkMode ? "text-black" : "text-black"}`}>
+                                    {t("Your Name")}</p>}
+                                     rules={[{ required: true }]}>
+                                    <Input prefix={<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+                                        <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clip-rule="evenodd" />
+                                    </svg>
+
+                                    } autoSize={{ minRows: 1, maxRows: 2 }} />
+                                </Form.Item>
+                            </div>
+                            
+                            <div className='w-full md:w-full md:pl-[52px] md:pr-4 '>
+                              
+                            <Form.Item name="email" 
+                             label={<p className={`${darkMode ? "text-black" : "text-black"}`}>Email</p>} rules={[{ type: 'email', required: true }]}>
+                                <Input prefix={<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+                                    <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
+                                    <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
+                                </svg>
+                                } />
+                            </Form.Item>
+                           
+                             </div>
+                             <div className='w-full md:w-full md:pl-[110px] md:pr-4 '>
+                        <Form.Item name="message" rules={[{ required: true, message: t('Please input your comment!')}]}>
+                        
+                          
                         <TextArea 
                         autoSize={{
                           minRows: 4,
                           maxRows: 10,
                         }}
-                        id="cmtArea" placeholder='Comment here' value={comment} onChange={(e) => setComment(e.target.value)} ></TextArea>
-                        <Button id="cmtSubmit" onClick={handleSendComment}>Send</Button>
+                        id="cmtArea" name='message' placeholder='Comment here' ></TextArea>
+                        </Form.Item>
+                        </div>
+                        <Button className='btn  ' onCancel={handleCancel1} type='default'  htmlType="submit" 
+                            icon={<SendOutlined />}>Comment</Button>
+                        </Form>
+                        
                       </div>
+                  
+                  </Modal>
                       <div id="commentWrapper" className='w-full md:w-1/2 mt-5  '>
+                      <h2>Last (10) reviews</h2>
+                      
                       {renderComments()}
                       </div>
                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
                   <h2 className='mt-12'>My social network here 👇</h2>
                   <div className='space-x-8 flex flex-row justify-center items-center mt-5'>

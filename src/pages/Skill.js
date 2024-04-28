@@ -26,9 +26,14 @@ function Skill() {
       <div className='  md:mx-32  flex flex-col justify-center items-center'>
         <Header />
         <div className='flexd'>
+          <div className='flex h-auto'>
         <span class="my-2  loader"></span>
         </div>
-        <div className={`flex my-8  ${darkMode ? "container1" : "container3"} container1   justify-center items-center flex-col `}>
+        </div>
+        {/* ${darkMode ? "container1" : "container3"}  */}
+        <div className={`flex my-8  
+        
+           justify-center items-center flex-col `}>
       
           <div className='flex md:mx-20 mx-2 '>
             <div className='    mt-8 min-h-screen w-full h-auto flex justify-center items-center  flex-col'>
