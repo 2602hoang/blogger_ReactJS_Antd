@@ -288,11 +288,11 @@ function About() {
                          I want to develop and learn to become a full-stack programmer in the future.</h2>
                     </div>
                   </div>
-                   <h1 className='text-3xl font-bold text-[#121212] my-6'>Please contribute with your comments</h1>
+                   <h1 className=' text-3xl font-bold text-[#121212] my-6'>Please contribute with your comments</h1>
 
                    <div id="conten_post" className='flex  justify-center items-center flex-col'>
                   {/* < Button className='animate-bounce bg-slate-950' type='link'onClick={showModal1} > Leave your own comment</Button> */}
-                  <button onClick={showModal1} class="bg-red-300 hover:bg-red-500 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:text-white shadow-white transform transition-all duration-500 ease-in-out hover:scale-110 hover:brightness-110 hover:animate-pulse active:animate-bounce">
+                  <button onClick={showModal1} class="bg-red-300 hover:bg-red-500 text-white animate-bounce font-bold py-3 px-6 rounded-full shadow-lg hover:text-white shadow-white transform transition-all duration-500 ease-in-out hover:scale-110 hover:brightness-110 hover:animate-pulse active:animate-bounce">
                   Leave your own comment!!!
 </button>
                     <Modal 
