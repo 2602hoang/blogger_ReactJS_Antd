@@ -30,7 +30,7 @@ function About() {
     });
   }, []);
  
-  const [loading, setLoading] = useState(false)
+  // const [loading, setLoading] = useState(false)
   const [check,setCheck] =useState(false);
   const [open, setOpen] = useState(false);
     const showModal = () => {
@@ -108,9 +108,7 @@ function About() {
       //setLoading(true);
       // getBanIDcontrong();
       // getBanIDsudung();
-      setTimeout(() => {
-        setLoading(false);
-    }, 1000);
+      
       
   }, []);
     const getComment =async ()=>{
