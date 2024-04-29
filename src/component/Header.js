@@ -70,7 +70,7 @@ function Header() {
             </li>
             {/* <span class="my-2  loader"></span> */}
         </ul>
-        <div id='menu-button' className='animate-pulse pt-5 top-10 left-5  md:hidden cursor-pointer z-50 flexd' onClick={toggleMenu}>
+        <div id='menu-button' className='absolute animate-pulse pt-5 top-10 left-5  md:hidden cursor-pointer z-50 flexd' onClick={toggleMenu}>
            
             <FloatButton icon={<MenuOutlined  style={{color:'black', }}/>} className={`flex z-50  top-5 right-5 bg-`}/>
            
