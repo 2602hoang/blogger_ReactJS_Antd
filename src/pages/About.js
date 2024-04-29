@@ -135,7 +135,7 @@ function About() {
     const commentsArray = Object.values(comment);
   
     // Get the last 10 comments
-    const lastTenComments = commentsArray.slice(-10);
+    const lastTenComments = commentsArray.slice(-15);
   
     // Reverse the order of comments to display the most recent first
     const reversedComments = lastTenComments.reverse();
@@ -255,8 +255,8 @@ function About() {
       <Fotter />
       <Modal  title={<div className='flex justify-center items-center gap-4'> 
       <IdcardFilled style={{color:'black',fontSize:"25px"}}/> {'\t\t\t\t'} About Me   </div>}
-                className=' overflow-hidden text-center  h-max  '
-                width={ window.innerWidth >= 768 ? "70%":"100%"}
+                className='sticky overflow-hidden text-center  h-max  '
+                width={ window.innerWidth >= 768 ? "80%":"100%"}
                 
                 open={open}
                 onOk={handleOk}
@@ -270,7 +270,7 @@ function About() {
                     disabled: true,
                     hidden: true,
                 }}>
-                  <h1 className='text-black'>Image Person</h1>
+                  <h1 className='text-yellow-300 my-5 text-3xl'>Image Person</h1>
                   <div className='flex flex-col w-full  bg-black'>
                       <div className=' w-auto justify-center items-center'>
                       <Silde/>
@@ -361,8 +361,12 @@ function About() {
                       </div>
                   
                   </Modal>
-                      <div id="commentWrapper" className='w-full md:w-1/2 mt-5  '>
-                      <h2>Last (10) reviews</h2>
+                  <h2>
+                    {/* Last (10) reviews */}
+                    Comments
+                  </h2>
+                      <div id="commentWrapper" className='overflow-y-auto h-[600px]  w-full md:w-1/2 mt-5  '>
+                     
                       
                       {renderComments()}
                       </div>
