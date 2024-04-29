@@ -310,9 +310,9 @@ function About() {
                          hidden: true,
                      }}
                     >
-                      <div id="cmt_input" className='md:w-full w-full md:space-y-6 items-center justify-center flex'>
-
-                        <Form form={form1} className='flex w-2/3 flex-col md:mx-0 md:w-[800px] h-auto justify-center items-center'
+                      <div id="cmt_input" className='md:w-full w-full md:space-y-6 items-center flex-col justify-center flex'>
+                      <h1 className='text-[#99ff33] font-serif text-4xl animate-bounce font-semibold'>Your comment</h1>
+                        <Form form={form1}  className='flex w-2/3 flex-col md:mx-0 md:w-[800px] md:px-8 h-auto justify-center items-center'
                         validateMessages={validateMessages}
                         onFinish={handleSendComment}
                         name="nest-messages"
