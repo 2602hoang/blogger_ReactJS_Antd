@@ -233,7 +233,7 @@ function About() {
             {/* {t("I'm a frontend developer who loves to make things look beautiful and working perfectly")}. <br/>
                 {t("I'm passionate about making websites that are easy to use and that provide the best user experience possible")}.  <br/>
                 {t("I also happen to be a creative person, which I use to inject a little bit of fun into every project")}. */}
-          </p>'
+          </p>
           <div className=' mr-auto justify-center items-center '>
             {/* <Button className='btn text-center justify-center items-center p-5'>
                   {t("Read More")}
@@ -371,17 +371,6 @@ function About() {
                       {renderComments()}
                       </div>
                    </div>
-
-
-
-
-
-
-
-
-
-
-
 
 
                   <h2 className='mt-12'>My social network here 👇</h2>
