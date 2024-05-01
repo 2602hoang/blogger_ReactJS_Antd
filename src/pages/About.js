@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Header from '../component/Header'
 import avata from '../assets/AVATA2.jpg'
 import Fotter from '../component/Fotter'
-import { Avatar, Button, Drawer, Form, Image, Input, Modal, Popover, QRCode } from 'antd'
+import { Avatar, Button, Drawer, Form, Image, Input, Modal, Popover, QRCode, Tooltip } from 'antd'
 import Aos from 'aos';
 import "aos/dist/aos.css"
 import { useDarkMode } from '../component/DarkModeProvider';
@@ -19,6 +19,7 @@ import Silde from '../component/Silde'
 import TextArea from 'antd/es/input/TextArea'
 
 import axios from 'axios'
+
 
 
 
@@ -159,7 +160,7 @@ function About() {
             </div>
           </div>
           <p className='text-start font-thin text-[10px]'>This  [{cmt.email}]  left a comment 👇👇  </p>
-          <b className='text-start mt-5'>Comment
+          <b className='text-start mt-5'>{t("Comment")}
             <CommentOutlined style={{ fontSize: "20px" }} className='ml-2' />:
              {"\t\t\t"}{cmt.comment}
           </b>
@@ -242,7 +243,9 @@ function About() {
               <span class="circle" aria-hidden="true">
                 <span class="icon arrow"></span>
               </span>
+              {/* <Tooltip title="prompt text" > */}
               <span class="button-text">{t("Read More")}</span>
+              {/* </Tooltip> */}
             </button>
           </div>
         </div>
@@ -254,7 +257,7 @@ function About() {
       <Nav darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <Fotter />
       <Modal  title={<div className='flex justify-center items-center gap-4'> 
-      <IdcardFilled style={{color:'black',fontSize:"25px"}}/> {'\t\t\t\t'} About Me   </div>}
+      <IdcardFilled style={{color:'black',fontSize:"25px"}}/> {'\t\t\t\t'} {t("About me")}   </div>}
                 className='sticky overflow-hidden text-center  h-max  '
                 width={ window.innerWidth >= 768 ? "80%":"100%"}
                 
@@ -270,7 +273,9 @@ function About() {
                     disabled: true,
                     hidden: true,
                 }}>
-                  <h1 className='text-yellow-300 my-5 text-3xl'>Image Person</h1>
+                  
+                  <h1 className='text-yellow-300 my-5 text-3xl'>{t("Image Person")}</h1>
+                  
                   <div className='flex flex-col w-full  bg-black'>
                       <div className=' w-auto justify-center items-center'>
                       <Silde/>
@@ -281,17 +286,19 @@ function About() {
                   <div className='mt-10 flex flex-col '> 
                     <div>
                      
-                      <h2 className='text-center '>I am a student who has completed a course in Software Engineering. <br/>
-                        I have mainly focused on programming interfaces and designing interfaces for web and mobile applications.<br/>
-                         I want to develop and learn to become a full-stack programmer in the future.</h2>
+                      <h2 className='text-center '>{t("I am a student who has completed a course in Software Engineering.")} <br/>
+                        {t("I have mainly focused on programming interfaces and designing interfaces for web and mobile applications.")}<br/>
+                         {t("I want to develop and learn to become a full-stack programmer in the future.")}</h2>
                     </div>
                   </div>
-                   <h1 className=' text-3xl font-bold text-[#121212] my-6'>Please contribute with your comments</h1>
+                   <h1 className=' text-3xl font-bold text-[#121212] my-6'>{t("Please contribute with your comments")}</h1>
 
                    <div id="conten_post" className='flex  justify-center items-center flex-col'>
                   {/* < Button className='animate-bounce bg-slate-950' type='link'onClick={showModal1} > Leave your own comment</Button> */}
-                  <button onClick={showModal1} class="bg-red-300 hover:bg-red-500 text-white animate-bounce font-bold py-3 px-6 rounded-full shadow-lg hover:text-white shadow-white transform transition-all duration-500 ease-in-out hover:scale-110 hover:brightness-110 hover:animate-pulse active:animate-bounce">
-                  Leave your own comment!!!
+                  <button onClick={showModal1} class="bg-red-300 hover:bg-red-500 text-white animate-bounce 
+                  font-bold py-3 px-6 rounded-full shadow-lg hover:text-white shadow-white transform transition-all
+                   duration-500 ease-in-out hover:scale-110 hover:brightness-110 hover:animate-pulse active:animate-bounce">
+                  {t("Leave your own comment")}!!!
 </button>
                     <Modal 
                      className=' overflow-hidden text-center w-1/2  h-max  '
@@ -311,7 +318,7 @@ function About() {
                      }}
                     >
                       <div id="cmt_input" className='md:w-full w-full md:space-y-6 items-center flex-col justify-center flex'>
-                      <h1 className='text-[#99ff33] font-serif text-4xl animate-bounce font-semibold'>Your comment</h1>
+                      <h1 className='text-[#99ff33] font-serif text-4xl animate-bounce font-semibold'>{t("Your comment")}</h1>
                         <Form form={form1}  className='flex w-2/3 flex-col md:mx-0 md:w-[800px] md:px-8 h-auto justify-center items-center'
                         validateMessages={validateMessages}
                         onFinish={handleSendComment}
@@ -351,11 +358,11 @@ function About() {
                           minRows: 4,
                           maxRows: 10,
                         }}
-                        id="cmtArea" name='message' placeholder='Comment here' ></TextArea>
+                        id="cmtArea" name='message' placeholder={t('Comment here')} ></TextArea>
                         </Form.Item>
                         </div>
                         <Button className='btn  ' onCancel={handleCancel1} type='default'  htmlType="submit" 
-                            icon={<SendOutlined />}>Comment</Button>
+                            icon={<SendOutlined />}>{t("Comment")}</Button>
                         </Form>
                         
                       </div>
@@ -363,7 +370,7 @@ function About() {
                   </Modal>
                   <h2>
                     {/* Last (10) reviews */}
-                    Comments
+                    {t("Comments")}
                   </h2>
                       <div id="commentWrapper" className='overflow-y-auto h-[600px]  w-full md:w-1/2 mt-5  '>
                      
@@ -373,7 +380,7 @@ function About() {
                    </div>
 
 
-                  <h2 className='mt-12'>My social network here 👇</h2>
+                  <h2 className='mt-12'>{t("My social network here")} 👇</h2>
                   <div className='space-x-8 flex flex-row justify-center items-center mt-5'>
                       <Popover  trigger="hover" content={<b>Github</b>}>
                       <Button

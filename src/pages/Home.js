@@ -6,7 +6,7 @@ import Content from '../component/Content';
 import Fotter from '../component/Fotter';
 import avata from '../assets/AVATA.png'
 import avata1 from '../assets/AVATA1.png'
-import { Button, Modal, QRCode, Popover } from "antd"
+import { Button, Modal, QRCode, Popover, Tooltip } from "antd"
 import { UserOutlined, GithubFilled, FacebookFilled, MailFilled, PhoneFilled } from '@ant-design/icons';
 import Aos from 'aos';
 import "aos/dist/aos.css"
@@ -172,22 +172,28 @@ function Home() {
                   {/* <span class="font-bold text-5xl">Jr</span> */}
                   <p class="text-xs">{t("Frontend Developer")}</p>
                 </div>
+              
                 <button
                 target="_blank"
                 onClick={() => {
                   window.open('https://drive.google.com/file/d/14B1j9y1IUDaneHU0BNiII_kXuBWdsye1/view?usp=sharing');
                   window.location.href = 'https://drive.google.com/uc?export=download&id=14B1j9y1IUDaneHU0BNiII_kXuBWdsye1';
                 }}
-                title='View&Dowload'
+                
                 class="
                 btn hover:animate-pulse bg-yellow-300
                 duration-300 hover:bg-sky-900 border hover:text-gray-50  font-semibold text-sky-800
-                 px-3 py-2 flex flex-row items-center gap-3">{t("View CV me")}
+                 px-3 py-2 flex flex-row items-center gap-3">
+                  <Tooltip title={t('View & Dowload')} placement='bottom'>
+                  {t("View CV me")}
+                  </Tooltip>
                   <svg class="w-6 h-6 fill-current" height="100" preserveAspectRatio="xMidYMid meet" viewBox="0 0 100 100" width="100" x="0" xmlns="http://www.w3.org/2000/svg" y="0">
                     <path d="M22.1,77.9a4,4,0,0,1,4-4H73.9a4,4,0,0,1,0,8H26.1A4,4,0,0,1,22.1,77.9ZM35.2,47.2a4,4,0,0,1,5.7,0L46,52.3V22.1a4,4,0,1,1,8,0V52.3l5.1-5.1a4,4,0,0,1,5.7,0,4,4,0,0,1,0,5.6l-12,12a3.9,3.9,0,0,1-5.6,0l-12-12A4,4,0,0,1,35.2,47.2Z" fill-rule="evenodd">
                     </path>
                   </svg>
+                 
                 </button>
+               
 
                 <svg class="group-hover:scale-125 duration-500 absolute -bottom-0.5 -right-20 w-48 h-48 z-10 -my-2 
                  fill-gray-50 stroke-sky-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path data-name="layer1" d="M 50.4 51 C 40.5 49.1 40 46 40 44 v -1.2 a 18.9 18.9 0 0 0 5.7 -8.8 h 0.1 c 3 0 3.8 -6.3 3.8 -7.3 s 0.1 -4.7 -3 -4.7 C 53 4 30 0 22.3 6 c -5.4 0 -5.9 8 -3.9 16 c -3.1 0 -3 3.8 -3 4.7 s 0.7 7.3 3.8 7.3 c 1 3.6 2.3 6.9 4.7 9 v 1.2 c 0 2 0.5 5 -9.5 6.8 S 2 62 2 62 h 60 a 14.6 14.6 0 0 0 -11.6 -11 z" stroke-miterlimit="10" stroke-width="5"></path></svg>
@@ -229,13 +235,13 @@ function Home() {
 
             >
               <p class="text-xl sm:text-2xl font-semibold text-gray-500 font-serif">
-                Thank You
+                {t("Thank You")}
               </p>
               <p class="px-10 text-[10px] sm:text-[12px] text-gray-700">
-                It's great that you stopped by my blog
+                {t("It's great that you stopped by my blog")}
               </p>
               <p class="font-serif text-[10px] sm:text-[12px text-gray-700">
-                Wishing you a fantastic day ahead!
+                {t("Wishing you a fantastic day ahead!")}
               </p>
               {/* <p class="font-sans text-[10px] text-gray-700 pt-5">HoangVu_Dev</p> */}
               <div class="group duration-500 hover:-skew-x-0 skew-x-6 hover:translate-x-2">

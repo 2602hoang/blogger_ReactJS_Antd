@@ -147,7 +147,7 @@ function Contact() {
                                 </Form.Item>
                             </div>
                         </div>
-                        <div className="w-full md:w-full md:pl-10 mb-4 md:pr-4">
+                        <div className="w-full md:w-full md:pl-8 mb-4 md:pr-4">
                             <Form.Item name="email" label={<p className={`${darkMode ? "text-black" : "text-white"}`}>Email</p>} rules={[{ type: 'email', required: true }]}>
                                 <Input prefix={<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
                                     <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
@@ -206,17 +206,18 @@ function Contact() {
                             {t("(Your message will be sent to the page admin's personal mail)")}
                         </h1>
                     </Form>
+                    
 
                 </div>
-                <div className='mt-10 flexd'>
+                
+                
+
+            </div>
+            <div className='flex mt-10 flexd items-center justify-center'>
                     <div className='flex h-auto'>
                         <span class="my-2  loader"></span>
                     </div>
                 </div>
-                
-
-            </div>
-
 
 
             <section></section>
