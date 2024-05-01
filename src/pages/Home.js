@@ -164,12 +164,13 @@ function Home() {
                 icon={<UserOutlined />} title='View&Dowload'  >
 
                 {t("View CV me")}</Button> */}
+                
               <div class=" duration-300  hover:scale-105
               -rotate-0 group  border-sky-900 border-4 
                overflow-hidden rounded-2xl relative h-52 w-72 bg-sky-800 p-5 flex flex-col items-start gap-4">
                 <div class="text-gray-50">
                   {/* <span class="font-bold text-5xl">Jr</span> */}
-                  <p class="text-xs">Frontend Developer</p>
+                  <p class="text-xs">{t("Frontend Developer")}</p>
                 </div>
                 <button
                 target="_blank"
@@ -196,6 +197,7 @@ function Home() {
 
 
               </div>
+             
             </div>
           </div>
 

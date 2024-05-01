@@ -131,7 +131,8 @@ function Skill() {
                       </span>
                     </button>
 
-                    <button className="profile_item w-[200px] h-[200px] p-1 border-2 rounded-full hover:border-gray-400/50 cursor-pointer transition-all duration-500 z-0">
+                    <button className="
+                    profile_item w-[200px] h-[200px] p-1 border-2 rounded-full hover:border-gray-400/50 cursor-pointer transition-all duration-500 z-0">
                       <div
                         style={{ backgroundImage: `url(${me1})` ,
                         backgroundRepeat: 'no-repeat',
@@ -143,6 +144,7 @@ function Skill() {
                       >
                         <span className="w-20 h-20 inline-block"></span>
                       </div>
+                      
                     </button>
 
                   </div>
