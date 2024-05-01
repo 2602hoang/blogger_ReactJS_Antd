@@ -3,6 +3,7 @@ import { FloatButton } from 'antd';
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import '../i18n/i18n';
+import { TypeAnimation } from 'react-type-animation';
 
 function Fotter() {
   const { t } = useTranslation();
@@ -27,7 +28,9 @@ function Fotter() {
   }, []);
 
   return (
+
     <div className=" border-t-2 flex-col flex w-full justify-center items-center flex-wrap bg-secondary-bg-color p-8">
+    
       <FloatButton.BackTop style={{ height: '60px', width: '60px' }} tooltip={<b>Back Top</b>} />
       <Button
         target="_blank"
@@ -44,6 +47,11 @@ function Fotter() {
         {t(time)}
       </Button>
       <p className="text-center text-base">{t("Copyright")} &copy; 2024 {t("by")} Vu Hoang  <span>Dev</span> | {t("All Rights Reserved")}</p>
+      <div className='flex mt-10 flexd items-center justify-center'>
+                    <div className='flex h-auto'>
+                        <span class="my-2  loader"></span>
+                    </div>
+                </div>
     </div>
   );
 }

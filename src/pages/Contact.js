@@ -213,11 +213,7 @@ function Contact() {
                 
 
             </div>
-            <div className='flex mt-10 flexd items-center justify-center'>
-                    <div className='flex h-auto'>
-                        <span class="my-2  loader"></span>
-                    </div>
-                </div>
+           
 
 
             <section></section>

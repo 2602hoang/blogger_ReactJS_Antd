@@ -115,10 +115,11 @@ function About() {
     const getComment =async ()=>{
       try {
        
-       const reponse = await axios.get(`https://script.googleusercontent.com/macros/echo?user_content_key=Sh0dbG36cqnSuNjX8KlqPFTlLYgafsJ-mo8sHWC63jTZ36vTmbYixrJTuPJUdZMJlBQmctlC0F1m0noclLPkxdHI-Uog9fktm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnJvWH7-NqqPu9xUmUl8VXxLHBg1pWCl25YyAoPEtIwcvpX2HWczp9doKZV7MwLThk2YOL62slGMnCchTin-XhVboARGPSpsE-g&lib=Mzpwhs7tDO-FN3mzLalj4dcTi32_F69pn`)
-       const data = reponse.data;
+       const reponse = await axios.get(`https://script.googleusercontent.com/macros/echo?user_content_key=5wqqY-CtNSoQquf9bajeVl3SWr-y8g0uE0-tgywqAczCgJ662ajCeZkcogrVBojY0h-v81_JaVN9XMEDPRkA1VRRu7WbtwmGm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnIJfHfzqyYfZwtaIwMrWHXLxxWF3dfeQoyXoH3SxGADwH9zghcSjgf1yhPnPzJB-b2LQ2WJMOPlUsIMdT5m7Hi_AcVk7YJoqsw&lib=Mzpwhs7tDO-FN3mzLalj4dcTi32_F69pn`)
+     
+        const data = reponse.data;
         setComment(reponse.data.data) 
-        console.log(reponse.data.data);
+        console.log("ok",reponse.data.data);
       } catch (error) {
         console.error('Error fetching post:', error);
       }
@@ -134,7 +135,7 @@ function About() {
   const renderComments = () => {
     // Convert the comment object to an array of comments
     const commentsArray = Object.values(comment);
-  
+    
     // Get the last 10 comments
     const lastTenComments = commentsArray.slice(-15);
   
@@ -144,7 +145,7 @@ function About() {
     return reversedComments.map((cmt, index) => {
       // Format the time
       const formattedTime = new Date(cmt.time).toLocaleString();
-  
+          // console.log("123",cmt.comment);
       return (
         
         <div className='flex-col flex w-full border-2 my-3 p-2 rounded-2xl' key={index}>
