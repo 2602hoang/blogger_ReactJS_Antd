@@ -115,7 +115,7 @@ function About() {
     const getComment =async ()=>{
       try {
        
-       const reponse = await axios.get(`https://script.googleusercontent.com/macros/echo?user_content_key=5wqqY-CtNSoQquf9bajeVl3SWr-y8g0uE0-tgywqAczCgJ662ajCeZkcogrVBojY0h-v81_JaVN9XMEDPRkA1VRRu7WbtwmGm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnIJfHfzqyYfZwtaIwMrWHXLxxWF3dfeQoyXoH3SxGADwH9zghcSjgf1yhPnPzJB-b2LQ2WJMOPlUsIMdT5m7Hi_AcVk7YJoqsw&lib=Mzpwhs7tDO-FN3mzLalj4dcTi32_F69pn`)
+       const reponse = await axios.get(`https://script.googleusercontent.com/macros/echo?user_content_key=wDBrhBzpDCo7idHJ_SH773REjzHsFdS2_ffdpGDWXX7uq2jAj8BAIriLdIB3CSyjDPWPkfxxHNjLS-pELn7JTvyMoyF5s2Kfm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnEgL9nhK-M2mBUdOs52CTPvMtcH4kds3ekD6CDkZKCZrxWzN8CtmCieZLxMT0MIXHqGLH0DUmSHtlUUIpVhlO3ik_sXeP8pAyg&lib=Mzpwhs7tDO-FN3mzLalj4dcTi32_F69pn`)
      
         const data = reponse.data;
         setComment(reponse.data.data) 
@@ -131,13 +131,13 @@ function About() {
           form1.setFieldsValue({ [field]: undefined });
       });
   };
-  
+  let a = 20
   const renderComments = () => {
     // Convert the comment object to an array of comments
     const commentsArray = Object.values(comment);
     
     // Get the last 10 comments
-    const lastTenComments = commentsArray.slice(-15);
+    const lastTenComments = commentsArray.slice(-{a});
   
     // Reverse the order of comments to display the most recent first
     const reversedComments = lastTenComments.reverse();
@@ -371,7 +371,7 @@ function About() {
                   </Modal>
                   <h2>
                     {/* Last (10) reviews */}
-                    {t("Comments")}
+                   ({a}) {t("Comments")}
                   </h2>
                       <div id="commentWrapper" className='overflow-y-auto h-[600px]  w-full md:w-1/2 mt-5  '>
                      

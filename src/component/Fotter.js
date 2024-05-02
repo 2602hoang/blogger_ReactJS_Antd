@@ -47,11 +47,11 @@ function Fotter() {
         {t(time)}
       </Button>
       <p className="text-center text-base">{t("Copyright")} &copy; 2024 {t("by")} Vu Hoang  <span>Dev</span> | {t("All Rights Reserved")}</p>
-      <div className='flex mt-10 flexd items-center justify-center'>
+      {/* <div className='flex mt-10 flexd items-center justify-center'>
                     <div className='flex h-auto'>
                         <span class="my-2  loader"></span>
                     </div>
-                </div>
+                </div> */}
     </div>
   );
 }
