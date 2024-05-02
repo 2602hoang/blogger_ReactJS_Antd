@@ -42,11 +42,13 @@ function Home() {
       <div className='text-orange-400  text-[30px] flex '>
       <TypeAnimation
         sequence={[
+          t("Wellcome")+"👋",
+          1500,
           // Same substring at the start will only be typed out once, initially
-          t('Hello👋,'),
-          1000, // wait 1s before replacing "Mice" with "Hamsters"
-          t('Hi👋,'),
-          1000,
+          t('Hello,') +"👋" ,
+          1500, // wait 1s before replacing "Mice" with "Hamsters"
+          t('Hi,')+"👋",
+          1500,
           // 'Welcome',
           // 1000,
           

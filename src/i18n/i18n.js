@@ -8,6 +8,7 @@ i18n
                 vn: 
                 {
                 translation: {
+                    "Wellcome":"Chào Mừng",
                     "Vu Huy Hoang":"Vũ Huy Hoàng",
                     "Dark mode": "Chế độ sáng/tối",
                     "Hello,": "Xin chào",
@@ -257,6 +258,7 @@ i18n
                 en: 
                 {
                 translation: {
+                    "Wellcome":"Wellcome",
                     "Hello,":"Hello,",
                     "Hi,":"Hi,",
                     "Vu Huy Hoang":"Vu Huy Hoang",
