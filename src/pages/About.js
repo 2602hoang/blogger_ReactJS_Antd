@@ -131,7 +131,7 @@ function About() {
           form1.setFieldsValue({ [field]: undefined });
       });
   };
-  let a = 20
+  let a = 15
   const renderComments = () => {
     // Convert the comment object to an array of comments
     const commentsArray = Object.values(comment);
