@@ -39,13 +39,13 @@ function Home() {
   const { t } = useTranslation();
   const ExampleComponent = () => {
     return (
-      <div className='text-orange-400  text-[50px] flex '>
+      <div className='text-orange-400  text-[30px] flex '>
       <TypeAnimation
         sequence={[
           // Same substring at the start will only be typed out once, initially
-          t('Hello,'),
+          t('Hello👋,'),
           1000, // wait 1s before replacing "Mice" with "Hamsters"
-          t('Hi,'),
+          t('Hi👋,'),
           1000,
           // 'Welcome',
           // 1000,
