@@ -26,6 +26,8 @@ import axios from 'axios'
 function About() {
   const { t } = useTranslation();
   useEffect(() => {
+    
+    getComment();
     Aos.init({
       duration: 1000, // Adjust the duration to your preference
     });
@@ -104,18 +106,17 @@ function About() {
 
       }
     };
-    useEffect(() => {
-      getComment();
-      //setLoading(true);
-      // getBanIDcontrong();
-      // getBanIDsudung();
+  //   useEffect(() => {
+      
+     
       
       
-  }, []);
+  // }, []);
+  
     const getComment =async ()=>{
       try {
        
-       const reponse = await axios.get(`https://script.googleusercontent.com/macros/echo?user_content_key=wDBrhBzpDCo7idHJ_SH773REjzHsFdS2_ffdpGDWXX7uq2jAj8BAIriLdIB3CSyjDPWPkfxxHNjLS-pELn7JTvyMoyF5s2Kfm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnEgL9nhK-M2mBUdOs52CTPvMtcH4kds3ekD6CDkZKCZrxWzN8CtmCieZLxMT0MIXHqGLH0DUmSHtlUUIpVhlO3ik_sXeP8pAyg&lib=Mzpwhs7tDO-FN3mzLalj4dcTi32_F69pn`)
+       const reponse = await axios.get(`https://script.googleusercontent.com/macros/echo?user_content_key=1Cw4qo234u2dXGmpuIw37ATJvTQbUGo-GjduK7kpjF9-N6_aLp7fVK2JGozhkMiatdTOP_ymMxUdY1-Tna5u1oFPr3_iKUxRm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnJxV2HDAvbGflSVU4qKEN-8j-A42WDGIrm2bRQXkRrDvAyS95kltcrowL1s31SVq-HHgrjGINH7BMcjWB2ld2Fl4PYA3sx2lTg&lib=Mzpwhs7tDO-FN3mzLalj4dcTi32_F69pn`)
      
         const data = reponse.data;
         setComment(reponse.data.data) 
@@ -131,13 +132,13 @@ function About() {
           form1.setFieldsValue({ [field]: undefined });
       });
   };
-  let a = 15
+  let a = 16
   const renderComments = () => {
     // Convert the comment object to an array of comments
     const commentsArray = Object.values(comment);
     
     // Get the last 10 comments
-    const lastTenComments = commentsArray.slice(-{a});
+    const lastTenComments = commentsArray.slice(-a);
   
     // Reverse the order of comments to display the most recent first
     const reversedComments = lastTenComments.reverse();
