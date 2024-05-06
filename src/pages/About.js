@@ -132,13 +132,14 @@ function About() {
           form1.setFieldsValue({ [field]: undefined });
       });
   };
-  let a = 16
+
   const renderComments = () => {
     // Convert the comment object to an array of comments
     const commentsArray = Object.values(comment);
     
     // Get the last 10 comments
-    const lastTenComments = commentsArray.slice(-a);
+    const lastTenComments = commentsArray.slice(-15);
+    
   
     // Reverse the order of comments to display the most recent first
     const reversedComments = lastTenComments.reverse();
@@ -372,7 +373,7 @@ function About() {
                   </Modal>
                   <h2>
                     {/* Last (10) reviews */}
-                   ({a}) {t("Comments")}
+                   (15) {t("Comments")}
                   </h2>
                       <div id="commentWrapper" className='overflow-y-auto h-[600px]  w-full md:w-1/2 mt-5  '>
                      
