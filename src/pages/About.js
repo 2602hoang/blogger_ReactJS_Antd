@@ -137,7 +137,7 @@ function About() {
     const commentsArray = Object.values(comment);
     
     // Get the last 10 comments
-    const lastTenComments = commentsArray.slice(-{a});
+    const lastTenComments = commentsArray.slice(-15);
   
     // Reverse the order of comments to display the most recent first
     const reversedComments = lastTenComments.reverse();
