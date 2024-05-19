@@ -101,7 +101,7 @@ function Service() {
       <ProgressBar />
 
       <Header />
-      <div data-aos="flip-left" className='  mx-12 mt-7 flex flex-row justify-center items-center'>
+      <div data-aos="flip-left" className='   mx-12 mt-7 flex flex-row justify-center items-center'>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
           <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
         </svg>
@@ -326,7 +326,9 @@ function Service() {
                             d="M15.4306 7.70172C7.55045 7.99826 3.43929 15.232 2.17021 19.3956C2.07701 19.7014 2.31139 20 2.63107 20C2.82491 20 3.0008 19.8828 3.08334 19.7074C6.04179 13.4211 12.7066 12.3152 15.514 12.5639C15.7583 12.5856 15.9333 12.7956 15.9333 13.0409V15.1247C15.9333 15.5667 16.4648 15.7913 16.7818 15.4833L20.6976 11.6784C20.8723 11.5087 20.8993 11.2378 20.7615 11.037L16.8456 5.32965C16.5677 4.92457 15.9333 5.12126 15.9333 5.61253V7.19231C15.9333 7.46845 15.7065 7.69133 15.4306 7.70172Z"
                           ></path></svg
                         >
-                        <a href={hrefs[index]}>
+                        <a 
+                        target="_blank"
+                        href={hrefs[index]}>
                         <span class="text-[0px] group-hover:text-sm duration-300"
                         >{t("Visit here")}</span
                         ></a>

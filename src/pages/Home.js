@@ -224,7 +224,7 @@ function Home() {
                 
 
             </div> */}
-            <div class=" duration-500  hover:-rotate-0 
+            <div data-aos="flip-down" class=" duration-500  hover:-rotate-0 
               group [transform:rotate3d(1_,-1,_1,_60deg)]  border-sky-900 border-4  overflow-hidden rounded-2xl
                relative h-64 w-80 bg-sky-800 p-5 flex 
                flex-col items-start gap-4">
@@ -266,7 +266,7 @@ function Home() {
               </div>
           </div>
 
-          <div className={`md:ml-40  ${darkMode ? '' : 'dark'}  my-10  mb-10 flex md:w-[400px] md:h-auto  `}>
+          <div data-aos="flip-down" className={`md:ml-40  ${darkMode ? '' : 'dark'}  my-10  mb-10 flex md:w-[400px] md:h-auto  `}>
             <img className={`
                 
                 hover:animate-none animate-float-image w-[400px] h-[600px] 

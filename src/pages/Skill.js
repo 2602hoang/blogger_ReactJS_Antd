@@ -31,7 +31,7 @@ function Skill() {
        
         {/* ${darkMode ? "container1" : "container3"}  */}
         <div className={`flex my-8  
-        
+          
            justify-center items-center flex-col `}>
 
           <div className='flex md:mx-20 mx-2 '>
@@ -71,7 +71,7 @@ function Skill() {
 
                 </div>
 
-                <div class="relative h-full w-full flex items-center justify-center">
+                <div  data-aos="flip-up" class="relative h-full w-full flex items-center justify-center">
                   <div class="profileCard_container relative p-10 border-2 border-dashed rounded-full border-spacing-4 border-gray-400/50">
                  
                     <button  class="profile_item left-[45px] -top-[4px] absolute rounded-full bg-cover cursor-pointer border border-gray-400/50 p-[2px] active:scale-95 hover:scale-95 transition-all duration-500">
