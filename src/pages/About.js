@@ -116,7 +116,7 @@ function About() {
     const getComment =async ()=>{
       try {
        
-       const reponse = await axios.get(`https://script.googleusercontent.com/macros/echo?user_content_key=1Cw4qo234u2dXGmpuIw37ATJvTQbUGo-GjduK7kpjF9-N6_aLp7fVK2JGozhkMiatdTOP_ymMxUdY1-Tna5u1oFPr3_iKUxRm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnJxV2HDAvbGflSVU4qKEN-8j-A42WDGIrm2bRQXkRrDvAyS95kltcrowL1s31SVq-HHgrjGINH7BMcjWB2ld2Fl4PYA3sx2lTg&lib=Mzpwhs7tDO-FN3mzLalj4dcTi32_F69pn`)
+       const reponse = await axios.get(`https://script.google.com/macros/s/AKfycbwVTMsw9F1W8bpvD9cTZ0Eodp-TbJwMUyPGTcFyYDUfKAdXoBK76lFiRyCkKtMAHJM/exec`)
      
         const data = reponse.data;
         setComment(reponse.data.data) 

@@ -235,8 +235,8 @@ function Home() {
                   <button 
                   target="_blank"
                   onClick={() => {
-                    window.open('https://drive.google.com/file/d/14B1j9y1IUDaneHU0BNiII_kXuBWdsye1/view?usp=sharing');
-                    window.location.href ='https://drive.google.com/uc?export=download&id=14B1j9y1IUDaneHU0BNiII_kXuBWdsye1';
+                    window.open('https://drive.google.com/file/d/1tWy-tXTZJ1P--EBxUs05ppV_cQfeZ3BN/view?usp=sharing');
+                    window.location.href ='https://drive.google.com/uc?export=download&id=1tWy-tXTZJ1P--EBxUs05ppV_cQfeZ3BN';
                   }}
                   class="
                   btn hover:animate-pulse
