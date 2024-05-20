@@ -187,13 +187,13 @@ function Home() {
       <div className='text-orange-400  text-[30px] flex '>
         <TypeAnimation
           sequence={[
-            t("Wellcome") + "👋",
-            1500,
+            t("Wellcome") ,
+            2000,
             // Same substring at the start will only be typed out once, initially
-            t('Hello,') + "👋",
-            1500, // wait 1s before replacing "Mice" with "Hamsters"
-            t('Hi,') + "👋",
-            1500,
+            t('Hello,') ,
+            2000, // wait 1s before replacing "Mice" with "Hamsters"
+            t('Hi,'),
+            2000,
             // 'Welcome',
             // 1000,
 
@@ -228,7 +228,7 @@ function Home() {
             <div className='flex flex-col '>
               <div className='flex flex-row'>
                 <b className='text-transparent bg-clip-text
-                 bg-gradient-to-br from-purple-900 via-pink-700 to-yellow-400 text-[70px]'><ExampleComponent /> {t("I am")}</b>
+                 bg-gradient-to-br from-purple-900 via-pink-700 to-yellow-400 text-[50px]'><ExampleComponent /> {t("I am")}</b>
               </div>
               <span className=' text-transparent bg-clip-text font-bold
                  bg-gradient-to-br from-purple-900 via-pink-700 to-yellow-400 text-5xl animate-pulse pb-5'>{t("Vu Huy Hoang")}</span>
@@ -347,7 +347,7 @@ function Home() {
 
 
       {/* 3 */}
-      <div className='md:h-screen  snap-start  w-full flex justify-center items-center'
+      <div className='md:h-screen  snap-start  w-full flex justify-center items-center mt-16 md:mt-0'
         data-aos="flip-left"
         data-aos-easing="ease-out-cubic"
         data-aos-duration="2000"
@@ -407,7 +407,7 @@ function Home() {
 
 
       <h1 className='text-center text-2xl font-bold text-[#121212] my-6'>{t("Please contribute with your comments")}</h1>
-      <div data-aos="flip-down" className='snap-start  flex flex-col md:h-screen justify-center items-center  md:mt-auto mx-2'>
+      <div data-aos="flip-down" className='mb-5 snap-start  flex flex-col md:h-screen justify-center items-center  md:mt-auto mx-2'>
 
         {/* <div data-aos="flip-down" class=" duration-500  hover:-rotate-0 
               group [transform:rotate3d(1_,-1,_1,_60deg)]  border-sky-900 border-4  overflow-hidden rounded-2xl
@@ -516,7 +516,7 @@ function Home() {
                 <button onClick={()=>{
                    window.location.href = "/eror"; 
                 }}
-                  class="flex h-[30px] w-[150px] items-center justify-center gap-[0.5em] rounded-full bg-[#c60808] px-[2em] py-[1em] text-white shadow-[inset_0px_-4px_4px_0px_#f05b5b,0px_0px_0px_2px_#f9d1d1,0px_4px_0px_0px_#A60000] duration-[250ms] hover:translate-y-[0.25em] active:translate-y-[0.5em] active:shadow-[inset_0px_-4px_4px_0px_#f05b5b,0px_0px_0px_2px_#f9d1d1]"
+                  class="flex h-[30px] w-[120px] mt-3 items-center justify-center gap-[0.5em] rounded-full bg-[#c60808] px-[2em] py-[1em] text-white shadow-[inset_0px_-4px_4px_0px_#f05b5b,0px_0px_0px_2px_#f9d1d1,0px_4px_0px_0px_#A60000] duration-[250ms] hover:translate-y-[0.25em] active:translate-y-[0.5em] active:shadow-[inset_0px_-4px_4px_0px_#f05b5b,0px_0px_0px_2px_#f9d1d1]"
                 >
 
                   <svg
