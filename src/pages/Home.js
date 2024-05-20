@@ -187,7 +187,7 @@ function Home() {
       <div className='text-orange-400  text-[30px] flex '>
         <TypeAnimation
           sequence={[
-            t("Wellcome") ,
+            t("Wellcome,"),
             2000,
             // Same substring at the start will only be typed out once, initially
             t('Hello,') ,
@@ -231,7 +231,7 @@ function Home() {
                  bg-gradient-to-br from-purple-900 via-pink-700 to-yellow-400 text-[50px]'><ExampleComponent /> {t("I am")}</b>
               </div>
               <span className=' text-transparent bg-clip-text font-bold
-                 bg-gradient-to-br from-purple-900 via-pink-700 to-yellow-400 text-5xl animate-pulse pb-5'>{t("Vu Huy Hoang")}</span>
+                 bg-gradient-to-br from-purple-900 via-pink-700 to-yellow-400 text-4xl animate-pulse pb-5'>{t("Vu Huy Hoang")}</span>
               <br></br>
 
               <span className='text-5xl '>{t("And")} {t("I am")} {t("a")}<br />
