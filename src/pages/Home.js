@@ -129,7 +129,7 @@ function Home() {
     return reversedComments.map((cmt, index) => {
       // Format the time
       const formattedTime = new Date(cmt.time).toLocaleString();
-      
+
       // console.log("ok", typeof cmt);
       return (
 
@@ -139,9 +139,12 @@ function Home() {
               <a >
                 <Avatar style={{ backgroundColor: '#121212' }} icon={<UserOutlined />} />
                 <span className='ml-2 text-sky-400'>{cmt.name}</span>
+
               </a>
+
             </div>
             <div className='ml-auto'>
+
               <span>{formattedTime}</span>
             </div>
           </div>
@@ -149,6 +152,7 @@ function Home() {
           <b className='text-start mt-5'>{t("Comment")}
             <CommentOutlined style={{ fontSize: "20px" }} className='ml-2' />:
             {"\t\t\t"}{cmt.comment}
+
           </b>
         </div>
 
@@ -174,10 +178,10 @@ function Home() {
     Aos.init({
       duration: 1000, // Adjust the duration to your preference
     });
-  }, [ [comment]]);
+  }, [[comment]]);
   const { darkMode, toggleDarkMode } = useDarkMode();
 
-  
+
   const ExampleComponent = () => {
     return (
       <div className='text-orange-400  text-[30px] flex '>
@@ -209,7 +213,7 @@ function Home() {
     <div className={`snap-y snap-mandatory justify-center overflow-hidden items-center flex w-full flex-col ${darkMode ? '' : 'dark'}`}>
       <ProgressBar />
       <Header />
- 
+
       <div className='snap-start mb-5 mt-auto md:h-screen  w-full flex justify-center items-center md:flex-row flex-col'>
         <div
           data-aos="fade-top"
@@ -297,45 +301,45 @@ function Home() {
 
               
               src={darkMode ? avata : avata1} /> */}
-               <div class={`${darkMode ? '' : 'dark'} group before:hover:scale-95 before:hover:h-72 before:hover:w-80 before:hover:h-44 before:hover:rounded-b-2xl before:transition-all before:duration-500 before:content-[''] before:w-80 before:h-24 before:rounded-t-2xl before:bg-gradient-to-bl from-sky-200 via-orange-200 to-orange-700 before:absolute before:top-0 w-80 h-72 relative bg-slate-50 flex flex-col items-center justify-center gap-2 text-center rounded-2xl overflow-hidden`
-}               >
-          <div style={{
-            backgroundImage:`url(${me5})`,
-          
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: '100%',
-          backgroundPosition: 'center'
-        }} 
-          
-          class="w-28 h-28  mt-8 rounded-full border-4 border-slate-50 z-10 group-hover:scale-150 group-hover:-translate-x-24  group-hover:-translate-y-20 transition-all duration-500"></div>
-          <div class="z-10  group-hover:-translate-y-10 transition-all duration-500">
-            <span class="text-2xl font-semibold">{t("Frontend Developer")}</span>
-            <p class="text-xs">Vu Huy Hoang</p>
-          </div>
-          <button 
-                  target="_blank"
-                  onClick={() => {
-                    window.open('https://drive.google.com/file/d/1tWy-tXTZJ1P--EBxUs05ppV_cQfeZ3BN/view?usp=sharing');
-                    window.location.href ='https://drive.google.com/uc?export=download&id=1tWy-tXTZJ1P--EBxUs05ppV_cQfeZ3BN';
-                  }}
-                  class="
+            <div class={`${darkMode ? '' : 'dark'} group before:hover:scale-95 before:hover:h-72 before:hover:w-80 before:hover:h-44 before:hover:rounded-b-2xl before:transition-all before:duration-500 before:content-[''] before:w-80 before:h-24 before:rounded-t-2xl before:bg-gradient-to-bl from-sky-200 via-orange-200 to-orange-700 before:absolute before:top-0 w-80 h-72 relative bg-slate-50 flex flex-col items-center justify-center gap-2 text-center rounded-2xl overflow-hidden`
+            }               >
+              <div style={{
+                backgroundImage: `url(${me5})`,
+
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: '100%',
+                backgroundPosition: 'center'
+              }}
+
+                class="w-28 h-28  mt-8 rounded-full border-4 border-slate-50 z-10 group-hover:scale-150 group-hover:-translate-x-24  group-hover:-translate-y-20 transition-all duration-500"></div>
+              <div class="z-10  group-hover:-translate-y-10 transition-all duration-500">
+                <span class="text-2xl font-semibold">{t("Frontend Developer")}</span>
+                <p class="text-xs">Vu Huy Hoang</p>
+              </div>
+              <button
+                target="_blank"
+                onClick={() => {
+                  window.open('https://drive.google.com/file/d/1tWy-tXTZJ1P--EBxUs05ppV_cQfeZ3BN/view?usp=sharing');
+                  window.location.href = 'https://drive.google.com/uc?export=download&id=1tWy-tXTZJ1P--EBxUs05ppV_cQfeZ3BN';
+                }}
+                class="
                   btn hover:animate-pulse
                   duration-300 hover:bg-sky-900 border hover:text-gray-50 bg-gray-50 font-semibold text-sky-800
                   px-3 py-2 flex flex-row items-center gap-3">
-                    
-                  <Tooltip title={t('View & Dowload')} placement='bottom'>
-                    {t("View CV me")}
-                  </Tooltip>
-                    <svg class="w-6 h-6 fill-current" height="100" preserveAspectRatio="xMidYMid meet" viewBox="0 0 100 100" width="100" x="0" xmlns="http://www.w3.org/2000/svg" y="0">
-                      <path d="M22.1,77.9a4,4,0,0,1,4-4H73.9a4,4,0,0,1,0,8H26.1A4,4,0,0,1,22.1,77.9ZM35.2,47.2a4,4,0,0,1,5.7,0L46,52.3V22.1a4,4,0,1,1,8,0V52.3l5.1-5.1a4,4,0,0,1,5.7,0,4,4,0,0,1,0,5.6l-12,12a3.9,3.9,0,0,1-5.6,0l-12-12A4,4,0,0,1,35.2,47.2Z" fill-rule="evenodd">
-                      </path>
-                    </svg>
-                  </button>
 
-                  {/* <svg class="group-hover:scale-125 duration-500 absolute -bottom-0.5 -right-20 w-48 h-48 z-10 -my-2  fill-gray-50 stroke-sky-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path data-name="layer1" d="M 50.4 51 C 40.5 49.1 40 46 40 44 v -1.2 a 18.9 18.9 0 0 0 5.7 -8.8 h 0.1 c 3 0 3.8 -6.3 3.8 -7.3 s 0.1 -4.7 -3 -4.7 C 53 4 30 0 22.3 6 c -5.4 0 -5.9 8 -3.9 16 c -3.1 0 -3 3.8 -3 4.7 s 0.7 7.3 3.8 7.3 c 1 3.6 2.3 6.9 4.7 9 v 1.2 c 0 2 0.5 5 -9.5 6.8 S 2 62 2 62 h 60 a 14.6 14.6 0 0 0 -11.6 -11 z" stroke-miterlimit="10" stroke-width="5"></path></svg>
+                <Tooltip title={t('View & Dowload')} placement='bottom'>
+                  {t("View CV me")}
+                </Tooltip>
+                <svg class="w-6 h-6 fill-current" height="100" preserveAspectRatio="xMidYMid meet" viewBox="0 0 100 100" width="100" x="0" xmlns="http://www.w3.org/2000/svg" y="0">
+                  <path d="M22.1,77.9a4,4,0,0,1,4-4H73.9a4,4,0,0,1,0,8H26.1A4,4,0,0,1,22.1,77.9ZM35.2,47.2a4,4,0,0,1,5.7,0L46,52.3V22.1a4,4,0,1,1,8,0V52.3l5.1-5.1a4,4,0,0,1,5.7,0,4,4,0,0,1,0,5.6l-12,12a3.9,3.9,0,0,1-5.6,0l-12-12A4,4,0,0,1,35.2,47.2Z" fill-rule="evenodd">
+                  </path>
+                </svg>
+              </button>
+
+              {/* <svg class="group-hover:scale-125 duration-500 absolute -bottom-0.5 -right-20 w-48 h-48 z-10 -my-2  fill-gray-50 stroke-sky-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path data-name="layer1" d="M 50.4 51 C 40.5 49.1 40 46 40 44 v -1.2 a 18.9 18.9 0 0 0 5.7 -8.8 h 0.1 c 3 0 3.8 -6.3 3.8 -7.3 s 0.1 -4.7 -3 -4.7 C 53 4 30 0 22.3 6 c -5.4 0 -5.9 8 -3.9 16 c -3.1 0 -3 3.8 -3 4.7 s 0.7 7.3 3.8 7.3 c 1 3.6 2.3 6.9 4.7 9 v 1.2 c 0 2 0.5 5 -9.5 6.8 S 2 62 2 62 h 60 a 14.6 14.6 0 0 0 -11.6 -11 z" stroke-miterlimit="10" stroke-width="5"></path></svg>
 
                   <svg class="group-hover:scale-125 duration-200 absolute -bottom-0.5 -right-20 w-48 h-48 z-10 -my-2  fill-gray-50 stroke-sky-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path data-name="layer1" d="M 50.4 51 C 40.5 49.1 40 46 40 44 v -1.2 a 18.9 18.9 0 0 0 5.7 -8.8 h 0.1 c 3 0 3.8 -6.3 3.8 -7.3 s 0.1 -4.7 -3 -4.7 C 53 4 30 0 22.3 6 c -5.4 0 -5.9 8 -3.9 16 c -3.1 0 -3 3.8 -3 4.7 s 0.7 7.3 3.8 7.3 c 1 3.6 2.3 6.9 4.7 9 v 1.2 c 0 2 0.5 5 -9.5 6.8 S 2 62 2 62 h 60 a 14.6 14.6 0 0 0 -11.6 -11 z" stroke-miterlimit="10" stroke-width="2"></path></svg> */}
-        </div>
+            </div>
           </div>
         </div>
 
@@ -347,7 +351,7 @@ function Home() {
         data-aos="flip-left"
         data-aos-easing="ease-out-cubic"
         data-aos-duration="2000"
-        >
+      >
         <div class={`card  `}>
           <div
             class={`relative border-2 border-sky-400 shadow-2xl ${darkMode ? "shadow-black" : "shadow-white"} w-[300px]   sm:w-[650px] group transition-all duration-700
@@ -404,7 +408,7 @@ function Home() {
 
       <h1 className='text-center text-2xl font-bold text-[#121212] my-6'>{t("Please contribute with your comments")}</h1>
       <div data-aos="flip-down" className='snap-start  flex flex-col md:h-screen justify-center items-center  md:mt-auto mx-2'>
-    
+
         {/* <div data-aos="flip-down" class=" duration-500  hover:-rotate-0 
               group [transform:rotate3d(1_,-1,_1,_60deg)]  border-sky-900 border-4  overflow-hidden rounded-2xl
                relative h-64 w-80 bg-sky-800 p-5 flex 
@@ -439,7 +443,7 @@ function Home() {
 
 
                 </div> */}
-                 <div id="conten_post" className='flex  justify-center items-center flex-col'>
+        <div id="conten_post" className='flex  justify-center items-center flex-col'>
           {/* < Button className='animate-bounce bg-slate-950' type='link'onClick={showModal1} > Leave your own comment</Button> */}
           <button onClick={showModal1} class="bg-red-300 hover:bg-red-500 text-white animate-bounce 
                   font-bold py-3 px-6 rounded-full shadow-lg hover:text-white shadow-white transform transition-all
@@ -509,6 +513,38 @@ function Home() {
                 </div>
                 <Button className='btn  ' onCancel={handleCancel1} type='default' htmlType="submit"
                   icon={<SendOutlined />}>{t("Comment")}</Button>
+                <button onClick={()=>{
+                   window.location.href = "/eror"; 
+                }}
+                  class="flex h-[30px] w-[150px] items-center justify-center gap-[0.5em] rounded-full bg-[#c60808] px-[2em] py-[1em] text-white shadow-[inset_0px_-4px_4px_0px_#f05b5b,0px_0px_0px_2px_#f9d1d1,0px_4px_0px_0px_#A60000] duration-[250ms] hover:translate-y-[0.25em] active:translate-y-[0.5em] active:shadow-[inset_0px_-4px_4px_0px_#f05b5b,0px_0px_0px_2px_#f9d1d1]"
+                >
+
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-[1.5em] w-[1.5em]"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <circle cx="12" cy="12" r="10" stroke="#fff" stroke-width="1.5"></circle>
+                      <path
+                        d="M9 17C9.85038 16.3697 10.8846 16 12 16C13.1154 16 14.1496 16.3697 15 17"
+                        stroke="#fff"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      ></path>
+                      <ellipse cx="15" cy="10.5" rx="1" ry="1.5" fill="#fff"></ellipse>
+                      <ellipse cx="9" cy="10.5" rx="1" ry="1.5" fill="#fff"></ellipse>
+                    </g>
+                  </svg>
+                  <p class="[text-shadow:0px_1px_1px_0px_#950000]">Delete</p>
+                </button>
               </Form>
 
             </div>
@@ -519,6 +555,8 @@ function Home() {
             (15) {t("Comments")}
           </h2>
           <div id="commentWrapper" className='overflow-y-auto h-[600px]  w-full md:w-1/2 mt-5  '>
+
+
             {comment !== undefined ? renderComments() :
               <div>aaaaaa</div>
 
@@ -530,7 +568,7 @@ function Home() {
 
 
       </div>
-     
+
       <section></section>
       <section></section>
 
