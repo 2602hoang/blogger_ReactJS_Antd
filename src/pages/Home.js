@@ -187,13 +187,13 @@ function Home() {
       <div className='text-orange-400  text-[30px] flex '>
         <TypeAnimation
           sequence={[
-            t("Wellcome,"),
-            2000,
+            // t("Wellcome"),
+            // 2000,
             // Same substring at the start will only be typed out once, initially
             t('Hello,') ,
-            2000, // wait 1s before replacing "Mice" with "Hamsters"
+            500, // wait 1s before replacing "Mice" with "Hamsters"
             t('Hi,'),
-            2000,
+            500,
             // 'Welcome',
             // 1000,
 
@@ -301,7 +301,7 @@ function Home() {
 
               
               src={darkMode ? avata : avata1} /> */}
-            <div class={`${darkMode ? '' : 'dark'} group before:hover:scale-95 before:hover:h-72 before:hover:w-80 before:hover:h-44 before:hover:rounded-b-2xl before:transition-all before:duration-500 before:content-[''] before:w-80 before:h-24 before:rounded-t-2xl before:bg-gradient-to-bl from-sky-200 via-orange-200 to-orange-700 before:absolute before:top-0 w-80 h-72 relative bg-slate-50 flex flex-col items-center justify-center gap-2 text-center rounded-2xl overflow-hidden`
+            <div class={`${darkMode ? 'dark' : ''}  group before:hover:scale-95 before:hover:h-72  before:hover:w-80  before:hover:rounded-b-2xl before:transition-all before:duration-500 before:content-[''] before:w-80 before:h-24 before:rounded-t-2xl before:bg-gradient-to-bl from-sky-200 via-orange-200 to-orange-700 before:absolute before:top-0 w-80 h-72 relative bg-slate-50 flex flex-col items-center justify-center gap-2 text-center rounded-2xl overflow-hidden`
             }               >
               <div style={{
                 backgroundImage: `url(${me5})`,
@@ -313,8 +313,8 @@ function Home() {
 
                 class="w-28 h-28  mt-8 rounded-full border-4 border-slate-50 z-10 group-hover:scale-150 group-hover:-translate-x-24  group-hover:-translate-y-20 transition-all duration-500"></div>
               <div class="z-10  group-hover:-translate-y-10 transition-all duration-500">
-                <span class="text-2xl font-semibold">{t("Frontend Developer")}</span>
-                <p class="text-xs">Vu Huy Hoang</p>
+                <span class={`${darkMode ? 'text-white' : ' text-black'} text-2xl font-semibold`}>{t("Frontend Developer")}</span>
+                <p class={`text-xs ${darkMode ? 'text-white' : ' text-black'}`}>Vu Huy Hoang</p>
               </div>
               <button
                 target="_blank"
@@ -406,7 +406,7 @@ function Home() {
       </div>
 
 
-      <h1 className='text-center text-2xl font-bold text-[#121212] my-6'>{t("Please contribute with your comments")}</h1>
+      <h1 className='text-center text-2xl font-bold text-yellow-400 my-6'>{t("Please contribute with your comments")}</h1>
       <div data-aos="flip-down" className='mb-5 snap-start  flex flex-col md:h-screen justify-center items-center  md:mt-auto mx-2'>
 
         {/* <div data-aos="flip-down" class=" duration-500  hover:-rotate-0 
