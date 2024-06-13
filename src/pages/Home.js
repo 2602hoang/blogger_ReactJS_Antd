@@ -19,6 +19,7 @@ import axios from 'axios';
 
 import avata from '../assets/AVATA2.jpg'
 import TextArea from 'antd/es/input/TextArea';
+import AgeCalculator from '../component/AgeCalculator';
 
 
 
@@ -404,7 +405,7 @@ function Home() {
 
 
       </div>
-
+   
 
       <h1 className='text-center text-2xl font-bold text-yellow-400 my-6'>{t("Please contribute with your comments")}</h1>
       <div data-aos="flip-down" className='mb-5 snap-start  flex flex-col md:h-screen justify-center items-center  md:mt-auto mx-2'>

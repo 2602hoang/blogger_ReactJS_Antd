@@ -19,6 +19,7 @@ import Silde from '../component/Silde'
 import TextArea from 'antd/es/input/TextArea'
 
 import axios from 'axios'
+import AgeCalculator from '../component/AgeCalculator'
 
 
 
@@ -140,6 +141,7 @@ function About() {
       <section></section>
 
       <Nav darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      
       <Fotter />
       <Modal title={<div className='flex justify-center items-center gap-4'>
         <IdcardFilled style={{ color: 'black', fontSize: "25px" }} /> {'\t\t\t\t'} {t("About me")}   </div>}

@@ -10,6 +10,7 @@ import Nav from '../component/Nav';
 import me1 from "../assets/me1.png";
 import { AntDesignOutlined } from '@ant-design/icons';
 import { Tooltip } from 'antd';
+import AgeCalculator from '../component/AgeCalculator';
 function Skill() {
   const { darkMode, toggleDarkMode } = useDarkMode();
   useEffect(() => {
@@ -196,6 +197,7 @@ function Skill() {
           </div>
           <Nav darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         </div>
+        <AgeCalculator/>
       </div>
 
       <Fotter />
