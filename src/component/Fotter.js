@@ -105,7 +105,7 @@ function Fotter() {
     
         <form
         ref={form} onSubmit={sendEmail}
-          class="text-neutral-800 py-6 overflow-hidden relative justify-center items-center flex flex-col md:w-auto w-11/12 h-44 
+          class="text-neutral-800 md:py-6 overflow-hidden relative justify-center items-center flex flex-col md:w-auto w-full h-44 
           border border-neutral-500 rounded-lg bg-neutral-50 p-3 md:px-6"
         >
           <div
