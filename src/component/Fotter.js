@@ -105,7 +105,7 @@ function Fotter() {
     
         <form
         ref={form} onSubmit={sendEmail}
-          class="text-neutral-800 py-6 overflow-hidden relative justify-center items-center flex flex-col w-auto h-44 
+          class="text-neutral-800 py-6 overflow-hidden relative justify-center items-center flex flex-col md:w-auto w-11/12 h-44 
           border border-neutral-500 rounded-lg bg-neutral-50 p-3 md:px-6"
         >
           <div
@@ -131,7 +131,7 @@ function Fotter() {
                 placeholder="Email..."
               />
             </div>
-            <button className="bg-violet-500 text-neutral-50 p-2 rounded-lg hover:bg-violet-400" type="submit">
+            <button className="bg-violet-500 text-neutral-50 md:p-2 p-0 rounded-lg hover:bg-violet-400" type="submit">
               {t("Subscribe")}
             </button>
           </div>
