@@ -65,7 +65,7 @@ function Fotter() {
       <FloatButton.BackTop style={{ height: '60px', width: '60px' }} tooltip={<b>Back Top</b>} />
 
      
-      <div className='flex md:flex-row flex-col overflow-hidden md:gap-x-8 gap-y-3 md:mr-0  items-center justify-center'>
+      <div className='flex md:flex-row flex-col overflow-hidden md:gap-x-8 gap-y-3 md:mr-0 w-full items-center justify-center'>
       
 
 
@@ -102,10 +102,10 @@ function Fotter() {
             </div>
           </div>
         </div>
-      {/* <div className='flex justify-center items-center overflow-hidden mx-auto'> */}
+      <div className='w-full md:w-auto flex justify-center items-center overflow-hidden '>
         <form
         ref={form} onSubmit={sendEmail}
-          class="text-neutral-800 md:py-6 overflow-hidden relative justify-center items-center mr-4 flex flex-col md:w-auto w-full h-44 
+          class="text-neutral-800 md:py-6 overflow-hidden relative justify-center items-center  flex flex-col md:w-auto w-auto h-44 
           border border-neutral-500 rounded-lg bg-neutral-50 p-3 md:px-6"
         >
           <div
@@ -138,7 +138,7 @@ function Fotter() {
             </button>
           </div>
         </form>
-      {/* </div> */}
+      </div>
 
 
 
