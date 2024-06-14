@@ -102,14 +102,16 @@ function Fotter() {
             </div>
           </div>
         </div>
-      <div className='flex justify-center items-center overflow-hidden mx-auto'>
+      {/* <div className='flex justify-center items-center overflow-hidden mx-auto'> */}
         <form
         ref={form} onSubmit={sendEmail}
-          class="text-neutral-800 md:py-6 overflow-hidden relative justify-center items-center flex flex-col md:w-auto w-full h-44 
+          class="text-neutral-800 md:py-6 overflow-hidden relative justify-center items-center mr-4 flex flex-col md:w-auto w-full h-44 
           border border-neutral-500 rounded-lg bg-neutral-50 p-3 md:px-6"
         >
           <div
-            class="before:absolute before:w-32 before:h-20 before:right-2 before:bg-rose-300 before:-z-10 before:rounded-full before:blur-xl before:-top-12 z-10 after:absolute after:w-24 after:h-24 after:bg-purple-300 after:-z-10 after:rounded-full after:blur after:-top-12 after:-right-6"
+            class="before:absolute before:w-32 before:h-20 before:right-2 before:bg-rose-300 before:-z-10 before:rounded-full
+             before:blur-xl before:-top-12 z-10 after:absolute after:w-24 after:h-24 after:bg-purple-300
+              after:-z-10 after:rounded-full after:blur after:-top-12 after:-right-6"
           >
             <span class="font-extrabold text-2xl text-violet-600"
             >{t("Leave your Email here")}...</span
@@ -136,7 +138,7 @@ function Fotter() {
             </button>
           </div>
         </form>
-      </div>
+      {/* </div> */}
 
 
 
