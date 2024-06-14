@@ -220,7 +220,9 @@ function Home() {
     banner
     message={
       <Marquee pauseOnHover gradient={false}>
-        {t("All the features on the above page are available. If you have any questions, please feel free to contact me. All the information to contact me on this page is correct.")}
+       {t("All the features on the above page are available. If you have any questions, please feel free to contact me")} &nbsp;  
+        <a href='/contact' className='text-sky-800 underline'>{t("here")}.</a>&nbsp;
+        {t("All the information to contact me on this page is correct.")}
       </Marquee>
     }
   />

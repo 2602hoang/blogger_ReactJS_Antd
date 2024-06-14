@@ -267,13 +267,19 @@ i18n
                     "Watch":"Đồng hồ",
                     "Must be in the past":"Chắc hẳn là trong quá khứ",
                     "Leave your Email here":"Để lại Email của bạn ở đây",
+                    "here":"tại đây",
+                    "All the information to contact me on this page is correct.":"Tất cả các thông tin để liên hệ với tôi trên trang này là chính xác.",
                     "Subscribe to get information, latest news about me":"Đăng ký để nhận thông tin, tin tức mới nhất về tôi",
+                    "All the features on the above page are available. If you have any questions, please feel free to contact me":"Tất cả các tính năng trên trang trên đều có sẵn. Nếu bạn có bất kỳ câu hỏi nào, xin vui lòng liên hệ với tôi",
                     "All the features on the above page are available. If you have any questions, please feel free to contact me. All the information to contact me on this page is correct.":"Tất cả các tính năng trên trang trên đều có sẵn. Nếu bạn có bất kỳ câu hỏi nào, xin vui lòng liên hệ với tôi. Tất cả thông tin để liên hệ với tôi trên trang này là đúng.",
                 }
                 },
                 en: 
                 {
                 translation: {
+                    "All the information to contact me on this page is correct.":"All the information to contact me on this page is correct.",
+                    "here":"here",
+                    "All the features on the above page are available. If you have any questions, please feel free to contact me":"All the features on the above page are available. If you have any questions, please feel free to contact me",
                     "Subscribe":"Subscribe",
                     "Watch":"Watch",
                     "Subscribe to get information, latest news about me":"Subscribe to get information, latest news about me",
