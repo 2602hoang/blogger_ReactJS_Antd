@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import Header from '../component/Header'
 import Fotter from '../component/Fotter'
 import { Alert, Button, Drawer, Form, Input } from 'antd';
-import { EnvironmentFilled, MailFilled, MenuOutlined, SendOutlined } from '@ant-design/icons';
+import { CloseCircleOutlined, CloseSquareFilled, EnvironmentFilled, MailFilled, MenuOutlined, SendOutlined } from '@ant-design/icons';
 import axios from 'axios';
 import TextArea from 'antd/es/input/TextArea';
 import Aos from 'aos';
@@ -93,17 +93,17 @@ function Contact() {
             <ProgressBar />
             <Header />
             <div className='flex justify-center items-center'>
-            <Alert 
-      className='my-2 md:w-4/5 w-full overflow-hidden mx-2'
-    banner
-    message={
-      <Marquee pauseOnHover gradient={false}>
-{t("All the features on the above page are available. If you have any questions, please feel free to contact me")} &nbsp;  
-        <a  href='/contact' className='text-sky-800 underline'>{t("here")}.</a>&nbsp;
-        {t("All the information to contact me on this page is correct.")}      </Marquee>
-    }
-  />
-  </div>
+                <Alert
+                    className='my-2 md:w-4/5 w-full overflow-hidden mx-2'
+                    banner
+                    message={
+                        <Marquee pauseOnHover gradient={false}>
+                            {t("All the features on the above page are available. If you have any questions, please feel free to contact me")} &nbsp;
+                            <a href='/contact' target='_blank' className='text-sky-800 underline'>{t("here")}.</a>&nbsp;
+                            {t("All the information to contact me on this page is correct.")}      </Marquee>
+                    }
+                />
+            </div>
             <section></section>
             <div data-aos="flip-left"
                 data-aos-easing="ease-out-cubic"
@@ -127,10 +127,13 @@ function Contact() {
                         <div className="flex flex-wrap -mx-4">
                             <div className="w-full md:w-2/5 px-4 mb-4">
                                 <Form.Item name="name"
+
                                     label={<p className={`${darkMode ? "text-black" : "text-white"}`}>
                                         {t("Your Name")}</p>}
                                     rules={[{ required: true }]}>
-                                    <Input prefix={<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+                                    <Input allowClear={{
+                                        clearIcon: <CloseCircleOutlined style={{color:'black'}}/>,
+                                    }} prefix={<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
                                         <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clip-rule="evenodd" />
                                     </svg>
 
@@ -149,30 +152,40 @@ function Contact() {
                                             message: t('Please input a valid 10-digit phone number!'),
                                         },
                                     ]}>
-                                    <Input prefix={
+                                    <Input
+                                        allowClear={{
+                                            clearIcon: <CloseCircleOutlined style={{color:'black'}}/>,
+                                        }}
+                                        prefix={
 
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
-                                            <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z" clip-rule="evenodd" />
-                                        </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+                                                <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z" clip-rule="evenodd" />
+                                            </svg>
 
-                                    }
+                                        }
                                     />
                                 </Form.Item>
                             </div>
                         </div>
                         <div className="w-full md:w-full md:pl-8 mb-4 md:pr-4">
                             <Form.Item name="email" label={<p className={`${darkMode ? "text-black" : "text-white"}`}>Email</p>} rules={[{ type: 'email', required: true }]}>
-                                <Input prefix={<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
-                                    <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
-                                    <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
-                                </svg>
-                                } />
+                                <Input
+                                    allowClear={{
+                                        clearIcon: <CloseCircleOutlined style={{color:'black'}}/>,
+                                    }}
+                                    prefix={<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+                                        <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
+                                        <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
+                                    </svg>
+                                    } />
                             </Form.Item>
                         </div>
                         <div className='w-full md:pl-3 md:pr-4 '>
                             <Form.Item name="message" label={<p className={`${darkMode ? "text-black" : "text-white"}`}>{t("Message")}</p>}
                                 rules={[{ required: true, message: t('Please input your message!') }]}>
-                                <TextArea prefix={
+                                <TextArea allowClear={{
+                                    clearIcon: <CloseCircleOutlined style={{color:'black'}}/>,
+                                }} prefix={
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
                                         <path fill-rule="evenodd" d="M5.337 21.718a6.707 6.707 0 0 1-.533-.074.75.75 0 0 1-.44-1.223 3.73 3.73 0 0 0 .814-1.686c.023-.115-.022-.317-.254-.543C3.274 16.587 2.25 14.41 2.25 12c0-5.03 4.428-9 9.75-9s9.75 3.97 9.75 9c0 5.03-4.428 9-9.75 9-.833 0-1.643-.097-2.417-.279a6.721 6.721 0 0 1-4.246.997Z" clip-rule="evenodd" />
                                     </svg>
@@ -219,14 +232,14 @@ function Contact() {
                             {t("(Your message will be sent to the page admin's personal mail)")}
                         </h1>
                     </Form>
-                    
+
 
                 </div>
-                
-                
+
+
 
             </div>
-           
+
 
 
             <section></section>

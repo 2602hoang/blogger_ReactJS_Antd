@@ -6,7 +6,7 @@ import Fotter from '../component/Fotter';
 // import avata from '../assets/AVATA.png'
 // import avata1 from '../assets/AVATA1.png'
 import { Alert, Avatar, Button, Drawer, Form, Image, Input, Modal, Popover, QRCode, Tooltip } from "antd"
-import { UserOutlined, GithubFilled, FacebookFilled, MailFilled, PhoneFilled, CommentOutlined, SendOutlined } from '@ant-design/icons';
+import { UserOutlined, GithubFilled, FacebookFilled, MailFilled, PhoneFilled, CommentOutlined, SendOutlined, CloseCircleOutlined } from '@ant-design/icons';
 import Aos from 'aos';
 import me5 from "../assets/me5.png";
 import "aos/dist/aos.css"
@@ -221,7 +221,7 @@ function Home() {
     message={
       <Marquee pauseOnHover gradient={false}>
        {t("All the features on the above page are available. If you have any questions, please feel free to contact me")} &nbsp;  
-        <a href='/contact' className='text-sky-800 underline'>{t("here")}.</a>&nbsp;
+        <a href='/contact' target='_blank' className='text-sky-800 underline'>{t("here")}.</a>&nbsp;
         {t("All the information to contact me on this page is correct.")}
       </Marquee>
     }
@@ -397,7 +397,7 @@ function Home() {
               class="seal bg-rose-500 text-red-800 w-10 aspect-square rounded-full 
               z-40 text-[10px] flex items-center justify-center font-semibold [clip-path:polygon(50%_0%,_80%_10%,_100%_35%,_100%_70%,_80%_90%,_50%_100%,_20%_90%,_0%_70%,_0%_35%,_20%_10%)] group-hover:opacity-0 transition-all duration-1000 group-hover:scale-0 group-hover:rotate-180 border-4 border-rose-900"
             >
-              HOANG
+              {t("OPEN")}
             </button>
             <div
               class="tp transition-all duration-1000 group-hover:duration-100 bg-neutral-800 absolute group-hover:[clip-path:polygon(50%_0%,_100%_0,_0_0)] w-full h-full [clip-path:polygon(50%_50%,_100%_0,_0_0)]"
@@ -492,7 +492,11 @@ function Home() {
                     label={<p className={`${darkMode ? "text-black" : "text-black"}`}>
                       {t("Your Name")}</p>}
                     rules={[{ required: true }]}>
-                    <Input prefix={<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+                    <Input
+                     allowClear={{
+                      clearIcon: <CloseCircleOutlined style={{color:'black'}} />,
+                  }}
+                    prefix={<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
                       <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clip-rule="evenodd" />
                     </svg>
 
@@ -504,7 +508,11 @@ function Home() {
 
                   <Form.Item name="email"
                     label={<p className={`${darkMode ? "text-black" : "text-black"}`}>Email</p>} rules={[{ type: 'email', required: true }]}>
-                    <Input prefix={<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+                    <Input 
+                     allowClear={{
+                      clearIcon: <CloseCircleOutlined style={{color:'black'}} />,
+                  }}
+                    prefix={<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
                       <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
                       <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
                     </svg>
@@ -517,6 +525,9 @@ function Home() {
 
 
                     <TextArea
+                     allowClear={{
+                      clearIcon: <CloseCircleOutlined style={{color:'black'}} />,
+                  }}
                       autoSize={{
                         minRows: 4,
                         maxRows: 10,
@@ -567,7 +578,7 @@ function Home() {
             {/* Last (10) reviews */}
             (15) {t("Comments")}
           </h2>
-          <div id="commentWrapper" className='overflow-y-auto h-[600px]  w-full md:w-1/2 mt-5  '>
+          <div id="commentWrapper" className='overflow-y-hidden hover:overflow-y-auto h-[600px]  w-full md:w-1/2 mt-5  '>
 
 
             {comment !== undefined ? renderComments() :

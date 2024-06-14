@@ -65,7 +65,7 @@ function Fotter() {
       <FloatButton.BackTop style={{ height: '60px', width: '60px' }} tooltip={<b>Back Top</b>} />
 
      
-      <div className='flex md:flex-row flex-col overflow-hidden md:gap-x-8 gap-y-3 md:mr-0 w-full items-center justify-center'>
+      <div className='flex md:flex-row flex-col overflow-hidden md:gap-x-14 gap-y-3 md:mr-0 w-full items-center justify-center'>
       
 
 
@@ -147,7 +147,7 @@ function Fotter() {
 
 
       </div>
-      <p className="text-center text-base">{t("Copyright")} &copy; 2024 {t("by")} Vu Hoang  <span>Dev</span> | {t("All Rights Reserved")}</p>
+      <p className="mt-6 text-center text-base">{t("Copyright")} &copy; 2024 {t("by")} Vu Hoang  <span>Dev</span> | {t("All Rights Reserved")}</p>
 
     </div>
   )

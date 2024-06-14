@@ -53,7 +53,7 @@ const AgeCalculator = () => {
     
         if (!year) {
           newErrors.year = t('This field is required');
-        } else if (year >= currentYear) {
+        } else if (year >= currentYear || year < 1000) {
           newErrors.year = t('Must be in the past');
         }
     
@@ -89,7 +89,8 @@ const AgeCalculator = () => {
           data-aos-duration="2000"
     
     className="bg-[#fea31b] 
-    shadow-2xl shadow-white
+    shadow-2xl shadow-white mb-5
+    h-screen
     overflow-hidden md:p-8 rounded-t-lg md:my-4 w-full  md:w-4/5 rounded-bl-lg flex flex-col justify-center items-center ">
       <form onSubmit={handleSubmit}>
         <div className="flex gap-4 mb-4 flex-col md:flex-row ">

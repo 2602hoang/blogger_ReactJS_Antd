@@ -11,8 +11,8 @@ import img6 from "../assets/6.png"
 import img7 from "../assets/7.png"
 
 import { useDarkMode } from '../component/DarkModeProvider';
-import { Alert, Button, Drawer, Image, List } from 'antd';
-import { GithubOutlined } from '@ant-design/icons';
+import { Alert, Button, Drawer, Image, List, Tooltip } from 'antd';
+import { GithubOutlined, InfoCircleOutlined } from '@ant-design/icons';
 import Aos from 'aos';
 import "aos/dist/aos.css"
 import ProgressBar from '../component/ProgressBar';
@@ -106,7 +106,7 @@ function Service() {
     message={
       <Marquee pauseOnHover gradient={false}>
 {t("All the features on the above page are available. If you have any questions, please feel free to contact me")} &nbsp;  
-        <a href='/contact' className='text-sky-800 underline'>{t("here")}.</a>&nbsp;
+        <a href='/contact' target='_blank' className='text-sky-800 underline'>{t("here")}.</a>&nbsp;
         {t("All the information to contact me on this page is correct.")}
       </Marquee>
     }
@@ -232,7 +232,17 @@ function Service() {
                 absolute   inset-0 flex justify-center items-center flex-col px-3 bg-gradient-to-t  ">
                   <h4 className=" text-center -translate-y-2
                   bg-gradient-to-r from-orange-500 via-yellow-500 to-green-500 text-purple-800 rounded-lg m-0 self-stretch relative text-inherit leading-[44px] font-semibold font-inherit
-                  text-2xl">{t("Personal project")}</h4>
+                  text-2xl">&nbsp;&nbsp;{t("Personal project")} &nbsp;&nbsp;
+                    <Tooltip color='orange' placement='top' title={<h2>Project Information</h2>}>
+                  <Button  type='link' icon={<InfoCircleOutlined style={{fontSize:"30px"}}/>}>
+             
+                  </Button>
+                  </Tooltip>
+                  
+                  
+                  </h4>
+                  
+                  
                   <p className={`text-lg text-black mt-8 text-start ${index === 4 ? 'animate-bounce' : ''}`}>{values1[index]}</p>
                   <div className='flex flex-row justify-center items-center mt-auto'>
 
