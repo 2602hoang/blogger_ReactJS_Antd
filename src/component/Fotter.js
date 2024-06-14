@@ -102,7 +102,7 @@ function Fotter() {
             </div>
           </div>
         </div>
-    
+      <div className='flex justify-center items-center overflow-hidden mx-auto'>
         <form
         ref={form} onSubmit={sendEmail}
           class="text-neutral-800 md:py-6 overflow-hidden relative justify-center items-center flex flex-col md:w-auto w-full h-44 
@@ -136,6 +136,7 @@ function Fotter() {
             </button>
           </div>
         </form>
+      </div>
 
 
 
