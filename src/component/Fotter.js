@@ -64,34 +64,14 @@ function Fotter() {
 
       <FloatButton.BackTop style={{ height: '60px', width: '60px' }} tooltip={<b>Back Top</b>} />
 
-      {/* <Alert 
-      className='my-2 md:w-4/5 w-full'
-    banner
-    message={
-      <Marquee pauseOnHover gradient={false}>
-        {t("All the features on the above page are available. If you have any questions, please feel free to contact me. All the information to contact me on this page is correct.")}
-      </Marquee>
-    }
-  /> */}
-      {/* <Button
-        target="_blank"
-        href="https://24timezones.com/Ho-Chi-Minh/time"
-        type="text"
-        icon={
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-          </svg>
-        }
-        className="text-white flex justify-center items-center text-center bg-orange-800 border-2 text-sm rounded-lg border-red-700"
-        rel="noopener noreferrer"
-      >
-        {t(time)}
-      </Button> */}
-      <div className='flex md:flex-row flex-col overflow-hidden md:gap-x-8 gap-y-3 items-center justify-center'>
+     
+      <div className='flex md:flex-row flex-col overflow-hidden md:gap-x-8 gap-y-3 md:mr-0 mr-auto items-center justify-center'>
       
 
 
-        <div class=" group before:absolute before:bg-sky-500 before:w-3 before:h-12 before:top-24 before:-right-2 before:-z-10 before:rounded-2xl before:shadow-inner before:shadow-gray-50 relative w-60 h-60 bg-sky-500 shadow-inner shadow-gray-50 flex justify-center items-center rounded-3xl">
+        <div class=" group before:absolute before:bg-sky-500 before:w-3 before:h-12 overflow-hidden
+         before:top-24 before:-right-2 before:-z-10 before:rounded-2xl before:shadow-inner before:shadow-gray-50
+          relative w-60 h-60 bg-sky-500 shadow-inner shadow-gray-50 flex justify-center items-center rounded-3xl">
           <div class="w-56 h-56 bg-neutral-900 shadow-inner shadow-gray-50 flex justify-center items-center rounded-3xl">
             <div class="flex flex-col items-center justify-center rounded-2xl bg-neutral-900 shadow-inner shadow-gray-50 w-52 h-52">
               <div class="group-hover:duration-300 hover:opacity-100  opacity-0 before:absolute before:w-12 before:h-12 before:bg-orange-800 before:rounded-full before:blur-xl before:top-16 relative   flex flex-col justify-around items-center w-44 h-40 bg-neutral-900 text-gray-50">
@@ -122,10 +102,11 @@ function Fotter() {
             </div>
           </div>
         </div>
-
+    
         <form
         ref={form} onSubmit={sendEmail}
-          class="text-neutral-800 py-6 relative overflow-hidden flex flex-col justify-around w-96 h-44 border border-neutral-500 rounded-lg bg-neutral-50 p-3 px-6"
+          class="text-neutral-800 py-6 overflow-hidden relative overflow-hidden flex flex-col justify-around w-auto h-44 
+          border border-neutral-500 rounded-lg bg-neutral-50 p-3 md:px-6"
         >
           <div
             class="before:absolute before:w-32 before:h-20 before:right-2 before:bg-rose-300 before:-z-10 before:rounded-full before:blur-xl before:-top-12 z-10 after:absolute after:w-24 after:h-24 after:bg-purple-300 after:-z-10 after:rounded-full after:blur after:-top-12 after:-right-6"
@@ -158,12 +139,13 @@ function Fotter() {
 
 
 
+     
+
+
+
       </div>
-
-
-
       <p className="text-center text-base">{t("Copyright")} &copy; 2024 {t("by")} Vu Hoang  <span>Dev</span> | {t("All Rights Reserved")}</p>
- 
+
     </div>
   )
 }
