@@ -9,8 +9,9 @@ import { useTranslation } from 'react-i18next';
 import Nav from '../component/Nav';
 import me1 from "../assets/me1.png";
 import { AntDesignOutlined } from '@ant-design/icons';
-import { Tooltip } from 'antd';
+import { Alert, Tooltip } from 'antd';
 import AgeCalculator from '../component/AgeCalculator';
+import Marquee from 'react-fast-marquee';
 function Skill() {
   const { darkMode, toggleDarkMode } = useDarkMode();
   useEffect(() => {
@@ -26,9 +27,19 @@ function Skill() {
 
 
       <ProgressBar />
-
-      <div className='  md:mx-32  flex flex-col justify-center items-center'>
-        <Header />
+      <Header />
+     
+        <Alert 
+      className='my-2 md:w-4/5 w-full overflow-hidden mx-2'
+    banner
+    message={
+      <Marquee pauseOnHover gradient={false}>
+        {t("All the features on the above page are available. If you have any questions, please feel free to contact me. All the information to contact me on this page is correct.")}
+      </Marquee>
+    }
+  />
+   <div className='  md:mx-32  flex flex-col justify-center items-center'>
+     
        
         {/* ${darkMode ? "container1" : "container3"}  */}
         <div className={`flex my-8  

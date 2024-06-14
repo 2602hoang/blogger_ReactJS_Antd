@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Header from '../component/Header'
 import avata from '../assets/AVATA2.jpg'
 import Fotter from '../component/Fotter'
-import { Avatar, Button, Drawer, Form, Image, Input, Modal, Popover, QRCode, Tooltip } from 'antd'
+import { Alert, Avatar, Button, Drawer, Form, Image, Input, Modal, Popover, QRCode, Tooltip } from 'antd'
 import Aos from 'aos';
 import "aos/dist/aos.css"
 import { useDarkMode } from '../component/DarkModeProvider';
@@ -20,6 +20,7 @@ import TextArea from 'antd/es/input/TextArea'
 
 import axios from 'axios'
 import AgeCalculator from '../component/AgeCalculator'
+import Marquee from 'react-fast-marquee'
 
 
 
@@ -77,6 +78,15 @@ function About() {
     <div className={`flex overflow-hidden justify-center items-center w-full flex-col ${darkMode ? '' : 'dark'}`}>
       <ProgressBar />
       <Header />
+      <Alert 
+      className='my-2 md:w-4/5 w-full overflow-hidden mx-2'
+    banner
+    message={
+      <Marquee pauseOnHover gradient={false}>
+        {t("All the features on the above page are available. If you have any questions, please feel free to contact me. All the information to contact me on this page is correct.")}
+      </Marquee>
+    }
+  />
       <section></section>
 
       <div className='mt-8 min-h-screen w-full h-auto flex justify-center items-center md:flex-row flex-col'>

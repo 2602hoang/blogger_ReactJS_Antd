@@ -11,13 +11,14 @@ import img6 from "../assets/6.png"
 import img7 from "../assets/7.png"
 
 import { useDarkMode } from '../component/DarkModeProvider';
-import { Button, Drawer, Image, List } from 'antd';
+import { Alert, Button, Drawer, Image, List } from 'antd';
 import { GithubOutlined } from '@ant-design/icons';
 import Aos from 'aos';
 import "aos/dist/aos.css"
 import ProgressBar from '../component/ProgressBar';
 import { useTranslation } from 'react-i18next';
 import Nav from '../component/Nav';
+import Marquee from 'react-fast-marquee';
 function Service() {
   const { t } = useTranslation();
   useEffect(() => {
@@ -97,10 +98,22 @@ function Service() {
 
   return (
     <div className={`flex w-full flex-col overflow-hidden ${darkMode ? '' : 'dark'}`}>
+      <Header />
+      <div className='flex justify-center items-center'>
+      <Alert 
+      className='flex  my-2 md:w-4/5 w-full overflow-hidden mx-2'
+    banner
+    message={
+      <Marquee pauseOnHover gradient={false}>
+        {t("All the features on the above page are available. If you have any questions, please feel free to contact me. All the information to contact me on this page is correct.")}
+      </Marquee>
+    }
+  />
+  </div>
 
       <ProgressBar />
 
-      <Header />
+      
       <div data-aos="flip-left" className='   mx-12 mt-7 flex flex-row justify-center items-center'>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
           <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />

@@ -5,7 +5,7 @@ import Header from '../component/Header';
 import Fotter from '../component/Fotter';
 // import avata from '../assets/AVATA.png'
 // import avata1 from '../assets/AVATA1.png'
-import { Avatar, Button, Drawer, Form, Image, Input, Modal, Popover, QRCode, Tooltip } from "antd"
+import { Alert, Avatar, Button, Drawer, Form, Image, Input, Modal, Popover, QRCode, Tooltip } from "antd"
 import { UserOutlined, GithubFilled, FacebookFilled, MailFilled, PhoneFilled, CommentOutlined, SendOutlined } from '@ant-design/icons';
 import Aos from 'aos';
 import me5 from "../assets/me5.png";
@@ -20,6 +20,7 @@ import axios from 'axios';
 import avata from '../assets/AVATA2.jpg'
 import TextArea from 'antd/es/input/TextArea';
 import AgeCalculator from '../component/AgeCalculator';
+import Marquee from 'react-fast-marquee';
 
 
 
@@ -134,7 +135,7 @@ function Home() {
       // console.log("ok", typeof cmt);
       return (
 
-        <div className='flex-col flex w-full border-2 my-3 p-2 rounded-2xl snap-y' key={index}>
+        <div className='flex-col flex w-full border-2 my-3 p-2 rounded-2xl snap-y scroll-smooth focus:scroll-auto' key={index}>
           <div className="flex flex-row gap-5 border-b-2 snap-normal ">
             <div className='mr-auto'>
               <a >
@@ -214,6 +215,15 @@ function Home() {
     <div className={`snap-y snap-mandatory justify-center overflow-hidden items-center flex w-full flex-col ${darkMode ? '' : 'dark'}`}>
       <ProgressBar />
       <Header />
+      <Alert 
+      className='my-2 md:w-4/5 w-full overflow-hidden mx-2'
+    banner
+    message={
+      <Marquee pauseOnHover gradient={false}>
+        {t("All the features on the above page are available. If you have any questions, please feel free to contact me. All the information to contact me on this page is correct.")}
+      </Marquee>
+    }
+  />
 
       <div className='snap-start mb-5 mt-auto md:h-screen  w-full flex justify-center items-center md:flex-row flex-col'>
         <div

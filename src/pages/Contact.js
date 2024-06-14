@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import Header from '../component/Header'
 import Fotter from '../component/Fotter'
-import { Button, Drawer, Form, Input } from 'antd';
+import { Alert, Button, Drawer, Form, Input } from 'antd';
 import { EnvironmentFilled, MailFilled, MenuOutlined, SendOutlined } from '@ant-design/icons';
 import axios from 'axios';
 import TextArea from 'antd/es/input/TextArea';
@@ -11,6 +11,7 @@ import { useDarkMode } from '../component/DarkModeProvider';
 import ProgressBar from '../component/ProgressBar';
 import { useTranslation } from 'react-i18next';
 import Nav from '../component/Nav';
+import Marquee from 'react-fast-marquee';
 
 
 function Contact() {
@@ -91,6 +92,17 @@ function Contact() {
 
             <ProgressBar />
             <Header />
+            <div className='flex justify-center items-center'>
+            <Alert 
+      className='my-2 md:w-4/5 w-full overflow-hidden mx-2'
+    banner
+    message={
+      <Marquee pauseOnHover gradient={false}>
+        {t("All the features on the above page are available. If you have any questions, please feel free to contact me. All the information to contact me on this page is correct.")}
+      </Marquee>
+    }
+  />
+  </div>
             <section></section>
             <div data-aos="flip-left"
                 data-aos-easing="ease-out-cubic"
