@@ -79,12 +79,21 @@ function Service() {
     t("Comming Soon . . ."),
     // Thêm các giá trị tương ứng với các phần tử khác nếu cần
   ];
+  const p = [
+    t("Website development according to figma template with ReactJS + taiwindcss + antd technology. In addition, its interface can be adapted to the screens of different types of devices. The website has English/Vietnamese and light/dark translation functions."),
+    t("Develop website according to available web templates with ReactJS + taiwindcss + antd technology. In addition, its interface can be adapted to the screens of different types of devices. The website is almost identical to the current website."),
+    t("Develop website according to self-designed template with ReactJS + taiwindcss + antd technology. In addition, its interface can be adapted to the screens of different types of devices. The web has the ability to send communications using the apps script API. Specifically, when entering information into available from, it will automatically fill in google from and will be stored in google sheet. In addition, when sending, there will be a notification to the predetermined email."),
+    t("Develop websites according to personal design. The technologies applied are ReactJS + Taiwindcss + Antd + i18n + emailJS + Aos. Also use apps scipt to use API to send contact messages, send comments and get comments to display them. This website can display friendly on all devices."),
+    t("Comming Soon . . ."),
+    // Thêm các giá trị tương ứng với các phần tử khác nếu cần
+  ];
   const hrefs = [
 
     "https://clone-joodo.vercel.app/",
     "https://cattiensa-clone.vercel.app/",
     "https://web-home-demo-js-taiwin.vercel.app/",
     "https://blogger-vhh.vercel.app/",
+    "/eror",
     // Thêm các href tương ứng với các phần tử khác nếu cần
   ];
   const hrefs1 = [
@@ -233,8 +242,10 @@ function Service() {
                   <h4 className=" text-center -translate-y-2
                   bg-gradient-to-r from-orange-500 via-yellow-500 to-green-500 text-purple-800 rounded-lg m-0 self-stretch relative text-inherit leading-[44px] font-semibold font-inherit
                   text-2xl">&nbsp;&nbsp;{t("Personal project")} &nbsp;&nbsp;
-                    <Tooltip color='orange' placement='top' title={<h2>Project Information</h2>}>
-                  <Button  type='link' icon={<InfoCircleOutlined style={{fontSize:"30px"}}/>}>
+                    <Tooltip color='orange' placement='bottom' title={<h2>{p[index]}</h2>}>
+                   
+                    
+                  <Button className='animate-spin hover:animate-none' type='link' icon={<InfoCircleOutlined style={{color:"red",fontSize:"30px"}}/>}>
              
                   </Button>
                   </Tooltip>

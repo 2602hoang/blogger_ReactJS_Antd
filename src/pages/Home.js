@@ -461,7 +461,7 @@ function Home() {
           <button onClick={showModal1} class="bg-red-300 hover:bg-red-500 text-white animate-bounce 
                   font-bold py-3 px-6 rounded-full shadow-lg hover:text-white shadow-white transform transition-all
                    duration-500 ease-in-out hover:scale-110 hover:brightness-110 hover:animate-pulse active:animate-bounce">
-            {t("Leave your own comment")}!!!
+           {t("Click here")}! {t("Leave your own comment")}!!!
           </button>
           <Modal
             className=' overflow-hidden text-center w-1/2  h-max  '
