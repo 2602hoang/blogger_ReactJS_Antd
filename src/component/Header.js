@@ -3,7 +3,7 @@ import { useState } from 'react'; // Import useState if you're using it
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import Logo from '../assets/logo.png';
-import { FloatButton } from 'antd';
+import { FloatButton, Tooltip } from 'antd';
 import { MenuOutlined } from '@ant-design/icons';
 import Nav from './Nav';
 import { useDarkMode } from './DarkModeProvider';
@@ -34,9 +34,10 @@ function Header() {
             {/* <ProgressBar/> */}
             <nav className='justify-between items-center flex   '>
                 <div className='md:flex top-0 left-0  z-50  md:z-50  w-52 md:w-72 md:mr-96 flex flex-row '>
+                    <Tooltip title={t("Back to Home")}>
                     <a href='/' className='hover:animate-ping font-black flex  items-center gap-x-2 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500'>
                         <img src={Logo} alt="Back Home" className='mt-2 w-12 h-12' />Blog Me</a>
-
+                    </Tooltip>
                 </div>
                 <ul id="menu"
                     className={`

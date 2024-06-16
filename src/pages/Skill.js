@@ -34,8 +34,10 @@ function Skill() {
     banner
     message={
       <Marquee pauseOnHover gradient={false}>
-       {t("All the features on the above page are available. If you have any questions, please feel free to contact me")} &nbsp;  
-        <a href='/contact' target='_blank' className='text-sky-800 underline'>{t("here")}.</a>&nbsp;
+       {t("All the features on the above page are available. If you have any questions, please feel free to contact me")} &nbsp;
+       <Tooltip title={t("Click here")}> 
+        <a href='/contact' target='_blank' className='text-sky-800 hover:animate-ping underline'>{t("here")}.</a>&nbsp;
+        </Tooltip>
         {t("All the information to contact me on this page is correct.")}
       </Marquee>
     }
