@@ -14,7 +14,7 @@
   }
   .dark {
     background-color: #121212; /* Dark background color */
-    color: #ffffff; /* White text color */
+    color: #F7F9F2; /* White text color */
     /* Add more dark mode styles here */
 }
 .dark ul#menu li a {
@@ -219,8 +219,10 @@ button:active {
 }
 /*  */
 .container {
+  position: fixed;
+  top: 0;
   width: 100%;
-  height: 100%;
+  height: 61px;
   --s: 84px;
   --c1: #79994f;
   --c2: #717246;

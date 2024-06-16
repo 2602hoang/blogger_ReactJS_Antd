@@ -21,18 +21,21 @@ function Header() {
 
     return (
         <div className={`
-    md:rounded-3xl
-     w-full
+    w-full
+    md:rounded-2xl
+     justify-center
+     items-center
      container
-    
+    z-30
+    top-0
     overflow-hidden
      ${darkMode ? '' : 'dark'} 
       mx-auto px-4`}>
             {/* <ProgressBar/> */}
-            <nav className='justify-between items-center py-3 flex   '>
+            <nav className='justify-between items-center flex   '>
                 <div className='md:flex top-0 left-0  z-50  md:z-50  w-52 md:w-72 md:mr-96 flex flex-row '>
                     <a href='/' className='font-black flex  items-center gap-x-2 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500'>
-                        <img src={Logo} alt="Back Home" className='w-12 h-12' />Blog Me</a>
+                        <img src={Logo} alt="Back Home" className='mt-2 w-12 h-12' />Blog Me</a>
 
                 </div>
                 <ul id="menu"
@@ -75,9 +78,9 @@ function Header() {
 
                     </li>
                 </ul>
-                <div id='menu-button' className='absolute  pt-5 top-10 left-5  md:hidden cursor-pointer z-50 flexd' onClick={toggleMenu}>
+                <div id='menu-button' className='absolute  pt-5 top-5 left-5  md:hidden cursor-pointer z-50 flexd' onClick={toggleMenu}>
 
-                    <FloatButton icon={<MenuOutlined style={{ color: 'black', }} />} className={`flex z-50  top-5 right-5 bg-`} />
+                    <FloatButton icon={<MenuOutlined style={{ color: 'black', }} />} className={`flex z-50  top-3 right-5 bg-`} />
 
                 </div>
 

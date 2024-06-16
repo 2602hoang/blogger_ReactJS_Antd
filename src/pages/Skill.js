@@ -30,7 +30,7 @@ function Skill() {
       <Header />
      
         <Alert 
-      className='my-2 md:w-4/5 w-full overflow-hidden mx-2'
+      className='my-2 mt-[65px] md:w-4/5 w-full overflow-hidden mx-2'
     banner
     message={
       <Marquee pauseOnHover gradient={false}>

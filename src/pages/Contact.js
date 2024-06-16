@@ -88,13 +88,13 @@ function Contact() {
     const { darkMode, toggleDarkMode } = useDarkMode();
     return (
 
-        <div className={`flex w-full overflow-hidden flex-col ${darkMode ? '' : 'dark'}`}>
+        <div className={`flex w-full overflow-hidden justify-center items-center flex-col ${darkMode ? '' : 'dark'}`}>
 
             <ProgressBar />
             <Header />
             <div className='flex justify-center items-center'>
                 <Alert
-                    className='my-2 md:w-4/5 w-full overflow-hidden mx-2'
+                    className=' mt-[65px] my-2 md:w-4/5 w-full overflow-hidden mx-2'
                     banner
                     message={
                         <Marquee pauseOnHover gradient={false}>
