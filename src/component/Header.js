@@ -34,7 +34,7 @@ function Header() {
             {/* <ProgressBar/> */}
             <nav className='justify-between items-center flex   '>
                 <div className='md:flex top-0 left-0  z-50  md:z-50  w-52 md:w-72 md:mr-96 flex flex-row '>
-                    <a href='/' className='font-black flex  items-center gap-x-2 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500'>
+                    <a href='/' className='hover:animate-ping font-black flex  items-center gap-x-2 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500'>
                         <img src={Logo} alt="Back Home" className='mt-2 w-12 h-12' />Blog Me</a>
 
                 </div>
@@ -47,28 +47,28 @@ function Header() {
             fixed z-20 top-0 left-0 w-full h-full flex font-bold flex-col justify-center items-center  bg-opacity-80 ${menuVisible ? 'min-h-full' : 'invisible'
                         } md:visible md:bg-transparent md:h-auto md:flex-row md:justify-between md:static`}>
                     <li className='m-8 md:m-0'>
-                        <a href='/' className=' md:text-white hover:border-b-2 hover:border-red-500 hover:text-red-500 transition duration-500 ease-in'>
+                        <a href='/' className=' md:text-white hover:animate-pulse hover:border-b-2 hover:border-red-500 hover:text-red-500 transition duration-500 ease-in'>
                             {t("Home")}
                         </a>
                     </li>
                     <li className='m-8 md:m-0'>
-                        <a href='/about' className=' md:text-white hover:border-b-2 hover:border-red-500 hover:text-red-500 transition duration-500 ease-in'>
+                        <a href='/about' className=' md:text-white hover:animate-pulse hover:border-b-2 hover:border-red-500 hover:text-red-500 transition duration-500 ease-in'>
                             {t("About")}
                         </a>
                     </li>
 
                     <li className='m-8 md:m-0'>
-                        <a href='/skills' className=' md:text-white hover:border-b-2 hover:border-red-500 hover:text-red-500 transition duration-500 ease-in'>
+                        <a href='/skills' className=' md:text-white hover:animate-pulse hover:border-b-2 hover:border-red-500 hover:text-red-500 transition duration-500 ease-in'>
                             {t("Skill")}
                         </a>
                     </li>
                     <li className='m-8 md:m-0'>
-                        <a href='/projects' className=' md:text-white hover:border-b-2 hover:border-red-500 hover:text-red-500 transition duration-500 ease-in'>
+                        <a href='/projects' className=' md:text-white hover:animate-pulse hover:border-b-2 hover:border-red-500 hover:text-red-500 transition duration-500 ease-in'>
                             {t("Project")}
                         </a>
                     </li>
                     <li className='m-8 md:m-0'>
-                        <a href='/contact' className=' md:text-white hover:border-b-2 hover:border-red-500 hover:text-red-500 transition duration-500 ease-in'>
+                        <a href='/contact' className=' md:text-white hover:animate-pulse hover:border-b-2 hover:border-red-500 hover:text-red-500 transition duration-500 ease-in'>
                             {t("Contact")}
                         </a>
                     </li>
