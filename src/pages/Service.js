@@ -77,7 +77,7 @@ function Service() {
     t("Build interfaces, deploy interface code and basic functions. Develop projects on the internet environment."),
     t("Build interfaces, deploy interface code and basic functions. Develop projects on the internet environment."),
     t("Build interfaces, deploy interface code and basic functions. Develop projects on the internet environment."),
-    t("Build interfaces, deploy interface code and basic functions. Develop projects on the internet environment."),
+    t("Build interfaces, deploy interface code and basic functions. Develop projects on the internet environment.")+ '\n' +"demo: https://s.net.vn/Y3bI",
     t("Comming Soon . . ."),
     // Thêm các giá trị tương ứng với các phần tử khác nếu cần
   ];
