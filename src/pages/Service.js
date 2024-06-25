@@ -86,7 +86,7 @@ function Service() {
     t("Develop website according to available web templates with ReactJS + taiwindcss + antd technology. In addition, its interface can be adapted to the screens of different types of devices. The website is almost identical to the current website."),
     t("Develop website according to self-designed template with ReactJS + taiwindcss + antd technology. In addition, its interface can be adapted to the screens of different types of devices. The web has the ability to send communications using the apps script API. Specifically, when entering information into available from, it will automatically fill in google from and will be stored in google sheet. In addition, when sending, there will be a notification to the predetermined email."),
     t("Develop websites according to personal design. The technologies applied are ReactJS + Taiwindcss + Antd + i18n + emailJS + Aos. Also use apps scipt to use API to send contact messages, send comments and get comments to display them. This website can display friendly on all devices."),
-    t("Comming Soon . . ."),
+    t("Perform interface design and interface programming. Design mysql database and deploy it to Console. Write APIs with nodejs and deploy it to render. Implementation on the web is to retrieve product data, add invoices, print invoices, finalize invoices, in addition, there are some functions that have not yet been implemented that have been completed by the API. Applied technologies are ReactJs, emailJs, PDFJs, Taiwindcss, antd, NodeJs, MySQL."),
     t("Comming Soon . . ."),
     // Thêm các giá trị tương ứng với các phần tử khác nếu cần
   ];

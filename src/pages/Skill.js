@@ -67,17 +67,17 @@ function Skill() {
                   <h1 className='text-sky-300 text-center font-extrabold mt-12 animate-pulse border-t-2 text-5xl'>{t("Programming Skills")}</h1>
                   <div class="flex-col  flex text-center justify-center items-center   ">
                     <div class="animate-float-image hover:animate-none my-10 mt-28 mx-2 md:flex-row  md:space-y-0 space-y-5  flex-wrap flex-col flex text-center justify-center items-center space-x-2  w-auto">
-                      <div class="text-xl shadow-white shadow-2xl px-3 bg-pink-200 text-pink-800 rounded-full"> ⭐</div>
-                      <div class="text-xl shadow-white shadow-2xl px-3 bg-indigo-200 text-indigo-800 rounded-full" >JavaScript</div>
-                      <div class="text-xl shadow-white shadow-2xl px-3 bg-red-200 text-red-800 rounded-full">HTML</div>
-                      <div class="text-xl shadow-white shadow-2xl px-3 bg-orange-200 text-orange-800 rounded-full">CSS</div>
-                      <div class="text-xl shadow-white shadow-2xl px-3 bg-yellow-200 text-yellow-800 rounded-full">ReactJS</div>
+                      <div class="text-[18px] shadow-white shadow-2xl px-3 bg-pink-200 text-pink-800 rounded-full"> ⭐</div>
+                      <div class="text-[18px] shadow-white shadow-2xl px-3 bg-indigo-200 text-indigo-800 rounded-full" >JavaScript</div>
+                      <div class="text-[18px] shadow-white shadow-2xl px-3 bg-red-200 text-red-800 rounded-full">HTML</div>
+                      <div class="text-[18px] shadow-white shadow-2xl px-3 bg-orange-200 text-orange-800 rounded-full">CSS</div>
+                      <div class="text-[18px] shadow-white shadow-2xl px-3 bg-yellow-200 text-yellow-800 rounded-full">ReactJS</div>
 
-                      <div class="text-xl shadow-white shadow-2xl px-3 bg-green-200 text-green-800 rounded-full">ReactNative</div>
-                      <div class="text-xl shadow-white shadow-2xl px-3 bg-teal-200 text-teal-800 rounded-full">Antd</div>
-                      <div class="text-xl shadow-white shadow-2xl px-3 bg-blue-200 text-blue-800 rounded-full">Tailwindcss</div>
-                      <div class="text-xl shadow-white shadow-2xl px-3 bg-purple-200 text-purple-800 rounded-full">Java/C#/C++</div>
-                      <div class="text-xl shadow-white shadow-2xl px-3 bg-pink-200 text-pink-800 rounded-full"> ⭐</div>
+                      <div class="text-[18px] shadow-white shadow-2xl px-3 bg-green-200 text-green-800 rounded-full">ReactNative</div>
+                      <div class="text-[18px] shadow-white shadow-2xl px-3 bg-teal-200 text-teal-800 rounded-full">Antd</div>
+                      <div class="text-[18px] shadow-white shadow-2xl px-3 bg-blue-200 text-blue-800 rounded-full">Tailwindcss</div>
+                      <div class="text-[18px] shadow-white shadow-2xl px-3 bg-purple-200 text-purple-800 rounded-full">NodeJS</div>
+                      <div class="text-[18px] shadow-white shadow-2xl px-3 bg-pink-200 text-pink-800 rounded-full"> ⭐</div>
                     </div>
 
 
