@@ -6,10 +6,11 @@ import img1 from "../assets/1.png"
 import img2 from "../assets/2.png"
 import img3 from "../assets/3.png"
 import img4 from "../assets/4.png"
-import img5 from "../assets/5.png"
+import img5 from "../assets/7.png"
 import img6 from "../assets/6.png"
-import img7 from "../assets/7.png"
-import img8 from "../assets/8.png"
+// import img7 from "../assets/5.png"
+import img8 from "../assets/9.png"
+import img9 from "../assets/8.png"
 
 import { useDarkMode } from '../component/DarkModeProvider';
 import { Alert, Button, Drawer, Image, List, Tooltip } from 'antd';
@@ -77,16 +78,20 @@ function Service() {
     t("Build interfaces, deploy interface code and basic functions. Develop projects on the internet environment."),
     t("Build interfaces, deploy interface code and basic functions. Develop projects on the internet environment."),
     t("Build interfaces, deploy interface code and basic functions. Develop projects on the internet environment."),
-    t("Build interfaces, deploy interface code and basic functions. Develop projects on the internet environment.")+ '\n' +"demo: https://s.net.vn/Y3bI",
+    // t("Build interfaces, deploy interface code and basic functions. Develop projects on the internet environment."),
+    t("Comming Soon . . ."),
     t("Comming Soon . . ."),
     // Thêm các giá trị tương ứng với các phần tử khác nếu cần
   ];
   const p = [
     t("Website development according to figma template with ReactJS + taiwindcss + antd technology. In addition, its interface can be adapted to the screens of different types of devices. The website has English/Vietnamese and light/dark translation functions."),
     t("Develop website according to available web templates with ReactJS + taiwindcss + antd technology. In addition, its interface can be adapted to the screens of different types of devices. The website is almost identical to the current website."),
-    t("Develop website according to self-designed template with ReactJS + taiwindcss + antd technology. In addition, its interface can be adapted to the screens of different types of devices. The web has the ability to send communications using the apps script API. Specifically, when entering information into available from, it will automatically fill in google from and will be stored in google sheet. In addition, when sending, there will be a notification to the predetermined email."),
-    t("Develop websites according to personal design. The technologies applied are ReactJS + Taiwindcss + Antd + i18n + emailJS + Aos. Also use apps scipt to use API to send contact messages, send comments and get comments to display them. This website can display friendly on all devices."),
     t("Perform interface design and interface programming. Design mysql database and deploy it to Console. Write APIs with nodejs and deploy it to render. Implementation on the web is to retrieve product data, add invoices, print invoices, finalize invoices, in addition, there are some functions that have not yet been implemented that have been completed by the API. Applied technologies are ReactJs, emailJs, PDFJs, Taiwindcss, antd, NodeJs, MySQL."),
+
+    t("Develop websites according to personal design. The technologies applied are ReactJS + Taiwindcss + Antd + i18n + emailJS + Aos. Also use apps scipt to use API to send contact messages, send comments and get comments to display them. This website can display friendly on all devices."),
+    // t("Develop website according to self-designed template with ReactJS + taiwindcss + antd technology. In addition, its interface can be adapted to the screens of different types of devices. The web has the ability to send communications using the apps script API. Specifically, when entering information into available from, it will automatically fill in google from and will be stored in google sheet. In addition, when sending, there will be a notification to the predetermined email."),
+
+    t("Comming Soon . . ."),
     t("Comming Soon . . ."),
     // Thêm các giá trị tương ứng với các phần tử khác nếu cần
   ];
@@ -94,9 +99,10 @@ function Service() {
 
     "https://clone-joodo.vercel.app/",
     "https://cattiensa-clone.vercel.app/",
-    "https://web-home-demo-js-taiwin.vercel.app/",
+    "https://katina-git-master-2602hoangs-projects.vercel.app/",
     "https://blogger-vhh.vercel.app/",
-    "https://katina-beta.vercel.app/",
+    // "https://web-home-demo-js-taiwin.vercel.app/",
+    "https://web-app-six-tau.vercel.app/",
     "/eror",
     // Thêm các href tương ứng với các phần tử khác nếu cần
   ];
@@ -227,7 +233,7 @@ function Service() {
       <div className='md:mx-32 mx-2 my-5'>
         <div className="grid md:grid-cols-3 grid-cols-1 gap-3 md:gap-9 justify-center items-center">
           {/* Map over your portfolio items */}
-          {[img3, img4, img5, img6, img7,img8,].map((img, index) => (
+          {[img3, img4, img5, img6,img8,img9].map((img, index) => (
             <div
               data-aos="flip-up"
               key={index}
