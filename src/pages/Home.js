@@ -229,7 +229,7 @@ function Home() {
     }
   />
 
-      <div className='snap-start mb-5 mt-auto md:h-screen  w-full flex justify-center items-center md:flex-row flex-col'>
+      <div className='snap-start  mt-auto md:h-screen  w-full flex justify-center items-center md:flex-row flex-col'>
         <div
           data-aos="fade-top"
           className={`
@@ -308,7 +308,7 @@ function Home() {
 
           </div>
 
-          <div data-aos="flip-down" className={`  md:ml-40 justify-center items-center  ${darkMode ? '' : 'dark'}  my-10  mb-10 flex md:w-[400px]   `}>
+          <div data-aos="flip-down" className={`  md:ml-40 justify-center items-center  ${darkMode ? '' : 'dark'}    mb-10 flex md:w-[400px]   `}>
             {/* <img className={`
                 
                 hover:animate-none animate-float-image w-[400px] h-[600px] 
