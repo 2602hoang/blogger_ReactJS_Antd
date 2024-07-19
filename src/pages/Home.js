@@ -251,7 +251,7 @@ function Home() {
 
               <span className='text-5xl '>{t("And")} {t("I am")} {t("a")}<br />
                 <marquee bgcolor="#FFB4A4" scrollamount="3" loop="3" width="100%" behavior="scroll"
-                  className='text-sky-600 font-bold mt-2 md:w-[500px] rounded-xl'> {t("Frontend Developer")}</marquee>
+                  className='text-sky-600 font-bold mt-2 md:w-[500px] rounded-xl'> {t("Developer")}</marquee>
 
 
               </span>
@@ -328,14 +328,15 @@ function Home() {
 
                 class="w-28 h-28  mt-8 rounded-full border-4 border-slate-50 z-10 group-hover:scale-150 group-hover:-translate-x-24  group-hover:-translate-y-20 transition-all duration-500"></div>
               <div class="z-10  group-hover:-translate-y-10 transition-all duration-500">
-                <span class={`${darkMode ? 'text-white' : ' text-black'} text-2xl font-semibold`}>{t("Frontend Developer")}</span>
+                <span class={`${darkMode ? 'text-white' : ' text-black'} text-2xl font-semibold`}>{t("Developer")}</span>
                 <p class={`text-xs ${darkMode ? 'text-white' : ' text-black'}`}>Vu Huy Hoang</p>
               </div>
               <button
                 target="_blank"
                 onClick={() => {
-                  window.open('https://drive.google.com/file/d/1hy8owJJLMo9drrnzXBxSAczpVZIuCd3b/view?usp=drive_link');
-                  window.location.href = 'https://drive.google.com/uc?export=download&id=1hy8owJJLMo9drrnzXBxSAczpVZIuCd3b';
+                  window.open('https://drive.google.com/file/d/1j9cqcAyPOF8o_WzR24G-cu13zv5gN1JC/view?usp=drive_link');
+                
+                  window.location.href = 'https://drive.google.com/uc?export=download&id=1j9cqcAyPOF8o_WzR24G-cu13zv5gN1JC';
                 }}
                 class="
                   btn hover:animate-pulse

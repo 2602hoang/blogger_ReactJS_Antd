@@ -4,12 +4,12 @@ import Header from '../component/Header';
 import Fotter from '../component/Fotter';
 import img1 from "../assets/1.png"
 import img2 from "../assets/2.png"
-import img3 from "../assets/3.png"
-import img4 from "../assets/4.png"
+import img8 from "../assets/3.png"
+import img6 from "../assets/4.png"
 import img5 from "../assets/7.png"
-import img6 from "../assets/6.png"
+import img4 from "../assets/6.png"
 // import img7 from "../assets/5.png"
-import img8 from "../assets/9.png"
+import img3 from "../assets/9.png"
 import img9 from "../assets/8.png"
 
 import { useDarkMode } from '../component/DarkModeProvider';
@@ -74,35 +74,34 @@ function Service() {
     // Thêm các giá trị tương ứng với các phần tử khác nếu cần
   ];
   const values1 = [
-    t("Build interfaces, deploy interface code and basic functions. Develop projects on the internet environment."),
+    t("Build interfaces, deploy interface code and basic functions. Develop projects on the internet environment." +"\n"+"Login admin 0917789964/123456"),
     t("Build interfaces, deploy interface code and basic functions. Develop projects on the internet environment."),
     t("Build interfaces, deploy interface code and basic functions. Develop projects on the internet environment."),
     t("Build interfaces, deploy interface code and basic functions. Develop projects on the internet environment."),
     // t("Build interfaces, deploy interface code and basic functions. Develop projects on the internet environment."),
-    t("Comming Soon . . ."),
+    t("Build interfaces, deploy interface code and basic functions. Develop projects on the internet environment."),
     t("Comming Soon . . ."),
     // Thêm các giá trị tương ứng với các phần tử khác nếu cần
   ];
   const p = [
-    t("Website development according to figma template with ReactJS + taiwindcss + antd technology. In addition, its interface can be adapted to the screens of different types of devices. The website has English/Vietnamese and light/dark translation functions."),
-    t("Develop website according to available web templates with ReactJS + taiwindcss + antd technology. In addition, its interface can be adapted to the screens of different types of devices. The website is almost identical to the current website."),
-    t("Perform interface design and interface programming. Design mysql database and deploy it to Console. Write APIs with nodejs and deploy it to render. Implementation on the web is to retrieve product data, add invoices, print invoices, finalize invoices, in addition, there are some functions that have not yet been implemented that have been completed by the API. Applied technologies are ReactJs, emailJs, PDFJs, Taiwindcss, antd, NodeJs, MySQL."),
-
+    t("I designed and developed a website/app to sell books. On the Front-end side, I developed two interfaces, one is the user page for buying books and the other is the admin page interface. I use ReactJS, TaiwindCss, Antd (Ant Design), Antd Charts to design the interface for each page. On the Back-end side, I use NodeJS combined with MySQL database to create APIs. I develop Front-end and Back-end on the internet environment via vercel. As for the MySQL database, I use Aiven."),
     t("Develop websites according to personal design. The technologies applied are ReactJS + Taiwindcss + Antd + i18n + emailJS + Aos. Also use apps scipt to use API to send contact messages, send comments and get comments to display them. This website can display friendly on all devices."),
+    t("Perform interface design and interface programming. Design mysql database and deploy it to Console. Write APIs with nodejs and deploy it to render. Implementation on the web is to retrieve product data, add invoices, print invoices, finalize invoices, in addition, there are some functions that have not yet been implemented that have been completed by the API. Applied technologies are ReactJs, emailJs, PDFJs, Taiwindcss, antd, NodeJs, MySQL."),
+    t("Develop website according to available web templates with ReactJS + taiwindcss + antd technology. In addition, its interface can be adapted to the screens of different types of devices. The website is almost identical to the current website."),
     // t("Develop website according to self-designed template with ReactJS + taiwindcss + antd technology. In addition, its interface can be adapted to the screens of different types of devices. The web has the ability to send communications using the apps script API. Specifically, when entering information into available from, it will automatically fill in google from and will be stored in google sheet. In addition, when sending, there will be a notification to the predetermined email."),
-
-    t("Comming Soon . . ."),
+    t("Website development according to figma template with ReactJS + taiwindcss + antd technology. In addition, its interface can be adapted to the screens of different types of devices. The website has English/Vietnamese and light/dark translation functions."),
+   
     t("Comming Soon . . ."),
     // Thêm các giá trị tương ứng với các phần tử khác nếu cần
   ];
   const hrefs = [
 
-    "https://clone-joodo.vercel.app/",
-    "https://cattiensa-clone.vercel.app/",
-    "https://katina-git-master-2602hoangs-projects.vercel.app/",
-    "https://blogger-vhh.vercel.app/",
-    // "https://web-home-demo-js-taiwin.vercel.app/",
     "https://web-app-six-tau.vercel.app/",
+    "https://blogger-vhh.vercel.app/",
+    "https://katina-git-master-2602hoangs-projects.vercel.app/",
+    "https://cattiensa-clone.vercel.app/",
+    // "https://web-home-demo-js-taiwin.vercel.app/",
+    "https://clone-joodo.vercel.app/",
     "/eror",
     // Thêm các href tương ứng với các phần tử khác nếu cần
   ];

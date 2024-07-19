@@ -8,6 +8,7 @@ i18n
                 vn: 
                 {
                 translation: {
+                    
                     "Wellcome":"Chào Mừng",
                     "Vu Huy Hoang":"Vũ Huy Hoàng",
                     "Dark mode": "Chế độ sáng/tối",
@@ -41,7 +42,7 @@ i18n
                     "Project": "Dự án",
                     "Contact": "Liên hệ",
                     "About me": "Giới thiệu về tôi",
-                    "I'm a frontend developer who loves to make things look beautiful and working perfectly": "Tôi là một nhà phát triển giao diện người dùng, đam mê tạo ra những sản phẩm website đẹp mắt và hoạt động hoàn hảo",
+                    "I'm a developer who loves to make things look beautiful and working perfectly": "Tôi là một lập trình viên, đam mê tạo ra những sản phẩm website đẹp mắt và hoạt động hoàn hảo",
                     "I'm passionate about making websites that are easy to use and that provide the best user experience possible": "Tôi tâm huyết trong việc xây dựng các trang web dễ sử dụng, mang đến trải nghiệm người dùng tốt nhất có thể",
                     "I also happen to be a creative person, which I use to inject a little bit of fun into every project": "Bên cạnh các kỹ năng lập trình, tôi còn là một người sáng tạo, luôn cố gắng mang đến một chút thú vị cho mọi dự án mình tham gia",
                     "Read more": "Đọc thêm",
@@ -123,7 +124,7 @@ i18n
                             "I am": "Tôi là",
                             "And": "Và ",
                             "a": "một",
-                            "Frontend Developer": "Nhà phát triển giao diện người dùng",
+                            "Developer": "Lập Trình Viên",
                             "Gmail me": "Liên hệ với tôi qua Gmail",
                             "Github me": "Liên hệ với tôi qua Github",
                             "Facebook me": "Liên hệ với tôi qua Facebook",
@@ -148,7 +149,7 @@ i18n
                             "Project": "Dự án",
                             "Contact": "Liên hệ",
                             "About me": "Giới thiệu về tôi",
-                            "I'm a frontend developer who loves to make things look beautiful and working perfectly": "Tôi là một nhà phát triển giao diện người dùng, đam mê tạo ra những sản phẩm website đẹp mắt và hoạt động hoàn hảo",
+                            "I'm a developer who loves to make things look beautiful and working perfectly": "Tôi là lập trình viên, đam mê tạo ra những sản phẩm website đẹp mắt và hoạt động hoàn hảo",
                             "I'm passionate about making websites that are easy to use and that provide the best user experience possible": "Tôi tâm huyết trong việc xây dựng các trang web dễ sử dụng, mang đến trải nghiệm người dùng tốt nhất có thể",
                             "I also happen to be a creative person, which I use to inject a little bit of fun into every project": "Bên cạnh các kỹ năng lập trình, tôi còn là một người sáng tạo, luôn cố gắng mang đến một chút thú vị cho mọi dự án mình tham gia",
                             "Read more": "Đọc thêm",
@@ -236,8 +237,8 @@ i18n
                     "Please input your message!":"Vui lòng nhập tin nhắn của bạn!",
                     "":"",
                     "Read More":"Đọc thêm",
-                    "I'm a frontend developer passionate about crafting visually stunning websites and mobile apps that not only look beautiful but also offer robust functionality. I thrive on creating smooth user experiences, leveraging my creativity to inject a bit of excitement into every project."
-                    :"Tôi là một nhà phát triển frontend, đam mê tạo ra những trang web và ứng dụng di động mỹ lệ không chỉ đẹp mắt mà còn mang lại nhiều chức năng hoàn hảo. Tôi hứng thú với việc tạo ra trải nghiệm người dùng mượt mà, sử dụng sự sáng tạo của mình để thêm một chút hứng khởi vào mỗi dự án.",
+                    "I'm a developer passionate about crafting visually stunning websites and mobile apps that not only look beautiful but also offer robust functionality. I thrive on creating smooth user experiences, leveraging my creativity to inject a bit of excitement into every project."
+                    :"Tôi là một lập trình viên, đam mê tạo ra những trang web và ứng dụng di động mỹ lệ không chỉ đẹp mắt mà còn mang lại nhiều chức năng hoàn hảo. Tôi hứng thú với việc tạo ra trải nghiệm người dùng mượt mà, sử dụng sự sáng tạo của mình để thêm một chút hứng khởi vào mỗi dự án.",
                     "View & Dowload":"Xem & Tải xuống",
                     "Thank You":"Cảm Ơn Bạn",
                     "It's great that you stopped by my blog":"Thật tuyệt khi bạn ghé qua blog của tôi",
@@ -280,7 +281,7 @@ i18n
                     "Subscribe to get information, latest news about me":"Đăng ký để nhận thông tin, tin tức mới nhất về tôi",
                     "All the features on the above page are available. If you have any questions, please feel free to contact me":"Tất cả các tính năng trên trang trên đều có sẵn. Nếu bạn có bất kỳ câu hỏi nào, xin vui lòng liên hệ với tôi",
                     "All the features on the above page are available. If you have any questions, please feel free to contact me. All the information to contact me on this page is correct.":"Tất cả các tính năng trên trang trên đều có sẵn. Nếu bạn có bất kỳ câu hỏi nào, xin vui lòng liên hệ với tôi. Tất cả thông tin để liên hệ với tôi trên trang này là đúng.",
-                }
+                }   
                 },
                 en: 
                 {
@@ -331,7 +332,7 @@ i18n
                     "It's great that you stopped by my blog":"It's great that you stopped by my blog",
                     "Thank You":"Thank You",
                     "View & Dowload":"View & Dowload",
-                    "I'm a frontend developer passionate about crafting visually stunning websites and mobile apps that not only look beautiful but also offer robust functionality. I thrive on creating smooth user experiences, leveraging my creativity to inject a bit of excitement into every project.":"I'm a frontend developer passionate about crafting visually stunning websites and mobile apps that not only look beautiful but also offer robust functionality. I thrive on creating smooth user experiences, leveraging my creativity to inject a bit of excitement into every project.",
+                    "I'm a developer passionate about crafting visually stunning websites and mobile apps that not only look beautiful but also offer robust functionality. I thrive on creating smooth user experiences, leveraging my creativity to inject a bit of excitement into every project.":"I'm a frontend developer passionate about crafting visually stunning websites and mobile apps that not only look beautiful but also offer robust functionality. I thrive on creating smooth user experiences, leveraging my creativity to inject a bit of excitement into every project.",
                     "Read More":"Read More",
                     "Your message has been sent to the site administrator via email. Messages are saved in google sheets. Thank you for contacting me!!!":"Your message has been sent to the site administrator via email. Messages are saved in google sheets. Thank you for contacting me!!!",
                     "(Your message will be sent to the page admin's personal mail)":"(Your message will be sent to the page admin's personal mail)",
@@ -368,7 +369,7 @@ i18n
                                 "Project": "Project",
                                 "Contact": "Contact",
                                 "About me": "About me",
-                                "I'm a frontend developer who loves to make things look beautiful and working perfectly": "I'm a frontend developer who loves to make things look beautiful and working perfectly",
+                                "I'm a developer who loves to make things look beautiful and working perfectly": "I'm a developer who loves to make things look beautiful and working perfectly",
                                 "I'm passionate about making websites that are easy to use and that provide the best user experience possible": "I'm passionate about making websites that are easy to use and that provide the best user experience possible",
                                 "I also happen to be a creative person, which I use to inject a little bit of fun into every project": "I also happen to be a creative person, which I use to inject a little bit of fun into every project",
                                 "Read more": "Read more",

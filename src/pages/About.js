@@ -130,7 +130,7 @@ function About() {
                   text-7xl animate-float-image'>{t("About me")}</b>
           <p className={`md:text-2xl text-lg font-mono ${darkMode ? 'text-black' : 'text-white'}`}>
 
-            {t("I'm a frontend developer passionate about crafting visually stunning websites and mobile apps that not only look beautiful but also offer robust functionality. I thrive on creating smooth user experiences, leveraging my creativity to inject a bit of excitement into every project.")}
+            {t("I'm a developer passionate about crafting visually stunning websites and mobile apps that not only look beautiful but also offer robust functionality. I thrive on creating smooth user experiences, leveraging my creativity to inject a bit of excitement into every project.")}
             {/* {t("I'm a frontend developer who loves to make things look beautiful and working perfectly")}. <br/>
                 {t("I'm passionate about making websites that are easy to use and that provide the best user experience possible")}.  <br/>
                 {t("I also happen to be a creative person, which I use to inject a little bit of fun into every project")}. */}
