@@ -8,8 +8,9 @@ i18n
                 vn: 
                 {
                 translation: {
-                    
+                    "I build Back-end with NodeJS, Express using MySQL database. On Front-end, I use ReactJS to build website for users and admin. Also, I am building mobile apps for clients.":"Tôi xây dựng Back-end bằng NodeJS, Express sử dụng cơ sở dữ liệu MySQL. Ở Front-end, tôi sử dụng ReactJS để xây dựng trang web cho người dùng và quản trị viên. Ngoài ra, tôi đang xây dựng các ứng dụng di động cho khách hàng.",
                     "Wellcome":"Chào Mừng",
+                    "I designed and developed a website/app to sell books. On the Front-end side, I developed two interfaces, one is the user page for buying books and the other is the admin page interface. I use ReactJS, TaiwindCss, Antd (Ant Design), Antd Charts to design the interface for each page. On the Back-end side, I use NodeJS combined with MySQL database to create APIs. I develop Front-end and Back-end on the internet environment via vercel. As for the MySQL database, I use Aiven.":"Tôi đã thiết kế và phát triển một trang web/ứng dụng để bán sách. Về phía Front-end, tôi đã phát triển hai giao diện, một là trang người dùng để mua sách và một là giao diện trang quản trị. Tôi sử dụng ReactJS, TaiwindCss, Antd (Ant Design), Antd Charts để thiết kế giao diện cho từng trang. Về phía Back-end, tôi sử dụng NodeJS kết hợp với cơ sở dữ liệu MySQL để tạo API. Tôi phát triển Front-end và Back-end trên môi trường internet thông qua vercel. Đối với cơ sở dữ liệu MySQL, tôi sử dụng Aiven.",
                     "Vu Huy Hoang":"Vũ Huy Hoàng",
                     "Dark mode": "Chế độ sáng/tối",
                     "Hello,": "Xin chào",
@@ -299,6 +300,7 @@ i18n
                     "All the features on the above page are available. If you have any questions, please feel free to contact me":"All the features on the above page are available. If you have any questions, please feel free to contact me",
                     "Subscribe":"Subscribe",
                     "Watch":"Watch",
+                    "I build the Back-end using NodeJS, Express using MySQL. On the Front-end I use ReactJS to build websites for users and administrators. In addition, I am building Mobile applications for customers.":"I build the Back-end using NodeJS, Express using MySQL. On the Front-end I use ReactJS to build websites for users and administrators. In addition, I am building Mobile applications for customers.",
                     "Subscribe to get information, latest news about me":"Subscribe to get information, latest news about me",
                     "Leave your Email here":"Leave your Email here",
                     "All the features on the above page are available. If you have any questions, please feel free to contact me. All the information to contact me on this page is correct.":"All the features on the above page are available. If you have any questions, please feel free to contact me. All the information to contact me on this page is correct.",
@@ -482,8 +484,8 @@ i18n
                                 "Project 2": "Project 2",
                                 "Project 3": "Project 3",
                                 "Happy new year!": "Happy new year!",
-                                "Goodbye": "Goodbye"
-                            
+                                "Goodbye": "Goodbye",
+                                "I build Back-end with NodeJS, Express using MySQL database. On Front-end, I use ReactJS to build website for users and admin. Also, I am building mobile apps for clients.":"I build Back-end with NodeJS, Express using MySQL database. On Front-end, I use ReactJS to build website for users and admin. Also, I am building mobile apps for clients.",
                     
                     
                     
