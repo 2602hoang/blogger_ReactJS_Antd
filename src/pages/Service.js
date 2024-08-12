@@ -106,8 +106,8 @@ function Service() {
   const values1 = [
     t(
       "Build interfaces, deploy interface code and basic functions. Develop projects on the internet environment." +
-        "\n" +
-        "Login admin 0917789964/123456"
+       
+        "\n Login admin at https://web-app-six-tau.vercel.app/admin {0917789964/123456}"
     ),
     t(
       "Build interfaces, deploy interface code and basic functions. Develop projects on the internet environment."
