@@ -467,7 +467,7 @@ function Home() {
            {t("Click here")}! {t("Leave your own comment")}!!!
           </button>
           <Modal
-            className=' overflow-hidden text-center w-1/2  h-max  '
+            className=' overflow-hidden text-center w-full h-max  '
             width={window.innerWidth >= 768 ? "50%" : "100%"}
 
             open={open1}
@@ -485,7 +485,7 @@ function Home() {
           >
             <div id="cmt_input" className='md:w-full w-full md:space-y-6 items-center flex-col justify-center flex'>
               <h1 className='text-[#99ff33] font-serif text-4xl animate-bounce font-semibold'>{t("Your comment")}</h1>
-              <Form form={form1} className='flex w-2/3 flex-col md:mx-0 md:w-[800px] md:px-8 h-auto justify-center items-center'
+              <Form form={form1} className='flex w-2/3 flex-col md:mx-0 md:w-full md:px-8 h-auto justify-center items-center'
                 validateMessages={validateMessages}
                 onFinish={handleSendComment}
                 name="nest-messages"
