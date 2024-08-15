@@ -35,8 +35,13 @@ function Header() {
             <nav className='justify-between items-center flex   '>
                 <div className='md:flex top-0 left-0  z-50  md:z-50  w-52 md:w-72 md:mr-96 flex flex-row '>
                     <Tooltip title={t("Back to Home")}>
-                    <a href='/' className='hover:animate-ping font-black flex  items-center gap-x-2 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500'>
-                        <img src={Logo} alt="Back Home" className='mt-2 w-12 h-12' />Blog Me</a>
+                        <div className='flex justify-center flex-row text-center items-center gap-x-2'>
+                    
+                        <img src={Logo} alt="Back Home" className='mt-2 size-12 flex ' />
+                        <a href='/' className='hover:animate-ping font-black flex justify-center flex-row text-center mt-2
+                     items-center gap-x-2 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500'>
+                        HOANG</a>
+                        </div>
                     </Tooltip>
                 </div>
                 <ul id="menu"
