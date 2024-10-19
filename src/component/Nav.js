@@ -26,7 +26,7 @@ function Nav() {
                 trigger="click"
                 type="default"
                 icon={<SettingTwoTone />}
-                className="right-5 bottom-28"
+                className="right-5 bottom-28 [&_.ant-float-btn-content]:!hidden "
             >
                 <FloatButton
                     tooltip={<div>{t('Dark mode')}</div>}

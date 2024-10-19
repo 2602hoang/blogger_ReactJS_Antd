@@ -12,10 +12,16 @@ import img4 from "../assets/6.png";
 import img3 from "../assets/9.png";
 import img9 from "../assets/8.png";
 import img10 from "../assets/10.png";
+import img11 from "../assets/11.png";
 
 import { useDarkMode } from "../component/DarkModeProvider";
 import { Alert, Button, Drawer, Image, List, Modal, Tooltip } from "antd";
-import { ChromeOutlined, GithubOutlined, InfoCircleOutlined, YoutubeOutlined } from "@ant-design/icons";
+import {
+  ChromeOutlined,
+  GithubOutlined,
+  InfoCircleOutlined,
+  YoutubeOutlined,
+} from "@ant-design/icons";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import ProgressBar from "../component/ProgressBar";
@@ -69,7 +75,7 @@ function Service() {
   for (let i = 4; i <= 8; i++) {
     imgs1.push(require(`../assets/i${i}.png`));
   }
-  const mobile =[];
+  const mobile = [];
   for (let i = 1; i <= 10; i++) {
     mobile.push(require(`../assets/e${i}.png`));
   }
@@ -106,7 +112,6 @@ function Service() {
   const values1 = [
     t(
       "Build interfaces, deploy interface code and basic functions. Develop projects on the internet environment." +
-       
         "\n Login admin at https://web-app-six-tau.vercel.app/admin {0917789964/123456}"
     ),
     t(
@@ -122,8 +127,10 @@ function Service() {
     t(
       "Build interfaces, deploy interface code and basic functions. Develop projects on the internet environment."
     ),
-    t("Comming Soon . . .") + "NextJS",
+    t("Zidi spa Comming Soon . . .") + "NextJS",
+    t("Admin Nextjs Comming Soon . . .") + " NextJS",
     t("Comming Soon . . ."),
+
     // Thêm các giá trị tương ứng với các phần tử khác nếu cần
   ];
   const p = [
@@ -145,6 +152,8 @@ function Service() {
     ),
     t("Comming Soon . . ."),
     t("Comming Soon . . ."),
+    t("Comming Soon . . ."),
+
     // Thêm các giá trị tương ứng với các phần tử khác nếu cần
   ];
   const hrefs = [
@@ -155,6 +164,7 @@ function Service() {
     // "https://web-home-demo-js-taiwin.vercel.app/",
     "https://clone-joodo.vercel.app/",
     "https://zidi-spa.vercel.app/",
+    "https://admin-nextjs-app.vercel.app/",
     "/eror",
     // Thêm các href tương ứng với các phần tử khác nếu cần
   ];
@@ -362,60 +372,61 @@ function Service() {
       <div className="md:mx-32 mx-2 my-5">
         <div className="grid md:grid-cols-3 grid-cols-1 gap-3 md:gap-9 justify-center items-center">
           {/* Map over your portfolio items */}
-          {[img3, img4, img5, img6, img8, img9, img10].map((img, index) => (
-            <div
-              data-aos="flip-up"
-              key={index}
-              onMouseEnter={() => setHoveredItem1(index)}
-              onMouseLeave={() => setHoveredItem1(null)}
-              className="h-[350px] shadow-white 
+          {[img3, img4, img5, img6, img8, img9, img11, img10].map(
+            (img, index) => (
+              <div
+                data-aos="flip-up"
+                key={index}
+                onMouseEnter={() => setHoveredItem1(index)}
+                onMouseLeave={() => setHoveredItem1(null)}
+                className="h-[350px] shadow-white 
               shadow-2xl w-full border-2 rounded-2xl hover:bg-sky-300 hover:border-sky-300 relative"
-              style={{
-                backgroundImage: `linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),url(${img})`,
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "100%",
-                backgroundPosition: "center",
-              }}
-            >
-              {hoveredItem1 === index && (
-                <div
-                  className="bg-sky-300 rounded-2xl 
+                style={{
+                  backgroundImage: `linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),url(${img})`,
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "100%",
+                  backgroundPosition: "center",
+                }}
+              >
+                {hoveredItem1 === index && (
+                  <div
+                    className="bg-sky-300 rounded-2xl 
                 
                 transform  hover:scale-90 hover:shadow-lg
                 absolute   inset-0 flex justify-center items-center flex-col px-3 bg-gradient-to-t  "
-                >
-                  <h4
-                    className=" text-center -translate-y-2
+                  >
+                    <h4
+                      className=" text-center -translate-y-2
                   bg-gradient-to-r from-orange-500 via-yellow-500 to-green-500 text-purple-800 rounded-lg m-0 self-stretch relative text-inherit leading-[44px] font-semibold font-inherit
                   text-2xl"
-                  >
-                    &nbsp;&nbsp;{t("Personal project")} &nbsp;&nbsp;
-                    <Tooltip
-                      color="orange"
-                      placement="bottom"
-                      title={<h2>{p[index]}</h2>}
                     >
-                      <Button
-                        className="animate-spin hover:animate-none"
-                        type="link"
-                        icon={
-                          <InfoCircleOutlined
-                            style={{ color: "red", fontSize: "30px" }}
-                          />
-                        }
-                      ></Button>
-                    </Tooltip>
-                  </h4>
+                      &nbsp;&nbsp;{t("Personal project")} &nbsp;&nbsp;
+                      <Tooltip
+                        color="orange"
+                        placement="bottom"
+                        title={<h2>{p[index]}</h2>}
+                      >
+                        <Button
+                          className="animate-spin hover:animate-none"
+                          type="link"
+                          icon={
+                            <InfoCircleOutlined
+                              style={{ color: "red", fontSize: "30px" }}
+                            />
+                          }
+                        ></Button>
+                      </Tooltip>
+                    </h4>
 
-                  <p
-                    className={`text-lg text-black mt-8 text-start ${
-                      index === 4 ? "animate-bounce" : ""
-                    }`}
-                  >
-                    {values1[index]}
-                  </p>
-                  <div className="flex flex-row justify-center items-center mt-auto">
-                    {/* <Button type='link' target="_blank" href={hrefs[index]} className="flex justify-center
+                    <p
+                      className={`text-lg text-black mt-8 text-start ${
+                        index === 4 ? "animate-bounce" : ""
+                      }`}
+                    >
+                      {values1[index]}
+                    </p>
+                    <div className="flex flex-row justify-center items-center mt-auto">
+                      {/* <Button type='link' target="_blank" href={hrefs[index]} className="flex justify-center
                    items-center w-8 h-8 bg-text-color rounded-full"
                       icon={<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
@@ -423,117 +434,118 @@ function Service() {
                     >
                       {t("Visit here")}
                     </Button> */}
-                    <div class="group relative flex justify-center items-center text-zinc-600 text-sm font-bold">
-                      <div class="absolute opacity-0 group-hover:opacity-100 group-hover:-translate-y-[150%] -translate-y-[300%] duration-500 group-hover:delay-500 skew-y-[20deg] group-hover:skew-y-0 shadow-md">
-                        <div class="bg-lime-200 flex items-center gap-1 p-2 rounded-md">
+                      <div class="group relative flex justify-center items-center text-zinc-600 text-sm font-bold">
+                        <div class="absolute opacity-0 group-hover:opacity-100 group-hover:-translate-y-[150%] -translate-y-[300%] duration-500 group-hover:delay-500 skew-y-[20deg] group-hover:skew-y-0 shadow-md">
+                          <div class="bg-lime-200 flex items-center gap-1 p-2 rounded-md">
+                            <svg
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              height="20px"
+                              width="20px"
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="stroke-zinc-600"
+                            >
+                              <circle
+                                stroke-linejoin="round"
+                                r="9"
+                                cy="12"
+                                cx="12"
+                              ></circle>
+                              <path
+                                stroke-linejoin="round"
+                                d="M12 3C12 3 8.5 6 8.5 12C8.5 18 12 21 12 21"
+                              ></path>
+                              <path
+                                stroke-linejoin="round"
+                                d="M12 3C12 3 15.5 6 15.5 12C15.5 18 12 21 12 21"
+                              ></path>
+                              <path stroke-linejoin="round" d="M3 12H21"></path>
+                              <path
+                                stroke-linejoin="round"
+                                d="M19.5 7.5H4.5"
+                              ></path>
+                              <g filter="url(#filter0_d_15_556)">
+                                <path
+                                  stroke-linejoin="round"
+                                  d="M19.5 16.5H4.5"
+                                ></path>
+                              </g>
+                              <defs>
+                                <filter
+                                  color-interpolation-filters="sRGB"
+                                  filterUnits="userSpaceOnUse"
+                                  height="3"
+                                  width="17"
+                                  y="16"
+                                  x="3.5"
+                                  id="filter0_d_15_556"
+                                >
+                                  <feFlood
+                                    result="BackgroundImageFix"
+                                    flood-opacity="0"
+                                  ></feFlood>
+                                  <feColorMatrix
+                                    result="hardAlpha"
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                    type="matrix"
+                                    in="SourceAlpha"
+                                  ></feColorMatrix>
+                                  <feOffset dy="1"></feOffset>
+                                  <feGaussianBlur stdDeviation="0.5"></feGaussianBlur>
+                                  <feColorMatrix
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
+                                    type="matrix"
+                                  ></feColorMatrix>
+                                  <feBlend
+                                    result="effect1_dropShadow_15_556"
+                                    in2="BackgroundImageFix"
+                                    mode="normal"
+                                  ></feBlend>
+                                  <feBlend
+                                    result="shape"
+                                    in2="effect1_dropShadow_15_556"
+                                    in="SourceGraphic"
+                                    mode="normal"
+                                  ></feBlend>
+                                </filter>
+                              </defs>
+                            </svg>
+                            <span>{hrefs[index]}</span>
+                          </div>
+                          <div class="shadow-md bg-lime-200 absolute bottom-0 translate-y-1/2 left-1/2 translate-x-full rotate-45 p-1"></div>
+                          <div class="rounded-md bg-white group-hover:opacity-0 group-hover:scale-[115%] group-hover:delay-700 duration-500 w-full h-full absolute top-0 left-0">
+                            <div class="border-b border-r border-white bg-white absolute bottom-0 translate-y-1/2 left-1/2 translate-x-full rotate-45 p-1"></div>
+                          </div>
+                        </div>
+
+                        <div class="shadow-md flex items-center group-hover:gap-2 bg-gradient-to-br from-lime-200 to-yellow-200 p-3 rounded-full cursor-pointer duration-300">
                           <svg
                             fill="none"
                             viewBox="0 0 24 24"
                             height="20px"
                             width="20px"
                             xmlns="http://www.w3.org/2000/svg"
-                            class="stroke-zinc-600"
+                            class="fill-zinc-600"
                           >
-                            <circle
-                              stroke-linejoin="round"
-                              r="9"
-                              cy="12"
-                              cx="12"
-                            ></circle>
                             <path
                               stroke-linejoin="round"
-                              d="M12 3C12 3 8.5 6 8.5 12C8.5 18 12 21 12 21"
+                              stroke-linecap="round"
+                              d="M15.4306 7.70172C7.55045 7.99826 3.43929 15.232 2.17021 19.3956C2.07701 19.7014 2.31139 20 2.63107 20C2.82491 20 3.0008 19.8828 3.08334 19.7074C6.04179 13.4211 12.7066 12.3152 15.514 12.5639C15.7583 12.5856 15.9333 12.7956 15.9333 13.0409V15.1247C15.9333 15.5667 16.4648 15.7913 16.7818 15.4833L20.6976 11.6784C20.8723 11.5087 20.8993 11.2378 20.7615 11.037L16.8456 5.32965C16.5677 4.92457 15.9333 5.12126 15.9333 5.61253V7.19231C15.9333 7.46845 15.7065 7.69133 15.4306 7.70172Z"
                             ></path>
-                            <path
-                              stroke-linejoin="round"
-                              d="M12 3C12 3 15.5 6 15.5 12C15.5 18 12 21 12 21"
-                            ></path>
-                            <path stroke-linejoin="round" d="M3 12H21"></path>
-                            <path
-                              stroke-linejoin="round"
-                              d="M19.5 7.5H4.5"
-                            ></path>
-                            <g filter="url(#filter0_d_15_556)">
-                              <path
-                                stroke-linejoin="round"
-                                d="M19.5 16.5H4.5"
-                              ></path>
-                            </g>
-                            <defs>
-                              <filter
-                                color-interpolation-filters="sRGB"
-                                filterUnits="userSpaceOnUse"
-                                height="3"
-                                width="17"
-                                y="16"
-                                x="3.5"
-                                id="filter0_d_15_556"
-                              >
-                                <feFlood
-                                  result="BackgroundImageFix"
-                                  flood-opacity="0"
-                                ></feFlood>
-                                <feColorMatrix
-                                  result="hardAlpha"
-                                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                                  type="matrix"
-                                  in="SourceAlpha"
-                                ></feColorMatrix>
-                                <feOffset dy="1"></feOffset>
-                                <feGaussianBlur stdDeviation="0.5"></feGaussianBlur>
-                                <feColorMatrix
-                                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
-                                  type="matrix"
-                                ></feColorMatrix>
-                                <feBlend
-                                  result="effect1_dropShadow_15_556"
-                                  in2="BackgroundImageFix"
-                                  mode="normal"
-                                ></feBlend>
-                                <feBlend
-                                  result="shape"
-                                  in2="effect1_dropShadow_15_556"
-                                  in="SourceGraphic"
-                                  mode="normal"
-                                ></feBlend>
-                              </filter>
-                            </defs>
                           </svg>
-                          <span>{hrefs[index]}</span>
+                          <a target="_blank" href={hrefs[index]}>
+                            <span class="text-[0px] group-hover:text-sm duration-300">
+                              {t("Visit here")}
+                            </span>
+                          </a>
                         </div>
-                        <div class="shadow-md bg-lime-200 absolute bottom-0 translate-y-1/2 left-1/2 translate-x-full rotate-45 p-1"></div>
-                        <div class="rounded-md bg-white group-hover:opacity-0 group-hover:scale-[115%] group-hover:delay-700 duration-500 w-full h-full absolute top-0 left-0">
-                          <div class="border-b border-r border-white bg-white absolute bottom-0 translate-y-1/2 left-1/2 translate-x-full rotate-45 p-1"></div>
-                        </div>
-                      </div>
-
-                      <div class="shadow-md flex items-center group-hover:gap-2 bg-gradient-to-br from-lime-200 to-yellow-200 p-3 rounded-full cursor-pointer duration-300">
-                        <svg
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          height="20px"
-                          width="20px"
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="fill-zinc-600"
-                        >
-                          <path
-                            stroke-linejoin="round"
-                            stroke-linecap="round"
-                            d="M15.4306 7.70172C7.55045 7.99826 3.43929 15.232 2.17021 19.3956C2.07701 19.7014 2.31139 20 2.63107 20C2.82491 20 3.0008 19.8828 3.08334 19.7074C6.04179 13.4211 12.7066 12.3152 15.514 12.5639C15.7583 12.5856 15.9333 12.7956 15.9333 13.0409V15.1247C15.9333 15.5667 16.4648 15.7913 16.7818 15.4833L20.6976 11.6784C20.8723 11.5087 20.8993 11.2378 20.7615 11.037L16.8456 5.32965C16.5677 4.92457 15.9333 5.12126 15.9333 5.61253V7.19231C15.9333 7.46845 15.7065 7.69133 15.4306 7.70172Z"
-                          ></path>
-                        </svg>
-                        <a target="_blank" href={hrefs[index]}>
-                          <span class="text-[0px] group-hover:text-sm duration-300">
-                            {t("Visit here")}
-                          </span>
-                        </a>
                       </div>
                     </div>
                   </div>
-                </div>
-              )}
-            </div>
-          ))}
+                )}
+              </div>
+            )
+          )}
         </div>
       </div>
 
@@ -781,7 +793,6 @@ function Service() {
         </div>
       </Drawer>
       <Modal
-    
         title={
           <a>
             <InfoCircleOutlined /> Chi Tiết Dự Án
@@ -797,49 +808,56 @@ function Service() {
         cancelButtonProps={{
           disabled: true,
           hidden: true,
-
-
         }}
-  
       >
         <div className="flex flex-col h-auto justify-center items-center">
           <div className="flex flex-col">
-          <p className="font-bold">Website + Backend: </p>
-          <span>{t("I designed and developed a website/app to sell books. On the Front-end side, I developed two interfaces, one is the user page for buying books and the other is the admin page interface. I use ReactJS, TaiwindCss, Antd (Ant Design), Antd Charts to design the interface for each page. On the Back-end side, I use NodeJS combined with MySQL database to create APIs. I develop Front-end and Back-end on the internet environment via vercel. As for the MySQL database, I use Aiven.")}</span>
-          <a href="https://web-app-six-tau.vercel.app/login" target="_blank"><ChromeOutlined /> Link web : https://web-app-six-tau.vercel.app/login </a>
-          <a href="https://www.youtube.com/watch?v=u4234HpFlek" target="_blank"><YoutubeOutlined /> Demo: https://www.youtube.com/watch?v=u4234HpFlek</a>
-          </div>  
+            <p className="font-bold">Website + Backend: </p>
+            <span>
+              {t(
+                "I designed and developed a website/app to sell books. On the Front-end side, I developed two interfaces, one is the user page for buying books and the other is the admin page interface. I use ReactJS, TaiwindCss, Antd (Ant Design), Antd Charts to design the interface for each page. On the Back-end side, I use NodeJS combined with MySQL database to create APIs. I develop Front-end and Back-end on the internet environment via vercel. As for the MySQL database, I use Aiven."
+              )}
+            </span>
+            <a href="https://web-app-six-tau.vercel.app/login" target="_blank">
+              <ChromeOutlined /> Link web :
+              https://web-app-six-tau.vercel.app/login{" "}
+            </a>
+            <a
+              href="https://www.youtube.com/watch?v=u4234HpFlek"
+              target="_blank"
+            >
+              <YoutubeOutlined /> Demo:
+              https://www.youtube.com/watch?v=u4234HpFlek
+            </a>
+          </div>
 
           <div className="flex flex-col">
-          <p className="font-bold">Mobile:</p>
-          <span>{t("Comming Soon . . .")}</span>
-          <List
-            itemLayout="vertical"
-            size="large"
-            className="h-auto"
-            pagination={{
-              onChange: (page) => {
-                console.log(page);
-              },
-              pageSize: 2,
-            }}
-            header={
-              <div className="w-auto flex justify-center item">
-                <h2 className="text-center uppercase bg-gradient-to-br from-purple-800 via-pink-700 to-yellow-400">
-                  {t("IMAGE OF MOBIE APP")}
-                </h2>
-              </div>
-            }
-            dataSource={mobile}
-            renderItem={(image, index) => (
-              <Image key={index} className="px-2 " width={200} src={image} />
-            )}
-          />
-
-
+            <p className="font-bold">Mobile:</p>
+            <span>{t("Comming Soon . . .")}</span>
+            <List
+              itemLayout="vertical"
+              size="large"
+              className="h-auto"
+              pagination={{
+                onChange: (page) => {
+                  console.log(page);
+                },
+                pageSize: 2,
+              }}
+              header={
+                <div className="w-auto flex justify-center item">
+                  <h2 className="text-center uppercase bg-gradient-to-br from-purple-800 via-pink-700 to-yellow-400">
+                    {t("IMAGE OF MOBIE APP")}
+                  </h2>
+                </div>
+              }
+              dataSource={mobile}
+              renderItem={(image, index) => (
+                <Image key={index} className="px-2 " width={200} src={image} />
+              )}
+            />
           </div>
         </div>
-
       </Modal>
     </div>
   );
